@@ -102,8 +102,7 @@
           <div class="links">
             <a class="btn btn--primary btn--sm" href="https://github.com/hitz482/HitzMergeTacticsCodeBase" target="_blank" rel="noopener">Source on GitHub</a>
             <a class="btn btn--sm" href="https://hitz482.github.io/HitzMergeTactics/" target="_blank" rel="noopener">Documentation</a>
-            <!-- TODO: point this at the HITZ listing on Fab -->
-            <a class="btn btn--sm" href="https://www.fab.com/listings/91fac1e6-2f5e-4908-8fdb-4f32dfdc6ad2" target="_blank" rel="noopener">View on Fab</a>
+            <!-- TODO: add "View on Fab" once the HITZ listing link is confirmed -->
           </div>
         </div>
       </div>
@@ -243,36 +242,62 @@
       <div class="section__head">
         <div>
           <p class="eyebrow">Products</p>
-          <h2>Selling on Fab</h2>
-          <p>I design, build and sell Unreal Engine products on Fab, Epic Games' marketplace, from scoping through documentation and store pages to release.</p>
+          <h2>Engine tools I sell on Fab</h2>
+          <p>I design, build, document and publish my own products on Fab, Epic Games' marketplace. Three are live and one is in review.</p>
         </div>
       </div>
 
       <div class="fab">
         <article class="card">
+          <div class="card__media"><img loading="lazy" src="assets/img/hitz-screenshot-board.jpg" alt="Hex board with units placed in HITZ: Merge Tactics" width="1672" height="941"></div>
           <div class="card__body">
-            <div class="fab__icon"><img src="assets/img/hitz-icon.png" alt="" width="128" height="128"></div>
             <h3>HITZ: Merge Tactics</h3>
-            <div class="card__meta">C++ code plugin · UE 5.8 · Paid listing</div>
-            <p>The auto-battler framework above, packaged as a product with a full documentation site and a playable sample game.</p>
+            <div class="card__meta">Unreal Engine 5.8 · C++ framework · Live on Fab</div>
+            <p>Server-authoritative auto-battler framework with board, shop, traits, combat and the full multiplayer round loop. Featured above.</p>
+            <div class="links">
+              <!-- TODO: add the HITZ Fab listing link -->
+              <a class="btn btn--sm" href="https://hitz482.github.io/HitzMergeTactics/" target="_blank" rel="noopener">Docs</a>
+              <a class="btn btn--sm" href="https://github.com/hitz482/HitzMergeTacticsCodeBase" target="_blank" rel="noopener">Source</a>
+            </div>
           </div>
         </article>
+
         <article class="card">
+          <div class="card__media"><img loading="lazy" src="assets/img/geomap-cover.jpg" alt="Hitz GeoMap: real-world map of a city streamed into Unreal Engine" width="1280" height="720"></div>
           <div class="card__body">
-            <div class="fab__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="m4 20 4-6 3 2 2-5 4 3 3-1"/><path d="M11 8 8 14"/></svg></div>
-            <h3>Combat Animation Packs</h3>
-            <div class="card__meta">Animation + UE integration · Fab &amp; ArtStation · ~$6,000 revenue</div>
-            <p>Spotted the opportunity, directed the artist team, and built the Unreal integration myself: animation blueprints, state machines, and root-motion and in-place variants. Still earning.</p>
+            <h3>Hitz GeoMap</h3>
+            <div class="card__meta">Unreal Engine 5.8 · C++ plugin · Windows + Android · Live on Fab</div>
+            <p>Streams real roads, buildings, water and parks around the player's GPS position as geometry, with your own meshes and actors placed on real places. Reads open vector tiles from five provider presets, with Android GPS, touch cameras and 13 styleable layers.</p>
+            <div class="links">
+              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/11ad1758-2a82-41f1-824e-5a4e020bc047" target="_blank" rel="noopener">View on Fab</a>
+              <a class="btn btn--sm" href="https://hitz482.github.io/HitzGeoMap/" target="_blank" rel="noopener">Product site</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media"><img loading="lazy" src="assets/img/gas-cover.jpg" alt="HitzGAS Toolkit: live GAS debugger in the Unreal editor" width="1280" height="720"></div>
+          <div class="card__body">
+            <h3>HitzGAS Toolkit</h3>
+            <div class="card__meta">Unreal Engine 5 · C++ code plugin · Live on Fab</div>
+            <p>Gameplay Ability System without the boilerplate: a live GAS debugger, a ready AttributeSet, six working abilities and nine effects, and a generator that writes a compilable, replicated C++ AttributeSet. Works in Blueprint-only projects.</p>
+            <!-- TODO: add the HitzGAS Toolkit Fab listing link -->
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__media"><img loading="lazy" src="assets/img/aisuite-cover.jpg" alt="Hitz AI Suite boss fight sample in Unity" width="1280" height="720"></div>
+          <div class="card__body">
+            <h3>Hitz AI Suite</h3>
+            <div class="card__meta">Unity 6 · C# + Burst · In Fab review</div>
+            <p>Perception, EQS, behavior trees, state machines, ORCA crowd avoidance and smart objects that share one scheduler and one debugger. 500 agents run in 0.67 ms median per frame with no per-frame allocations, backed by 360+ automated tests.</p>
           </div>
         </article>
       </div>
 
-      <!-- TODO: rename these three links to the real product names -->
-      <div class="fab__store">
-        Listings on Fab:
-        <a class="btn btn--sm" href="https://www.fab.com/listings/91fac1e6-2f5e-4908-8fdb-4f32dfdc6ad2" target="_blank" rel="noopener">Listing 1 ↗</a>
-        <a class="btn btn--sm" href="https://www.fab.com/listings/5bbba0ca-9f37-4822-8fe5-ce48dcadfbb9" target="_blank" rel="noopener">Listing 2 ↗</a>
-        <a class="btn btn--sm" href="https://www.fab.com/listings/11ad1758-2a82-41f1-824e-5a4e020bc047" target="_blank" rel="noopener">Listing 3 ↗</a>
+      <div class="callout" style="margin-top:24px">
+        <span class="mono">Also</span>
+        Combat animation packs on Fab and ArtStation (~$6,000 revenue): I directed the artist team and built the Unreal integration, with animation blueprints, state machines, and root-motion and in-place variants.
       </div>
     </div>
   </section>
