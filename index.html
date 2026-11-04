@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aman Khandelwal — Gameplay & Systems Programmer</title>
+  <meta name="description" content="Gameplay and systems programmer, 5+ years shipping multiplayer games in Unreal Engine 5 and Unity. Author of HITZ: Merge Tactics, a UE5 auto-battler framework on Fab.">
+  <meta name="theme-color" content="#0b0c0f">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aman Khandelwal — Gameplay & Systems Programmer (UE5 / Unity)">
+  <meta property="og:description" content="Multiplayer netcode, gameplay systems and editor tooling. Shipped on Steam, Google Play, the App Store and Meta Quest.">
+  <meta property="og:image" content="https://hitz482.github.io/assets/img/hitz-screenshot-overview.jpg">
+  <meta property="og:url" content="https://hitz482.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="nav__brand" href="#top"><img src="favicon.svg" alt="" width="28" height="28">Aman Khandelwal</a>
+    <ul class="nav__links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#fab">Fab</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn--sm" href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <div class="hero__status"><i></i>Open to remote roles · IST (UTC+5:30)</div>
+        <h1>Aman Khandelwal<span>Gameplay &amp; Systems Programmer — Unreal Engine 5 / Unity</span></h1>
+        <p class="hero__lede">I build multiplayer games end to end: server-authoritative netcode, gameplay systems and the editor tools that let designers ship without me. Five-plus years and titles live on Steam, Google Play, the App Store and the Meta Quest Store.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#work">See the work</a>
+          <a class="btn" href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
+          <a class="btn" href="mailto:khandelwalaman5@gmail.com">khandelwalaman5@gmail.com</a>
+        </div>
+      </div>
+      <img class="hero__figure" src="assets/img/hitz-hero-figure.webp" alt="Unit render from HITZ: Merge Tactics" width="511" height="760">
+    </div>
+
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat"><b>5+ yrs</b><small>shipping games in UE5 and Unity</small></div>
+        <div class="stat"><b>13.8k</b><small>lines of C++ in my solo UE5 framework</small></div>
+        <div class="stat"><b>18–23k</b><small>estimated players on The Cursed Hour</small></div>
+        <div class="stat"><b>~$6k</b><small>revenue from my Fab animation packs</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Featured: HITZ ===== -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Featured · Solo project · On Fab</p>
+          <h2>HITZ: Merge Tactics</h2>
+          <p>A server-authoritative auto-battler framework for Unreal Engine 5.8. Built alone, published as a paid product, and designed so buyers can ship a full game without writing C++.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div>
+          <button class="shot" data-full="assets/img/hitz-screenshot-overview.jpg" aria-label="Enlarge: framework overview">
+            <img src="assets/img/hitz-screenshot-overview.jpg" alt="Overview of the HITZ framework: board layouts, shop, traits, combat, 3D viewer and material painter" width="1672" height="941">
+          </button>
+          <div class="gallery">
+            <button class="shot" data-full="assets/img/hitz-screenshot-combat.jpg" aria-label="Enlarge: combat and prep phases"><img loading="lazy" src="assets/img/hitz-screenshot-combat.jpg" alt="Combat and prep phases on a hex grid" width="1672" height="941"></button>
+            <button class="shot" data-full="assets/img/hitz-screenshot-editor.jpg" aria-label="Enlarge: board layout painter"><img loading="lazy" src="assets/img/hitz-screenshot-editor.jpg" alt="Board layout data asset and material painter in the editor" width="1672" height="941"></button>
+            <button class="shot" data-full="assets/img/hitz-screenshot-preview.jpg" aria-label="Enlarge: unit preview editor"><img loading="lazy" src="assets/img/hitz-screenshot-preview.jpg" alt="Unit definition editor with live 3D preview" width="1672" height="941"></button>
+          </div>
+        </div>
+
+        <div>
+          <ul class="tags">
+            <li>UE 5.8</li><li>C++</li><li>Replication</li><li>GAS</li><li>Editor modules</li><li>Data assets</li>
+          </ul>
+          <ul class="points">
+            <li><b>Server-authoritative combat.</b> The server locks board snapshots, simulates, and replicates a compact event log that clients replay. Clients never compute outcomes, so match results can't be cheated.</li>
+            <li><b>Four modules, cleanly split.</b> <span class="mono">HMT_Core</span> (6.2k lines), <span class="mono">HMT_CoreEditor</span> (1.3k) and <span class="mono">HMT_GASBridge</span> (0.3k), plus a separate sample game (6.0k). Drop the framework into a project by copying three folders.</li>
+            <li><b>Blueprint-first extension.</b> Four interfaces (stat provider, targeting, trait effect, ability executor) cover every extension point without C++.</li>
+            <li><b>GAS bridge.</b> Maps the stat interface onto an existing <span class="mono">AttributeSet</span>, per unit, with zero changes elsewhere.</li>
+            <li><b>Editor tooling.</b> Click-to-paint board editor, unit asset editor with live 3D preview and montage playback, and a save-time validator.</li>
+            <li><b>Full round loop.</b> Prep, combat and results phases, recency-weighted pairing, ghost boards for odd lobbies, PvE rounds, spectating and late-join. Hex and square grids from one asset.</li>
+          </ul>
+          <div class="links">
+            <a class="btn btn--primary btn--sm" href="https://github.com/hitz482/HitzMergeTacticsCodeBase" target="_blank" rel="noopener">Source on GitHub</a>
+            <a class="btn btn--sm" href="https://hitz482.github.io/HitzMergeTactics/" target="_blank" rel="noopener">Documentation</a>
+            <!-- TODO: point this at the HITZ listing on Fab -->
+            <a class="btn btn--sm" href="https://www.fab.com/listings/91fac1e6-2f5e-4908-8fdb-4f32dfdc6ad2" target="_blank" rel="noopener">View on Fab</a>
+          </div>
+        </div>
+      </div>
+
+      <figure class="diagram">
+        <div class="diagram-scroll">
+          <svg viewBox="0 0 990 250" role="img" aria-labelledby="dg-title">
+            <title id="dg-title">Server-authoritative combat: the server locks snapshots, simulates, builds an event log and applies results; clients receive the log and replay it.</title>
+            <defs>
+              <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6f727a"/></marker>
+              <marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e5322d"/></marker>
+            </defs>
+            <text class="lane" x="0" y="77">SERVER</text>
+            <text class="lane" x="0" y="197">CLIENTS</text>
+            <line x1="0" y1="130" x2="990" y2="130" stroke="#23262d" stroke-dasharray="4 6"/>
+
+            <rect class="box" x="100" y="40" width="200" height="64" rx="8"/>
+            <text class="t" x="116" y="68">Lock board snapshots</text>
+            <text class="s" x="116" y="88">end of prep phase</text>
+
+            <rect class="box" x="340" y="40" width="200" height="64" rx="8"/>
+            <text class="t" x="356" y="68">Simulate combat</text>
+            <text class="s" x="356" y="88">targeting · abilities</text>
+
+            <rect class="box box--hot" x="580" y="40" width="200" height="64" rx="8"/>
+            <text class="t" x="596" y="68">Build event log</text>
+            <text class="s" x="596" y="88">compact, ordered events</text>
+
+            <rect class="box" x="820" y="40" width="160" height="64" rx="8"/>
+            <text class="t" x="836" y="68">Apply results</text>
+            <text class="s" x="836" y="88">HP · gold · pairing</text>
+
+            <rect class="box" x="580" y="160" width="200" height="64" rx="8"/>
+            <text class="t" x="596" y="188">Receive event log</text>
+            <text class="s" x="596" y="208">replicated once</text>
+
+            <rect class="box" x="820" y="160" width="160" height="64" rx="8"/>
+            <text class="t" x="836" y="188">Replay visually</text>
+            <text class="s" x="836" y="208">anims · VFX · UI</text>
+
+            <path class="arrow" d="M300 72H338"/>
+            <path class="arrow" d="M540 72H578"/>
+            <path class="arrow" d="M780 72H818"/>
+            <path class="arrow arrow--hot" d="M680 104V158"/>
+            <path class="arrow" d="M780 192H818"/>
+          </svg>
+        </div>
+        <figcaption><span class="swipe mono">Swipe to see the full flow →</span>Clients only receive the server's event log and replay it for animation. They never compute a match outcome themselves.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== Shipped games ===== -->
+  <section class="section" id="games">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Shipped</p>
+          <h2>Multiplayer games on Steam</h2>
+        </div>
+      </div>
+
+      <div class="games">
+        <article class="card">
+          <button class="shot card__media" data-full="assets/img/ktrl-1.jpg" aria-label="Enlarge: Ktrl Smash gameplay">
+            <img loading="lazy" src="assets/img/ktrl-1.jpg" alt="Ktrl Smash arena gameplay with scoreboard and elimination feed" width="1600" height="900">
+          </button>
+          <div class="card__body">
+            <h3>Ktrl Smash</h3>
+            <div class="card__meta">Unity · Photon Fusion · AWS dedicated servers · Steam + WebGL · Dec 2025</div>
+            <p>Free-to-play online PvP arena brawler, rated Mostly Positive on Steam. I built the multiplayer layer on Photon Fusion and worked with devops to deploy dedicated servers on AWS.</p>
+            <div class="callout">
+              <span class="mono">Debugging story</span>
+              Ping climbed over each session: <span class="metric">20→60 ms</span> on Windows, <span class="metric">40→100 ms</span> on WebGL. The cause was per-frame work piling up on WebGL's single main thread, made worse by chatty network updates and redundant replicated state. I audited coroutines, cut update rate and payload size, and removed unneeded replicated variables. Ping now stays flat for the whole session.
+            </div>
+            <div class="links">
+              <a class="btn btn--sm" href="https://store.steampowered.com/app/4223440/" target="_blank" rel="noopener">Steam page</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <button class="shot card__media" data-full="assets/img/cursed-1.jpg" aria-label="Enlarge: The Cursed Hour key art">
+            <img loading="lazy" src="assets/img/cursed-1.jpg" alt="The Cursed Hour key art: a ghost with red eyes in a dark corridor" width="1600" height="900">
+          </button>
+          <div class="card__body">
+            <h3>The Cursed Hour</h3>
+            <div class="card__meta">Unreal Engine 5 · 4-player online co-op · EOS + Steam SDK · Nov 2024</div>
+            <p>Co-op survival horror in a haunted mansion. I pitched the original concept and owned the core multiplayer systems through to launch: the ghost NPC, the lobby and session layer, and text and voice chat.</p>
+            <p>I integrated Epic Online Services and the Steam SDK side by side for a planned cross-platform rollout, keeping the session layer backend-agnostic. Around 18–23k estimated players and 129 reviews.</p>
+            <div class="links">
+              <a class="btn btn--sm" href="https://store.steampowered.com/app/3297310/The_Cursed_Hour/" target="_blank" rel="noopener">Steam page</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h3 style="margin:56px 0 18px">More shipped and in-development work</h3>
+      <div class="worklist">
+        <div class="work">
+          <h3>DinoMap Explorer</h3>
+          <div class="card__meta">Unity · AR Foundation · iOS/Android · Team lead</div>
+          <p>Location-based AR game for finding and collecting dinosaurs. Built the AR capture flow, encyclopedia and NFT integration; parts became shared studio components.</p>
+        </div>
+        <div class="work">
+          <h3>Robo XR</h3>
+          <div class="card__meta">Unreal · Meta Quest · Sole developer</div>
+          <p>Robot build-and-battle VR game on the Meta Quest Store. Built robot assembly, combat, enemy AI and DLC support.</p>
+        </div>
+        <div class="work">
+          <h3>Rift Riders</h3>
+          <div class="card__meta">Unreal · iOS/Android</div>
+          <p>Proposed the concept, then built endless track generation, the vehicle pawn, quests and tasks, and Firebase/Play Services.</p>
+        </div>
+        <div class="work">
+          <h3>Fight Hero</h3>
+          <div class="card__meta">Unity · iOS/Android</div>
+          <p>Owned the mech combat loop, enemy waves and upgrade balancing, and directed the art team on combat animation.</p>
+        </div>
+        <div class="work">
+          <h3>Tower of Demons</h3>
+          <div class="card__meta">Unity · Mobile</div>
+          <p>Added game modes, cosmetics, resolution-scalable UI and Firebase-backed player data.</p>
+        </div>
+        <div class="work">
+          <h3>Nutrients Sold Separately</h3>
+          <div class="card__meta">Unreal · Google Play · Epic game jam</div>
+          <p>Team of five, built for the "As Above, So Below" theme and released on the Play Store.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Fab ===== -->
+  <section class="section" id="fab">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Products</p>
+          <h2>Selling on Fab</h2>
+          <p>I design, build and sell Unreal Engine products on Fab, Epic Games' marketplace, from scoping through documentation and store pages to release.</p>
+        </div>
+      </div>
+
+      <div class="fab">
+        <article class="card">
+          <div class="card__body">
+            <div class="fab__icon"><img src="assets/img/hitz-icon.png" alt="" width="128" height="128"></div>
+            <h3>HITZ: Merge Tactics</h3>
+            <div class="card__meta">C++ code plugin · UE 5.8 · Paid listing</div>
+            <p>The auto-battler framework above, packaged as a product with a full documentation site and a playable sample game.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__body">
+            <div class="fab__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="m4 20 4-6 3 2 2-5 4 3 3-1"/><path d="M11 8 8 14"/></svg></div>
+            <h3>Combat Animation Packs</h3>
+            <div class="card__meta">Animation + UE integration · Fab &amp; ArtStation · ~$6,000 revenue</div>
+            <p>Spotted the opportunity, directed the artist team, and built the Unreal integration myself: animation blueprints, state machines, and root-motion and in-place variants. Still earning.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- TODO: rename these three links to the real product names -->
+      <div class="fab__store">
+        Listings on Fab:
+        <a class="btn btn--sm" href="https://www.fab.com/listings/91fac1e6-2f5e-4908-8fdb-4f32dfdc6ad2" target="_blank" rel="noopener">Listing 1 ↗</a>
+        <a class="btn btn--sm" href="https://www.fab.com/listings/5bbba0ca-9f37-4822-8fe5-ce48dcadfbb9" target="_blank" rel="noopener">Listing 2 ↗</a>
+        <a class="btn btn--sm" href="https://www.fab.com/listings/11ad1758-2a82-41f1-824e-5a4e020bc047" target="_blank" rel="noopener">Listing 3 ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Experience ===== -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Experience</p>
+          <h2>Where I've worked</h2>
+        </div>
+      </div>
+      <ol class="timeline">
+        <li class="job">
+          <div class="job__when">Oct 2021 – Present<br>Jaipur, India</div>
+          <div>
+            <h3>Senior Game Developer</h3>
+            <div class="job__org">Fiftyfive Gaming Studio · teams of 5–6</div>
+            <ul>
+              <li>Gameplay, combat and systems programming on titles for PC (Steam), mobile and VR.</li>
+              <li>Owned multiplayer on <b>Ktrl Smash</b> and <b>The Cursed Hour</b>; led <b>DinoMap Explorer</b>.</li>
+              <li>Fixed a persistent iOS <span class="mono">bad_weak_ptr</span> crash caused by Firebase linking twice (Unity prebuilt libraries alongside EDM4U's Swift Package Manager resolution).</li>
+              <li>Led the studio's combat animation packs from idea to store.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="job__when">Jun 2021 – Oct 2021</div>
+          <div>
+            <h3>Unreal Game Developer (Intern)</h3>
+            <div class="job__org">Hyperreality Technologies</div>
+            <ul>
+              <li>Sole developer on <b>Robo XR</b>, shipped to the Meta Quest Store.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="job__when">2018 – 2022</div>
+          <div>
+            <h3>B.Tech, Computer Science</h3>
+            <div class="job__org">Poornima University, Jaipur · Cloud Computing specialization</div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Toolbox</p>
+          <h2>Skills</h2>
+        </div>
+      </div>
+      <div class="skills">
+        <div><h3>Languages</h3><ul class="tags"><li>C++</li><li>C#</li><li>Blueprints</li></ul></div>
+        <div><h3>Multiplayer</h3><ul class="tags"><li>Server-authoritative sim</li><li>Actor replication</li><li>Dedicated servers (AWS)</li><li>Photon Fusion</li><li>EOS</li><li>Steam SDK</li><li>Voice/text chat</li></ul></div>
+        <div><h3>Unreal Engine 5</h3><ul class="tags"><li>C++ modules &amp; plugins</li><li>GAS</li><li>Gameplay Tags</li><li>Editor tooling</li><li>Anim BPs</li><li>MetaHuman</li></ul></div>
+        <div><h3>Unity</h3><ul class="tags"><li>URP</li><li>Burst</li><li>WebGL</li><li>Mobile</li><li>AR Foundation</li></ul></div>
+        <div><h3>Platforms &amp; backend</h3><ul class="tags"><li>Meta Quest</li><li>iOS / Android</li><li>Firebase</li><li>Play Services</li><li>AdMob</li></ul></div>
+        <div><h3>Profiling &amp; tools</h3><ul class="tags"><li>Unreal Insights</li><li>RenderDoc</li><li>GPU Visualizer</li><li>Git</li><li>Perforce</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's build something multiplayer.</h2>
+      <p>I'm open to remote gameplay, multiplayer and tools roles on Unreal or Unity, full-time or contract. I'm based in India (IST, UTC+5:30).</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="mailto:khandelwalaman5@gmail.com">Email me</a>
+        <a class="btn" href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
+      <div class="contact__links">
+        <a href="https://github.com/hitz482" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.artstation.com/hitzsama" target="_blank" rel="noopener">ArtStation</a>
+        <a href="https://www.youtube.com/@amankhandelwal8816" target="_blank" rel="noopener">YouTube</a>
+        <!-- TODO: add LinkedIn: <a href="YOUR_URL" target="_blank" rel="noopener">LinkedIn</a> -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Aman Khandelwal</span>
+    <span>Game screenshots © their respective studios.</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox">
+  <button type="button" aria-label="Close">×</button>
+  <img alt="">
+</dialog>
+
+<script>
+  // Click any screenshot to view it full size.
+  const box = document.getElementById("lightbox");
+  const big = box.querySelector("img");
+  document.querySelectorAll("[data-full]").forEach((el) => {
+    el.addEventListener("click", () => {
+      big.src = el.dataset.full;
+      big.alt = el.querySelector("img")?.alt || "";
+      box.showModal();
+    });
+  });
+  box.addEventListener("click", () => box.close());
+</script>
+</body>
+</html>
