@@ -22,13 +22,24 @@
 </head>
 <body>
 
+<div class="chrome">
+  <div class="wrap">
+    <span class="chrome__dot" aria-hidden="true"></span>
+    <nav class="chrome__menu" aria-hidden="true"><span>File</span><span>Edit</span><span>Window</span><span>Build</span><span>Select</span></nav>
+    <div class="chrome__right">
+      <span class="chrome__live"><i></i>Open to remote · IST</span>
+    </div>
+  </div>
+</div>
+
 <header class="nav">
   <div class="wrap">
     <a class="nav__brand" href="#top"><img src="favicon.svg" alt="" width="28" height="28">Aman Khandelwal</a>
     <ul class="nav__links">
       <li><a href="#work">Work</a></li>
       <li><a href="#games">Games</a></li>
-      <li><a href="#fab">Fab</a></li>
+      <li><a href="#fab">Products</a></li>
+      <li><a href="#packs">Asset Packs</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -51,15 +62,20 @@
           <a class="btn" href="mailto:khandelwalaman5@gmail.com">khandelwalaman5@gmail.com</a>
         </div>
       </div>
-      <img class="hero__figure" src="assets/img/hitz-hero-figure.webp" alt="Unit render from HITZ: Merge Tactics" width="511" height="760">
+      <div class="viewframe">
+        <img class="hero__figure" src="assets/img/hitz-hero-figure.webp" alt="Unit render from HITZ: Merge Tactics" width="511" height="760">
+        <div class="viewframe__hud">[TRIS: 128,540]<br>[FPS: 120]</div>
+      </div>
     </div>
 
     <div class="wrap">
       <div class="stats">
         <div class="stat"><b>5+ yrs</b><small>shipping games in UE5 and Unity</small></div>
         <div class="stat"><b>13.8k</b><small>lines of C++ in my solo UE5 framework</small></div>
-        <div class="stat"><b>18–23k</b><small>estimated players on The Cursed Hour</small></div>
-        <div class="stat"><b>~$6k</b><small>revenue from my Fab animation packs</small></div>
+        <div class="stat"><b>337</b><small>automated tests across my Unity AI framework</small></div>
+        <div class="stat"><b>0.19 ms</b><small>500-agent crowd-sim cost, 0 B GC</small></div>
+        <div class="stat"><b>750+</b><small>assets across my low-poly packs</small></div>
+        <div class="stat"><b>~$6k</b><small>revenue from my Fab/ArtStation animation packs</small></div>
       </div>
     </div>
   </section>
@@ -113,7 +129,7 @@
             <title id="dg-title">Server-authoritative combat: the server locks snapshots, simulates, builds an event log and applies results; clients receive the log and replay it.</title>
             <defs>
               <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6f727a"/></marker>
-              <marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e5322d"/></marker>
+              <marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4ee6c4"/></marker>
             </defs>
             <text class="lane" x="0" y="77">SERVER</text>
             <text class="lane" x="0" y="197">CLIENTS</text>
@@ -243,7 +259,7 @@
         <div>
           <p class="eyebrow">Products</p>
           <h2>Engine tools I sell on Fab</h2>
-          <p>I design, build, document and publish my own products on Fab, Epic Games' marketplace. Three are live and one is in review.</p>
+          <p>I design, build, document and publish my own products on Fab, Epic Games' marketplace. All four are live.</p>
         </div>
       </div>
 
@@ -255,7 +271,7 @@
             <div class="card__meta">Unreal Engine 5.8 · C++ framework · Live on Fab</div>
             <p>Server-authoritative auto-battler framework with board, shop, traits, combat and the full multiplayer round loop. Featured above.</p>
             <div class="links">
-              <!-- TODO: add the HITZ Fab listing link -->
+              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/ead02f11-78dc-43d0-9b92-e5edb8c4cd28" target="_blank" rel="noopener">View on Fab</a>
               <a class="btn btn--sm" href="https://hitz482.github.io/HitzMergeTactics/" target="_blank" rel="noopener">Docs</a>
               <a class="btn btn--sm" href="https://github.com/hitz482/HitzMergeTacticsCodeBase" target="_blank" rel="noopener">Source</a>
             </div>
@@ -280,8 +296,11 @@
           <div class="card__body">
             <h3>HitzGAS Toolkit</h3>
             <div class="card__meta">Unreal Engine 5 · C++ code plugin · Live on Fab</div>
-            <p>Gameplay Ability System without the boilerplate: a live GAS debugger, a ready AttributeSet, six working abilities and nine effects, and a generator that writes a compilable, replicated C++ AttributeSet. Works in Blueprint-only projects.</p>
-            <!-- TODO: add the HitzGAS Toolkit Fab listing link -->
+            <p>Gameplay Ability System without the boilerplate: three drop-in components, a live GAS debugger, a DataTable-driven attribute set, six sample abilities/effects, and a generator that writes a compilable, replicated C++ AttributeSet. Works in Blueprint-only projects.</p>
+            <div class="links">
+              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/5bbba0ca-9f37-4822-8fe5-ce48dcadfbb9" target="_blank" rel="noopener">View on Fab</a>
+              <a class="btn btn--sm" href="https://hitz482.github.io/HitzGasToolkit/" target="_blank" rel="noopener">Product site</a>
+            </div>
           </div>
         </article>
 
@@ -289,15 +308,60 @@
           <div class="card__media"><img loading="lazy" src="assets/img/aisuite-cover.jpg" alt="Hitz AI Suite boss fight sample in Unity" width="1280" height="720"></div>
           <div class="card__body">
             <h3>Hitz AI Suite</h3>
-            <div class="card__meta">Unity 6 · C# + Burst · In Fab review</div>
-            <p>Perception, EQS, behavior trees, state machines, ORCA crowd avoidance and smart objects that share one scheduler and one debugger. 500 agents run in 0.67 ms median per frame with no per-frame allocations, backed by 360+ automated tests.</p>
+            <div class="card__meta">Unity 6000.3 LTS+ · C# · Live on Fab</div>
+            <p>Perception, EQS, Behavior Trees, Smart Objects and crowd simulation, plus a bridge into Unity's own Behavior package — all sharing a GraphView-based Behavior Tree editor. A 500-agent crowd benchmark holds 0.19 ms median per frame with zero GC allocation (measured in the Unity Editor), backed by 337 automated tests.</p>
+            <div class="links">
+              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/53974d58-8b16-41f3-ba25-da18639515f5" target="_blank" rel="noopener">View on Fab</a>
+            </div>
           </div>
         </article>
       </div>
 
       <div class="callout" style="margin-top:24px">
         <span class="mono">Also</span>
-        Combat animation packs on Fab and ArtStation (~$6,000 revenue): I directed the artist team and built the Unreal integration, with animation blueprints, state machines, and root-motion and in-place variants.
+        Combat animation packs on <a href="https://www.artstation.com/hitzsama" target="_blank" rel="noopener">ArtStation</a> and Fab (~$6,000 revenue): I directed the artist team and built the Unreal integration, with animation blueprints, state machines, and root-motion and in-place variants.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Asset packs ===== -->
+  <section class="section" id="packs">
+    <div class="wrap">
+      <div class="packs-panel">
+        <p class="eyebrow">Also on Fab</p>
+        <h2>Cozy Kingdom — low-poly asset packs</h2>
+        <p>A different kind of product: hand-authored low-poly environment packs for Unity and UE5, built with a custom Blender/Python procedural generation pipeline so every pack shares one art style and one demo layout.</p>
+
+        <div class="packs">
+          <article class="pack">
+            <div class="pack__media"><img loading="lazy" src="assets/img/kingdom-cover.png" alt="Cozy Kingdom Builder Kit overview render" width="1200" height="630"></div>
+            <div class="pack__body">
+              <h3>Cozy Kingdom Builder Kit</h3>
+              <div class="pack__meta">751 assets · Unity + UE5 · Live</div>
+              <p>The base kit: modular houses, a castle, a farm, nature and water sets, ready to lay out as a village.</p>
+              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/6ff1dd0a-1eb8-45f7-b7e8-00009421a204" target="_blank" rel="noopener">View on Fab</a>
+            </div>
+          </article>
+
+          <article class="pack">
+            <div class="pack__media"><img loading="lazy" src="assets/img/xmas-cover.png" alt="Cozy Christmas Village overview render" width="1200" height="630"></div>
+            <div class="pack__body">
+              <h3>Cozy Christmas Village</h3>
+              <div class="pack__meta">123 assets · Unity + UE5 · Live</div>
+              <p>A festive expansion: a market, a workshop, a rink and holiday decor built on the same base style.</p>
+              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/91fac1e6-2f5e-4908-8fdb-4f32dfdc6ad2" target="_blank" rel="noopener">View on Fab</a>
+            </div>
+          </article>
+
+          <article class="pack pack--pending">
+            <div class="pack__media"><img loading="lazy" src="assets/img/halloween-cover.png" alt="Cozy Halloween Village overview render" width="1200" height="630"></div>
+            <div class="pack__body">
+              <h3>Cozy Halloween Village<span class="badge-pending">Pending approval</span></h3>
+              <div class="pack__meta">109 assets · Unity + UE5</div>
+              <p>A graveyard, a witch's manor, pumpkins and street decor — submitted to Fab, awaiting approval.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -375,6 +439,7 @@
       <div class="hero__cta">
         <a class="btn btn--primary" href="mailto:khandelwalaman5@gmail.com">Email me</a>
         <a class="btn" href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <a class="btn" href="assets/Aman_Khandelwal_Resume_Full.pdf" target="_blank" rel="noopener">Full resume (PDF)</a>
       </div>
       <div class="contact__links">
         <a href="https://github.com/hitz482" target="_blank" rel="noopener">GitHub</a>
