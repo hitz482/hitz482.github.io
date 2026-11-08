@@ -17,18 +17,33 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="chrome">
-  <div class="wrap">
-    <span class="chrome__dot" aria-hidden="true"></span>
-    <nav class="chrome__menu" aria-hidden="true"><span>File</span><span>Edit</span><span>Window</span><span>Build</span><span>Select</span></nav>
-    <div class="chrome__right">
-      <span class="chrome__live"><i></i>Open to remote · IST</span>
-    </div>
+<div class="titlebar" aria-hidden="true">
+  <div class="wrap titlebar__row">
+    <span class="titlebar__mark">U</span>
+    <nav class="titlebar__menu"><span>File</span><span>Edit</span><span>Window</span><span>Tools</span><span>Build</span><span>Select</span><span>Actor</span><span>Help</span></nav>
+    <div class="titlebar__win"><i></i><i></i><i></i></div>
+  </div>
+</div>
+
+<div class="vtabbar" aria-hidden="true">
+  <div class="wrap vtabbar__row">
+    <span class="vtabbar__tab">Viewport <i>×</i></span>
+    <span class="vtabbar__drop">Perspective ⌄</span>
+    <span class="vtabbar__drop">Lit ⌄</span>
+    <span class="vtabbar__drop">Show ⌄</span>
+    <span class="vtabbar__tools">
+      <i class="vt-ico vt-ico--on"></i><i class="vt-ico"></i><i class="vt-ico"></i><i class="vt-ico"></i>
+    </span>
+    <span class="vtabbar__play"><i>▶</i><i>■</i></span>
+    <span class="vtabbar__drop">Build ⌄</span>
+    <span class="vtabbar__right">
+      <i class="vt-dot">⚠</i><i class="vt-dot">⌁</i><i class="vt-dot">⎇</i><i class="vt-dot">⚙</i><i class="vt-dot">☺</i>
+    </span>
   </div>
 </div>
 
@@ -53,18 +68,41 @@
   <section class="hero">
     <div class="wrap hero__grid">
       <div>
-        <div class="hero__status"><i></i>Open to remote roles · IST (UTC+5:30)</div>
-        <h1>Aman Khandelwal<span>Gameplay &amp; Systems Programmer — Unreal Engine 5 / Unity</span></h1>
-        <p class="hero__lede">I build multiplayer games end to end: server-authoritative netcode, gameplay systems and the editor tools that let designers ship without me. Five-plus years and titles live on Steam, Google Play, the App Store and the Meta Quest Store.</p>
+        <p class="eyebrow">// Portfolio</p>
+        <h1 class="hero__name">AMAN<br><span class="nowrap">KHANDELWAL<i class="hero__cursor" aria-hidden="true"></i></span></h1>
+        <p class="hero__role mono">Senior Gameplay Programmer</p>
+        <p class="hero__tags mono">Gameplay Systems / Combat Design / Multiplayer<br>Unity / Unreal Engine / Game Development</p>
+
+        <ul class="skillchips" aria-label="Core stack">
+          <li title="Unreal Engine 5"><span class="mono">UE5</span></li>
+          <li title="Unity"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 L21 19 L3 19 Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></li>
+          <li title="C#"><span class="mono">C#</span></li>
+          <li title="Systems &amp; AI"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2.2" fill="currentColor"/><circle cx="19" cy="6" r="2.2" fill="currentColor"/><circle cx="12" cy="18" r="2.2" fill="currentColor"/><path d="M6.8 7.2 10.5 16.5 M17.2 7.2 13.5 16.5 M7.2 6 16.8 6" stroke="currentColor" stroke-width="1.3" fill="none"/></svg></li>
+          <li title="Gameplay"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="8" width="20" height="9" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 10.5v4M5 12.5h4" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="11" r="1.1" fill="currentColor"/><circle cx="19.2" cy="13.2" r="1.1" fill="currentColor"/></svg></li>
+          <li title="Code"><span class="mono">&lt;/&gt;</span></li>
+        </ul>
+
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#work">See the work</a>
-          <a class="btn" href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener">Download resume</a>
-          <a class="btn" href="mailto:khandelwalaman5@gmail.com">khandelwalaman5@gmail.com</a>
+          <a class="btn btn--primary" href="#work"><i class="mono">▶</i> View Projects</a>
+          <a class="btn btn--outline" href="#experience">About Me</a>
+        </div>
+        <p class="hero__links mono">
+          <a href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener">Download resume</a> ·
+          <a href="mailto:khandelwalaman5@gmail.com">khandelwalaman5@gmail.com</a>
+        </p>
+
+        <p class="eyebrow" style="margin-top:34px">// Selected Projects</p>
+        <div class="projpills">
+          <a class="projpill" href="#ktrl-smash"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="8" width="20" height="9" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 10.5v4M5 12.5h4" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="11" r="1.1" fill="currentColor"/><circle cx="19.2" cy="13.2" r="1.1" fill="currentColor"/></svg>Ktrl Smash</a>
+          <a class="projpill" href="#dinomap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16c2-6 6-9 11-9 2 0 3 1 3 1l2-2 1 1-2 2s1 2 1 4c0 3-3 5-7 5-4 0-7-1-9-2z" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="16" cy="9" r=".8" fill="currentColor"/></svg>DinoMap Explorer</a>
+          <a class="projpill" href="#cursed-hour"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c2 3-2 4-2 7a2 2 0 0 0 4 0c0-1-1-1.5-1-2.5 1 1 2 2.5 2 4.5a3 3 0 0 1-6 0c0-4 3-5 3-9z" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="9" y="16" width="6" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>The Cursed Hour</a>
         </div>
       </div>
-      <div class="viewframe">
-        <img class="hero__figure" src="assets/img/hitz-hero-figure.webp" alt="Unit render from HITZ: Merge Tactics" width="511" height="760">
-        <div class="viewframe__hud">[TRIS: 128,540]<br>[FPS: 120]</div>
+
+      <div class="viewframe heroshot">
+        <svg class="gizmo" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 20V4" stroke="#5b8cff" stroke-width="1.6"/><path d="M20 20H34" stroke="#e5484d" stroke-width="1.6"/><path d="M20 20L10 30" stroke="#46c27a" stroke-width="1.6"/><text x="18" y="3" fill="#5b8cff" font-size="7" font-family="monospace">Z</text><text x="35" y="23" fill="#e5484d" font-size="7" font-family="monospace">X</text><text x="6" y="33" fill="#46c27a" font-size="7" font-family="monospace">Y</text></svg>
+        <img class="hero__figure hero__figure--photo" src="assets/img/profile-photo.jpg" alt="Aman Khandelwal on the Manali–Leh Highway, Ladakh" width="400" height="400">
+        <div class="viewframe__hud">[LOCATION: MANALI–LEH HWY]<br>[STATUS: EXPLORING]</div>
       </div>
     </div>
 
@@ -182,7 +220,7 @@
       </div>
 
       <div class="games">
-        <article class="card">
+        <article class="card" id="ktrl-smash">
           <button class="shot card__media" data-full="assets/img/ktrl-1.jpg" aria-label="Enlarge: Ktrl Smash gameplay">
             <img loading="lazy" src="assets/img/ktrl-1.jpg" alt="Ktrl Smash arena gameplay with scoreboard and elimination feed" width="1600" height="900">
           </button>
@@ -200,7 +238,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="cursed-hour">
           <button class="shot card__media" data-full="assets/img/cursed-1.jpg" aria-label="Enlarge: The Cursed Hour key art">
             <img loading="lazy" src="assets/img/cursed-1.jpg" alt="The Cursed Hour key art: a ghost with red eyes in a dark corridor" width="1600" height="900">
           </button>
@@ -218,7 +256,7 @@
 
       <h3 style="margin:56px 0 18px">More shipped and in-development work</h3>
       <div class="worklist">
-        <div class="work">
+        <div class="work" id="dinomap">
           <h3>DinoMap Explorer</h3>
           <div class="card__meta">Unity · AR Foundation · iOS/Android · Team lead</div>
           <p>Location-based AR game for finding and collecting dinosaurs. Built the AR capture flow, encyclopedia and NFT integration; parts became shared studio components.</p>
