@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aman Khandelwal — Gameplay & Systems Programmer</title>
-  <meta name="description" content="Gameplay and systems programmer, 5+ years shipping multiplayer games in Unreal Engine 5 and Unity. Author of HITZ: Merge Tactics, a UE5 auto-battler framework on Fab.">
+  <title>Aman Khandelwal — Senior Gameplay &amp; Systems Programmer (UE5 / Unity)</title>
+  <meta name="description" content="Senior gameplay and systems programmer, 5+ years shipping multiplayer games in Unreal Engine 5 and Unity. Author of HITZ: Merge Tactics and Hitz AI Suite on Fab.">
   <meta name="theme-color" content="#0b0c0f">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Aman Khandelwal — Gameplay & Systems Programmer (UE5 / Unity)">
-  <meta property="og:description" content="Multiplayer netcode, gameplay systems and editor tooling. Shipped on Steam, Google Play, the App Store and Meta Quest.">
+  <meta property="og:title" content="Aman Khandelwal — Senior Gameplay &amp; Systems Programmer (UE5 / Unity)">
+  <meta property="og:description" content="Multiplayer netcode, gameplay systems, AI frameworks and editor tooling. Shipped on Steam, Google Play, the App Store and Meta Quest.">
   <meta property="og:image" content="https://hitz482.github.io/assets/img/hitz-screenshot-overview.jpg">
   <meta property="og:url" content="https://hitz482.github.io/">
   <meta name="twitter:card" content="summary_large_image">
@@ -17,10 +17,60 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7 3 12l5 5M16 7l5 5-5 5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/><path d="M7.5 15h9"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 18 4-6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 2 21 7v10l-9 5-9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h6l2 2h10v11H3z"/></symbol>
+  <symbol id="i-folder-open" viewBox="0 0 24 24"><path d="M3 7V5h6l2 2h8v3"/><path d="M3 19 6 10h16l-3 9z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01"/></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="4" rx="1"/><rect x="3" y="17" width="6" height="4" rx="1"/><rect x="15" y="17" width="6" height="4" rx="1"/><path d="M12 7v5M6 17v-5h12v5"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20v-9M10 20V5M16 20v-6M2 20h20"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v5M15 2v5M6 7h12v4a6 6 0 0 1-12 0zM12 17v5"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></symbol>
+  <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="m6 9 3 3-3 3M12 15h6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-gamepad" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="5"/><path d="M7 10v4M5 12h4"/><path d="M16 11h.01M18 13h.01" stroke-width="2.6"/></symbol>
+  <symbol id="i-dino" viewBox="0 0 24 24"><path d="M3 16c2-6 6-9 11-9 2 0 3 1 3 1l2-2 1 1-2 2s1 2 1 4c0 3-3 5-7 5-4 0-7-1-9-2z"/><path d="M16 9.5h.01" stroke-width="2.6"/></symbol>
+  <symbol id="i-candle" viewBox="0 0 24 24"><path d="M12 2c2 3-2 4-2 7a2 2 0 0 0 4 0c0-1-1-1.5-1-2.5"/><rect x="9" y="12" width="6" height="9" rx="1"/></symbol>
+  <symbol id="i-xr" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="4"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 16v-4l2-5h14l2 5v4z"/><path d="M3 12h18"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></symbol>
+  <symbol id="i-sword" viewBox="0 0 24 24"><path d="M14.5 3H21v6.5L10 20.5 3.5 14z"/><path d="M6 17l-3 3M8 12l4 4"/></symbol>
+  <symbol id="i-tower" viewBox="0 0 24 24"><path d="M6 21V9h12v12M5 9h14M6 5v4M10 5v4M14 5v4M18 5v4M10 21v-5h4v5"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C5 10 11 5 20 5c0 9-5 15-14 15"/><path d="m5 19 8-8"/></symbol>
+  <symbol id="i-unity" viewBox="0 0 24 24"><path d="M12 3 21 19H3z"/></symbol>
+  <symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M6.8 7.6 10.6 16.2M17.2 7.6 13.4 16.2M7.2 6h9.6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></symbol>
+  <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="7" r="2"/><path d="M6 7v10M18 9c0 5-7 4-11 8"/></symbol>
+  <symbol id="i-cursor" viewBox="0 0 24 24"><path d="M5 3l13 8-6 1.5L9 19z"/></symbol>
+  <symbol id="i-move" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/></symbol>
+  <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 4v5h-5"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/><path d="M4 10h6V4M20 14h-6v6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+  <symbol id="i-memory" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+  <symbol id="i-agents" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M15 20a5 5 0 0 1 7-4.5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-skipb" viewBox="0 0 24 24"><path d="M6 5v14M19 5 9 12l10 7z"/></symbol>
+  <symbol id="i-skipf" viewBox="0 0 24 24"><path d="M18 5v14M5 5l10 7-10 7z"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9v6l5-3z"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="9" cy="9" r="2"/><path d="m21 16-5-5L5 20"/></symbol>
+</svg>
 
 <div class="titlebar" aria-hidden="true">
   <div class="wrap titlebar__row">
@@ -32,24 +82,27 @@
 
 <div class="vtabbar" aria-hidden="true">
   <div class="wrap vtabbar__row">
-    <span class="vtabbar__tab">Viewport <i>×</i></span>
+    <span class="vtabbar__tab"><svg class="ic"><use href="#i-cube"/></svg>Viewport <i>×</i></span>
     <span class="vtabbar__drop">Perspective ⌄</span>
     <span class="vtabbar__drop">Lit ⌄</span>
     <span class="vtabbar__drop">Show ⌄</span>
     <span class="vtabbar__tools">
-      <i class="vt-ico vt-ico--on"></i><i class="vt-ico"></i><i class="vt-ico"></i><i class="vt-ico"></i>
+      <span class="is-on"><svg class="ic"><use href="#i-cursor"/></svg></span>
+      <span><svg class="ic"><use href="#i-move"/></svg></span>
+      <span><svg class="ic"><use href="#i-rotate"/></svg></span>
+      <span><svg class="ic"><use href="#i-scale"/></svg></span>
     </span>
-    <span class="vtabbar__play"><i>▶</i><i>■</i></span>
+    <span class="vtabbar__play"><i><svg class="ic"><use href="#i-play"/></svg></i><i>■</i></span>
     <span class="vtabbar__drop">Build ⌄</span>
     <span class="vtabbar__right">
-      <i class="vt-dot">⚠</i><i class="vt-dot">⌁</i><i class="vt-dot">⎇</i><i class="vt-dot">⚙</i><i class="vt-dot">☺</i>
+      <svg class="ic"><use href="#i-alert"/></svg><svg class="ic"><use href="#i-chart"/></svg><svg class="ic"><use href="#i-branch"/></svg><svg class="ic"><use href="#i-gear"/></svg><svg class="ic"><use href="#i-user"/></svg>
     </span>
   </div>
 </div>
 
 <header class="nav">
   <div class="wrap">
-    <a class="nav__brand" href="#top"><img src="favicon.svg" alt="" width="28" height="28">Aman Khandelwal</a>
+    <a class="nav__brand" href="#top"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg>AMAN KHANDELWAL</a>
     <ul class="nav__links">
       <li><a href="#work">Work</a></li>
       <li><a href="#games">Games</a></li>
@@ -58,7 +111,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="btn btn--sm" href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    <a class="btn btn--cyan btn--sm" href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Resume</a>
   </div>
 </header>
 
@@ -68,296 +121,318 @@
   <section class="hero">
     <div class="wrap hero__grid">
       <div>
-        <p class="eyebrow">// Portfolio</p>
-        <h1 class="hero__name">AMAN<br><span class="nowrap">KHANDELWAL<i class="hero__cursor" aria-hidden="true"></i></span></h1>
-        <p class="hero__role mono">Senior Gameplay Programmer</p>
-        <p class="hero__tags mono">Gameplay Systems / Combat Design / Multiplayer<br>Unity / Unreal Engine / Game Development</p>
+        <p class="eyebrow hero-in">// Portfolio</p>
+        <h1 class="hero__name hero-in" style="--d:.05s" aria-label="Aman Khandelwal"><span data-type>AMAN</span><br><span class="nowrap"><span data-type>KHANDELWAL</span><i class="hero__cursor" aria-hidden="true"></i></span></h1>
+        <p class="hero__role mono hero-in" style="--d:.15s">Senior Gameplay Programmer</p>
+        <p class="hero__tags mono hero-in" style="--d:.2s">Gameplay Systems / Combat Design / Multiplayer<br>Unity / Unreal Engine / Game Development</p>
 
         <ul class="skillchips" aria-label="Core stack">
-          <li title="Unreal Engine 5"><span class="mono">UE5</span></li>
-          <li title="Unity"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 L21 19 L3 19 Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></li>
-          <li title="C#"><span class="mono">C#</span></li>
-          <li title="Systems &amp; AI"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2.2" fill="currentColor"/><circle cx="19" cy="6" r="2.2" fill="currentColor"/><circle cx="12" cy="18" r="2.2" fill="currentColor"/><path d="M6.8 7.2 10.5 16.5 M17.2 7.2 13.5 16.5 M7.2 6 16.8 6" stroke="currentColor" stroke-width="1.3" fill="none"/></svg></li>
-          <li title="Gameplay"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="8" width="20" height="9" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 10.5v4M5 12.5h4" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="11" r="1.1" fill="currentColor"/><circle cx="19.2" cy="13.2" r="1.1" fill="currentColor"/></svg></li>
-          <li title="Code"><span class="mono">&lt;/&gt;</span></li>
+          <li class="hero-in" style="--d:.28s" title="Unreal Engine 5"><span class="mono">UE5</span></li>
+          <li class="hero-in" style="--d:.32s" title="Unity"><svg class="ic" aria-hidden="true"><use href="#i-unity"/></svg></li>
+          <li class="hero-in" style="--d:.36s" title="C#"><span class="mono">C#</span></li>
+          <li class="hero-in" style="--d:.40s" title="Systems &amp; AI"><svg class="ic" aria-hidden="true"><use href="#i-nodes"/></svg></li>
+          <li class="hero-in" style="--d:.44s" title="Gameplay"><svg class="ic" aria-hidden="true"><use href="#i-gamepad"/></svg></li>
+          <li class="hero-in" style="--d:.48s" title="C++"><span class="mono">&lt;/&gt;</span></li>
         </ul>
 
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#work"><i class="mono">▶</i> View Projects</a>
-          <a class="btn btn--outline" href="#experience">About Me</a>
+        <div class="hero__cta hero-in" style="--d:.5s">
+          <a class="btn btn--primary btn--lg" href="#work"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg>View Projects</a>
+          <a class="btn btn--outline btn--lg" href="#experience"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg>About Me</a>
         </div>
-        <p class="hero__links mono">
+        <p class="hero__links mono hero-in" style="--d:.55s">
           <a href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener">Download resume</a> ·
           <a href="mailto:khandelwalaman5@gmail.com">khandelwalaman5@gmail.com</a>
         </p>
 
-        <p class="eyebrow" style="margin-top:34px">// Selected Projects</p>
-        <div class="projpills">
-          <a class="projpill" href="#ktrl-smash"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="8" width="20" height="9" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 10.5v4M5 12.5h4" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="11" r="1.1" fill="currentColor"/><circle cx="19.2" cy="13.2" r="1.1" fill="currentColor"/></svg>Ktrl Smash</a>
-          <a class="projpill" href="#dinomap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16c2-6 6-9 11-9 2 0 3 1 3 1l2-2 1 1-2 2s1 2 1 4c0 3-3 5-7 5-4 0-7-1-9-2z" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="16" cy="9" r=".8" fill="currentColor"/></svg>DinoMap Explorer</a>
-          <a class="projpill" href="#cursed-hour"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c2 3-2 4-2 7a2 2 0 0 0 4 0c0-1-1-1.5-1-2.5 1 1 2 2.5 2 4.5a3 3 0 0 1-6 0c0-4 3-5 3-9z" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="9" y="16" width="6" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>The Cursed Hour</a>
+        <p class="eyebrow hero-in" style="--d:.6s;margin-top:30px">// Selected Projects</p>
+        <div class="projpills hero-in" style="--d:.65s">
+          <a class="projpill" href="#ktrl-smash"><svg class="ic" aria-hidden="true"><use href="#i-gamepad"/></svg>Ktrl Smash</a>
+          <a class="projpill" href="#dinomap"><svg class="ic" aria-hidden="true"><use href="#i-dino"/></svg>DinoMap Explorer</a>
+          <a class="projpill" href="#cursed-hour"><svg class="ic" aria-hidden="true"><use href="#i-candle"/></svg>The Cursed Hour</a>
         </div>
       </div>
 
-      <div class="viewframe heroshot">
-        <svg class="gizmo" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 20V4" stroke="#5b8cff" stroke-width="1.6"/><path d="M20 20H34" stroke="#e5484d" stroke-width="1.6"/><path d="M20 20L10 30" stroke="#46c27a" stroke-width="1.6"/><text x="18" y="3" fill="#5b8cff" font-size="7" font-family="monospace">Z</text><text x="35" y="23" fill="#e5484d" font-size="7" font-family="monospace">X</text><text x="6" y="33" fill="#46c27a" font-size="7" font-family="monospace">Y</text></svg>
-        <img class="hero__figure hero__figure--photo" src="assets/img/profile-photo.jpg" alt="Aman Khandelwal on the Manali–Leh Highway, Ladakh" width="400" height="400">
-        <div class="viewframe__hud">[LOCATION: MANALI–LEH HWY]<br>[STATUS: EXPLORING]</div>
+      <div class="heroshot brackets hero-in" style="--d:.2s">
+        <svg class="gizmo" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 20V4" stroke="#5b8cff" stroke-width="1.6"/><path d="M20 20H34" stroke="#e5484d" stroke-width="1.6"/><path d="M20 20 10 30" stroke="#46c27a" stroke-width="1.6"/><text x="18" y="3" fill="#5b8cff" font-size="7" font-family="monospace">Z</text><text x="35" y="23" fill="#e5484d" font-size="7" font-family="monospace">X</text><text x="6" y="34" fill="#46c27a" font-size="7" font-family="monospace">Y</text></svg>
+        <div class="photo scan"><img src="assets/img/profile-photo.jpg" alt="Aman Khandelwal on the Manali–Leh Highway" width="400" height="400"></div>
+        <div class="hud mono" aria-hidden="true">[LOCATION: MANALI–LEH HWY]<br>[STATUS: EXPLORING]</div>
       </div>
     </div>
 
     <div class="wrap">
-      <div class="stats">
-        <div class="stat"><b>5+ yrs</b><small>shipping games in UE5 and Unity</small></div>
-        <div class="stat"><b>13.8k</b><small>lines of C++ in my solo UE5 framework</small></div>
-        <div class="stat"><b>337</b><small>automated tests across my Unity AI framework</small></div>
-        <div class="stat"><b>0.19 ms</b><small>500-agent crowd-sim cost, 0 B GC</small></div>
-        <div class="stat"><b>750+</b><small>assets across my low-poly packs</small></div>
-        <div class="stat"><b>~$6k</b><small>revenue from my Fab/ArtStation animation packs</small></div>
+      <div class="statstrip reveal">
+        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><div><b data-to="5" data-suf="+">5+</b><small>Years shipping games</small></div></div>
+        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg><div><b data-to="13.8" data-dec="1" data-suf="k">13.8k</b><small>Lines of C++ · solo framework</small></div></div>
+        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-flask"/></svg><div><b data-to="337">337</b><small>Automated tests passing</small></div></div>
+        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-gauge"/></svg><div><b data-to="0.19" data-dec="2" data-suf=" ms">0.19 ms</b><small>500-agent crowd frame</small></div></div>
+        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-cube"/></svg><div><b data-to="750" data-suf="+">750+</b><small>Low-poly assets on Fab</small></div></div>
+        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-coin"/></svg><div><b data-to="6" data-pre="~$" data-suf="k">~$6k</b><small>Animation-pack revenue</small></div></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Featured: HITZ ===== -->
+  <!-- ===== Featured: HITZ Merge Tactics ===== -->
   <section class="section" id="work">
     <div class="wrap">
-      <div class="section__head">
+      <div class="sec-head reveal">
         <div>
-          <p class="eyebrow">Featured · Solo project · On Fab</p>
-          <h2>HITZ: Merge Tactics</h2>
-          <p>A server-authoritative auto-battler framework for Unreal Engine 5.8. Built alone, published as a paid product, and designed so buyers can ship a full game without writing C++.</p>
+          <p class="eyebrow">// Featured case study · solo · on Fab</p>
+          <h2 class="sec-title">HITZ: Merge Tactics</h2>
         </div>
+        <ul class="chips"><li>UE 5.8</li><li>C++</li><li>Auto-battler</li><li>Replication</li><li>Multiplayer</li></ul>
       </div>
 
-      <div class="feature">
-        <div>
-          <button class="shot" data-full="assets/img/hitz-screenshot-overview.jpg" aria-label="Enlarge: framework overview">
-            <img src="assets/img/hitz-screenshot-overview.jpg" alt="Overview of the HITZ framework: board layouts, shop, traits, combat, 3D viewer and material painter" width="1672" height="941">
-          </button>
-          <div class="gallery">
-            <button class="shot" data-full="assets/img/hitz-screenshot-combat.jpg" aria-label="Enlarge: combat and prep phases"><img loading="lazy" src="assets/img/hitz-screenshot-combat.jpg" alt="Combat and prep phases on a hex grid" width="1672" height="941"></button>
-            <button class="shot" data-full="assets/img/hitz-screenshot-editor.jpg" aria-label="Enlarge: board layout painter"><img loading="lazy" src="assets/img/hitz-screenshot-editor.jpg" alt="Board layout data asset and material painter in the editor" width="1672" height="941"></button>
-            <button class="shot" data-full="assets/img/hitz-screenshot-preview.jpg" aria-label="Enlarge: unit preview editor"><img loading="lazy" src="assets/img/hitz-screenshot-preview.jpg" alt="Unit definition editor with live 3D preview" width="1672" height="941"></button>
+      <div class="grid-merge">
+        <div class="panel reveal">
+          <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-cube"/></svg>BoardLayout_Hex<i>×</i></span><span class="panel__right">click a thumbnail to swap</span></div>
+          <div class="vp-tools" aria-hidden="true"><span>Perspective ⌄</span><span>Lit ⌄</span><span>Show ⌄</span><svg class="ic"><use href="#i-cursor"/></svg><svg class="ic"><use href="#i-move"/></svg><svg class="ic"><use href="#i-rotate"/></svg></div>
+          <div class="vp-stage">
+            <div class="brackets brackets--sm">
+              <button class="shot vp-main scan" data-full="assets/img/hitz-screenshot-overview.jpg" aria-label="Enlarge screenshot">
+                <img src="assets/img/hitz-screenshot-overview.jpg" alt="Overview of the HITZ framework: board layouts, shop, traits, combat, 3D viewer and material painter" width="1672" height="941">
+              </button>
+            </div>
+          </div>
+          <div class="vp-thumbs">
+            <button class="vp-thumb is-active" data-src="assets/img/hitz-screenshot-overview.jpg" aria-label="Show framework overview"><img loading="lazy" src="assets/img/hitz-screenshot-overview.jpg" alt="Overview of the HITZ framework: board layouts, shop, traits, combat, 3D viewer and material painter" width="1672" height="941"></button>
+            <button class="vp-thumb" data-src="assets/img/hitz-screenshot-combat.jpg" aria-label="Show combat and prep phases"><img loading="lazy" src="assets/img/hitz-screenshot-combat.jpg" alt="Combat and prep phases on a hex grid" width="1672" height="941"></button>
+            <button class="vp-thumb" data-src="assets/img/hitz-screenshot-editor.jpg" aria-label="Show board layout painter"><img loading="lazy" src="assets/img/hitz-screenshot-editor.jpg" alt="Board layout data asset and material painter in the editor" width="1672" height="941"></button>
+            <button class="vp-thumb" data-src="assets/img/hitz-screenshot-preview.jpg" aria-label="Show unit preview editor"><img loading="lazy" src="assets/img/hitz-screenshot-preview.jpg" alt="Unit definition editor with live 3D preview" width="1672" height="941"></button>
           </div>
         </div>
 
-        <div>
-          <ul class="tags">
-            <li>UE 5.8</li><li>C++</li><li>Replication</li><li>GAS</li><li>Editor modules</li><li>Data assets</li>
-          </ul>
-          <ul class="points">
-            <li><b>Server-authoritative combat.</b> The server locks board snapshots, simulates, and replicates a compact event log that clients replay. Clients never compute outcomes, so match results can't be cheated.</li>
-            <li><b>Four modules, cleanly split.</b> <span class="mono">HMT_Core</span> (6.2k lines), <span class="mono">HMT_CoreEditor</span> (1.3k) and <span class="mono">HMT_GASBridge</span> (0.3k), plus a separate sample game (6.0k). Drop the framework into a project by copying three folders.</li>
-            <li><b>Blueprint-first extension.</b> Four interfaces (stat provider, targeting, trait effect, ability executor) cover every extension point without C++.</li>
-            <li><b>GAS bridge.</b> Maps the stat interface onto an existing <span class="mono">AttributeSet</span>, per unit, with zero changes elsewhere.</li>
-            <li><b>Editor tooling.</b> Click-to-paint board editor, unit asset editor with live 3D preview and montage playback, and a save-time validator.</li>
-            <li><b>Full round loop.</b> Prep, combat and results phases, recency-weighted pairing, ghost boards for odd lobbies, PvE rounds, spectating and late-join. Hex and square grids from one asset.</li>
-          </ul>
-          <div class="links">
-            <a class="btn btn--primary btn--sm" href="https://github.com/hitz482/HitzMergeTacticsCodeBase" target="_blank" rel="noopener">Source on GitHub</a>
-            <a class="btn btn--sm" href="https://hitz482.github.io/HitzMergeTactics/" target="_blank" rel="noopener">Documentation</a>
-            <!-- TODO: add "View on Fab" once the HITZ listing link is confirmed -->
+        <div class="stack">
+          <div class="panel reveal" style="--d:.1s">
+            <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>Details<i>×</i></span></div>
+            <dl class="props">
+              <div><dt>Overview</dt><dd>Server-authoritative auto-battler framework for Unreal Engine 5.8. Built alone (~13,800 lines of C++), published as a paid, source-available product, and designed so buyers ship a full game without writing C++.</dd></div>
+              <div><dt>Netcode</dt><dd>The server locks board snapshots, simulates, and replicates a compact event log that clients replay. Clients never compute outcomes, so match results can't be cheated.</dd></div>
+              <div><dt>Modules</dt><dd><code>HMT_Core</code> 6.2k lines, <code>HMT_CoreEditor</code> 1.3k and <code>HMT_GASBridge</code> 0.3k, plus a 6.0k sample game. Drops into a project by copying three folders.</dd></div>
+              <div><dt>Extension</dt><dd>Four Blueprint interfaces (stat provider, targeting, trait effect, ability executor) cover every extension point. A GAS bridge maps stats onto an existing <code>AttributeSet</code> per unit.</dd></div>
+              <div><dt>Editor tools</dt><dd>Click-to-paint board editor, unit editor with live 3D preview and montage playback, and a save-time validator across seven data-asset types.</dd></div>
+              <div><dt>Round loop</dt><dd>Prep, combat and results phases, recency-weighted pairing, ghost boards for odd lobbies, PvE rounds, spectating and late-join. Hex and square grids from one asset.</dd></div>
+            </dl>
+            <div class="panel__actions">
+              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/ead02f11-78dc-43d0-9b92-e5edb8c4cd28" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg>View on Fab</a>
+              <a class="btn btn--outline btn--sm" href="https://github.com/hitz482/HitzMergeTacticsCodeBase" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg>Source</a>
+              <a class="btn btn--outline btn--sm" href="https://hitz482.github.io/HitzMergeTactics/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Docs</a>
+            </div>
+          </div>
+
+          <div class="panel reveal" style="--d:.2s">
+            <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-tree"/></svg>GameplayFlow (Blueprint)<i>×</i></span></div>
+            <div class="bp" role="img" aria-label="Server locks a snapshot, simulates combat, replicates a compact event log, and clients replay it visually.">
+              <div class="bp-node"><b>Lock snapshot</b><small>Server · authority</small></div>
+              <span class="bp-wire"></span>
+              <div class="bp-node"><b>Simulate</b><small>Combat · targeting</small></div>
+              <span class="bp-wire"></span>
+              <div class="bp-node bp-node--hot"><b>Replicate</b><small>Compact event log</small></div>
+              <span class="bp-wire"></span>
+              <div class="bp-node"><b>Client replay</b><small>Anims · VFX · UI</small></div>
+            </div>
+            <p class="panel__note">Clients only replay the server's event log. They never compute a match outcome themselves.</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <figure class="diagram">
-        <div class="diagram-scroll">
-          <svg viewBox="0 0 990 250" role="img" aria-labelledby="dg-title">
-            <title id="dg-title">Server-authoritative combat: the server locks snapshots, simulates, builds an event log and applies results; clients receive the log and replay it.</title>
-            <defs>
-              <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6f727a"/></marker>
-              <marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4ee6c4"/></marker>
-            </defs>
-            <text class="lane" x="0" y="77">SERVER</text>
-            <text class="lane" x="0" y="197">CLIENTS</text>
-            <line x1="0" y1="130" x2="990" y2="130" stroke="#23262d" stroke-dasharray="4 6"/>
-
-            <rect class="box" x="100" y="40" width="200" height="64" rx="8"/>
-            <text class="t" x="116" y="68">Lock board snapshots</text>
-            <text class="s" x="116" y="88">end of prep phase</text>
-
-            <rect class="box" x="340" y="40" width="200" height="64" rx="8"/>
-            <text class="t" x="356" y="68">Simulate combat</text>
-            <text class="s" x="356" y="88">targeting · abilities</text>
-
-            <rect class="box box--hot" x="580" y="40" width="200" height="64" rx="8"/>
-            <text class="t" x="596" y="68">Build event log</text>
-            <text class="s" x="596" y="88">compact, ordered events</text>
-
-            <rect class="box" x="820" y="40" width="160" height="64" rx="8"/>
-            <text class="t" x="836" y="68">Apply results</text>
-            <text class="s" x="836" y="88">HP · gold · pairing</text>
-
-            <rect class="box" x="580" y="160" width="200" height="64" rx="8"/>
-            <text class="t" x="596" y="188">Receive event log</text>
-            <text class="s" x="596" y="208">replicated once</text>
-
-            <rect class="box" x="820" y="160" width="160" height="64" rx="8"/>
-            <text class="t" x="836" y="188">Replay visually</text>
-            <text class="s" x="836" y="208">anims · VFX · UI</text>
-
-            <path class="arrow" d="M300 72H338"/>
-            <path class="arrow" d="M540 72H578"/>
-            <path class="arrow" d="M780 72H818"/>
-            <path class="arrow arrow--hot" d="M680 104V158"/>
-            <path class="arrow" d="M780 192H818"/>
-          </svg>
+  <!-- ===== Hitz AI Suite ===== -->
+  <section class="section" id="ai">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="eyebrow">// Second case study · solo · on Fab</p>
+          <h2 class="sec-title">Hitz AI Suite</h2>
+          <p class="sec-lede">Unreal-style AI for Unity: Perception, EQS, Behavior Trees, Smart Objects and crowd simulation, with a GraphView Behavior Tree editor and a bridge into Unity's own Behavior package.</p>
         </div>
-        <figcaption><span class="swipe mono">Swipe to see the full flow →</span>Clients only receive the server's event log and replay it for animation. They never compute a match outcome themselves.</figcaption>
-      </figure>
+        <ul class="chips"><li>Unity 6</li><li>C#</li><li>Behavior Trees</li><li>EQS</li><li>Crowds</li></ul>
+      </div>
+
+      <div class="grid-ai">
+        <div class="panel reveal">
+          <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-tree"/></svg>BehaviorTree_HitzAI<i>×</i></span><span class="panel__right bt-status" aria-live="off">Idle</span></div>
+          <div class="bt-wrap">
+            <svg class="bt" viewBox="0 0 660 250" role="img" aria-label="Behavior tree: a Selector tries a Sequence that finds and moves to a target, then falls back to a Sequence that finds and moves to cover.">
+              <path class="edge" data-n="seqL" d="M330 52V76H170V100"/>
+              <path class="edge" data-n="seqR" d="M330 52V76H490V100"/>
+              <path class="edge" data-n="eqsL" d="M170 136V161H85V186"/>
+              <path class="edge" data-n="mvL" d="M170 136V161H245V186"/>
+              <path class="edge" data-n="eqsR" d="M490 136V161H420V186"/>
+              <path class="edge" data-n="mvR" d="M490 136V161H582V186"/>
+              <g class="node" data-n="sel"><rect x="260" y="14" width="140" height="38" rx="5"/><text x="330" y="38" text-anchor="middle">Selector</text></g>
+              <g class="node" data-n="seqL"><rect x="95" y="100" width="150" height="36" rx="5"/><text x="170" y="123" text-anchor="middle">Sequence</text></g>
+              <g class="node" data-n="seqR"><rect x="415" y="100" width="150" height="36" rx="5"/><text x="490" y="123" text-anchor="middle">Sequence</text></g>
+              <g class="node" data-n="eqsL"><rect x="10" y="186" width="150" height="48" rx="5"/><text x="85" y="206" text-anchor="middle">EQS Query</text><text class="sub" x="85" y="224" text-anchor="middle">(Find Target)</text></g>
+              <g class="node" data-n="mvL"><rect x="180" y="186" width="130" height="48" rx="5"/><text x="245" y="206" text-anchor="middle">Move To</text><text class="sub" x="245" y="224" text-anchor="middle">(Target)</text></g>
+              <g class="node" data-n="eqsR"><rect x="345" y="186" width="150" height="48" rx="5"/><text x="420" y="206" text-anchor="middle">EQS Query</text><text class="sub" x="420" y="224" text-anchor="middle">(Find Cover)</text></g>
+              <g class="node" data-n="mvR"><rect x="515" y="186" width="135" height="48" rx="5"/><text x="582" y="206" text-anchor="middle">Move To</text><text class="sub" x="582" y="224" text-anchor="middle">(Cover)</text></g>
+            </svg>
+          </div>
+          <div class="bt-legend" aria-hidden="true"><span><i class="lg lg--run"></i>Running</span><span><i class="lg lg--ok"></i>Succeeded</span><span><i class="lg lg--fail"></i>Failed</span></div>
+        </div>
+
+        <div class="panel reveal" style="--d:.1s">
+          <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg>Profiler<i>×</i></span><span class="panel__right">S500 benchmark</span></div>
+          <div class="prof">
+            <div class="prof__cards">
+              <div class="pcard"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><b data-to="0.19" data-dec="2" data-suf=" ms">0.19 ms</b><small>Median frame</small></div>
+              <div class="pcard"><svg class="ic" aria-hidden="true"><use href="#i-memory"/></svg><b>0 B</b><small>GC alloc</small></div>
+              <div class="pcard"><svg class="ic" aria-hidden="true"><use href="#i-agents"/></svg><b data-to="500">500</b><small>Agents</small></div>
+            </div>
+            <div class="tests">
+              <svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>
+              <div><b><span data-to="337">337</span> tests passed</b><small>271 EditMode · 66 PlayMode</small></div>
+            </div>
+            <div class="tests__bar" aria-hidden="true"><i></i></div>
+            <p class="prof__note">Measured in the Unity Editor. Release builds strip all debug and editor-only tooling.</p>
+            <div class="panel__actions panel__actions--flush">
+              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/53974d58-8b16-41f3-ba25-da18639515f5" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg>View on Fab</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===== Shipped games ===== -->
   <section class="section" id="games">
     <div class="wrap">
-      <div class="section__head">
-        <div>
-          <p class="eyebrow">Shipped</p>
-          <h2>Multiplayer games on Steam</h2>
-        </div>
-      </div>
+      <h2 class="eyebrow eyebrow--section reveal">// Shipped games</h2>
 
-      <div class="games">
-        <article class="card" id="ktrl-smash">
-          <button class="shot card__media" data-full="assets/img/ktrl-1.jpg" aria-label="Enlarge: Ktrl Smash gameplay">
-            <img loading="lazy" src="assets/img/ktrl-1.jpg" alt="Ktrl Smash arena gameplay with scoreboard and elimination feed" width="1600" height="900">
-          </button>
-          <div class="card__body">
-            <h3>Ktrl Smash</h3>
-            <div class="card__meta">Unity · Photon Fusion · AWS dedicated servers · Steam + WebGL · Dec 2025</div>
-            <p>Free-to-play online PvP arena brawler, rated Mostly Positive on Steam. I built the multiplayer layer on Photon Fusion and worked with devops to deploy dedicated servers on AWS.</p>
-            <div class="callout">
-              <span class="mono">Debugging story</span>
-              Ping climbed over each session: <span class="metric">20→60 ms</span> on Windows, <span class="metric">40→100 ms</span> on WebGL. The cause was per-frame work piling up on WebGL's single main thread, made worse by chatty network updates and redundant replicated state. I audited coroutines, cut update rate and payload size, and removed unneeded replicated variables. Ping now stays flat for the whole session.
+      <div class="panel reveal">
+        <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>Content Browser<i>×</i></span></div>
+        <div class="cb">
+          <nav class="tree" aria-label="Site folders">
+            <span class="tree__root"><svg class="ic" aria-hidden="true"><use href="#i-folder-open"/></svg>Content</span>
+            <a class="is-here" href="#games"><svg class="ic" aria-hidden="true"><use href="#i-folder-open"/></svg>Shipped</a>
+            <a href="#work"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>CaseStudies</a>
+            <a href="#fab"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>Plugins</a>
+            <a href="#packs"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>AssetPacks</a>
+            <a href="#experience"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>Experience</a>
+          </nav>
+
+          <div class="cb__main">
+            <div class="crumb mono"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>Content <span>›</span> Shipped<span class="count">8 items</span></div>
+
+            <div class="tiles-big">
+              <article class="tile" id="ktrl-smash">
+                <button class="shot tile__thumb" data-full="assets/img/ktrl-1.jpg" aria-label="Enlarge: Ktrl Smash gameplay"><img loading="lazy" src="assets/img/ktrl-1.jpg" alt="Ktrl Smash arena gameplay with scoreboard and elimination feed" width="1600" height="900"></button>
+                <div class="tile__body">
+                  <h3>Ktrl Smash</h3>
+                  <div class="meta">Multiplayer arena brawler · Unity · Photon Fusion · AWS · Steam + WebGL · Dec 2025</div>
+                  <p>Free-to-play online PvP brawler, rated Mostly Positive on Steam. I built the multiplayer layer on Photon Fusion and worked with devops to deploy dedicated servers on AWS.</p>
+                  <div class="callout">
+                    <span>Debugging story</span>
+                    Ping climbed over each session: <b class="metric">20→60 ms</b> on Windows, <b class="metric">40→100 ms</b> on WebGL. The cause was per-frame work piling up on WebGL's single main thread, made worse by chatty network updates and redundant replicated state. I audited coroutines, cut update rate and payload size, and removed unneeded replicated variables. Ping now stays flat for the whole session.
+                  </div>
+                  <a class="btn btn--outline btn--sm" href="https://store.steampowered.com/app/4223440/Ktrl_Smash/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg>Steam page</a>
+                </div>
+              </article>
+
+              <article class="tile" id="cursed-hour">
+                <button class="shot tile__thumb" data-full="assets/img/cursed-1.jpg" aria-label="Enlarge: The Cursed Hour key art"><img loading="lazy" src="assets/img/cursed-1.jpg" alt="The Cursed Hour key art: a ghost with red eyes in a dark corridor" width="1600" height="900"></button>
+                <div class="tile__body">
+                  <h3>The Cursed Hour</h3>
+                  <div class="meta">4-player online co-op horror · Unreal Engine 5 · EOS + Steam SDK · Nov 2024</div>
+                  <p>Co-op survival horror in a haunted mansion. I pitched the original concept and owned the core multiplayer systems through to launch: the ghost NPC, the lobby and session layer, and text and voice chat.</p>
+                  <div class="callout">
+                    <span>Engineering note</span>
+                    I integrated Epic Online Services and the Steam SDK side by side for a planned cross-platform rollout, keeping the session layer backend-agnostic. Around <b class="metric">18–23k</b> estimated players and <b class="metric">129</b> reviews.
+                  </div>
+                  <a class="btn btn--outline btn--sm" href="https://store.steampowered.com/app/3297310/The_Cursed_Hour/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg>Steam page</a>
+                </div>
+              </article>
             </div>
-            <div class="links">
-              <a class="btn btn--sm" href="https://store.steampowered.com/app/4223440/" target="_blank" rel="noopener">Steam page</a>
+
+            <div class="tiles-small">
+              <article class="tile tile--sm" id="dinomap"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-dino"/></svg></span><div><h3>DinoMap Explorer</h3><div class="meta">Unity · AR Foundation · iOS/Android · Team lead</div><p>Location-based AR game for finding and collecting dinosaurs. Built the AR capture flow, encyclopedia and NFT integration; parts became shared studio components.</p></div></article>
+              <article class="tile tile--sm"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-xr"/></svg></span><div><h3>Robo XR</h3><div class="meta">Unreal · Meta Quest · Sole developer</div><p>Robot build-and-battle VR game on the Meta Quest Store. Built robot assembly, combat, enemy AI and DLC support.</p></div></article>
+              <article class="tile tile--sm"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg></span><div><h3>Rift Riders</h3><div class="meta">Unreal · iOS/Android</div><p>Proposed the concept, then built endless track generation, the vehicle pawn, quests and tasks, and Firebase/Play Services.</p></div></article>
+              <article class="tile tile--sm"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-sword"/></svg></span><div><h3>Fight Hero</h3><div class="meta">Unity · iOS/Android</div><p>Owned the mech combat loop, enemy waves and upgrade balancing, and directed the art team on combat animation.</p></div></article>
+              <article class="tile tile--sm"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-tower"/></svg></span><div><h3>Tower of Demons</h3><div class="meta">Unity · Mobile</div><p>Added game modes, cosmetics, resolution-scalable UI and Firebase-backed player data.</p></div></article>
+              <article class="tile tile--sm"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg></span><div><h3>Nutrients Sold Separately</h3><div class="meta">Unreal · Google Play · Epic game jam</div><p>Team of five, built for the "As Above, So Below" theme and released on the Play Store.</p></div></article>
             </div>
           </div>
-        </article>
-
-        <article class="card" id="cursed-hour">
-          <button class="shot card__media" data-full="assets/img/cursed-1.jpg" aria-label="Enlarge: The Cursed Hour key art">
-            <img loading="lazy" src="assets/img/cursed-1.jpg" alt="The Cursed Hour key art: a ghost with red eyes in a dark corridor" width="1600" height="900">
-          </button>
-          <div class="card__body">
-            <h3>The Cursed Hour</h3>
-            <div class="card__meta">Unreal Engine 5 · 4-player online co-op · EOS + Steam SDK · Nov 2024</div>
-            <p>Co-op survival horror in a haunted mansion. I pitched the original concept and owned the core multiplayer systems through to launch: the ghost NPC, the lobby and session layer, and text and voice chat.</p>
-            <p>I integrated Epic Online Services and the Steam SDK side by side for a planned cross-platform rollout, keeping the session layer backend-agnostic. Around 18–23k estimated players and 129 reviews.</p>
-            <div class="links">
-              <a class="btn btn--sm" href="https://store.steampowered.com/app/3297310/The_Cursed_Hour/" target="_blank" rel="noopener">Steam page</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <h3 style="margin:56px 0 18px">More shipped and in-development work</h3>
-      <div class="worklist">
-        <div class="work" id="dinomap">
-          <h3>DinoMap Explorer</h3>
-          <div class="card__meta">Unity · AR Foundation · iOS/Android · Team lead</div>
-          <p>Location-based AR game for finding and collecting dinosaurs. Built the AR capture flow, encyclopedia and NFT integration; parts became shared studio components.</p>
-        </div>
-        <div class="work">
-          <h3>Robo XR</h3>
-          <div class="card__meta">Unreal · Meta Quest · Sole developer</div>
-          <p>Robot build-and-battle VR game on the Meta Quest Store. Built robot assembly, combat, enemy AI and DLC support.</p>
-        </div>
-        <div class="work">
-          <h3>Rift Riders</h3>
-          <div class="card__meta">Unreal · iOS/Android</div>
-          <p>Proposed the concept, then built endless track generation, the vehicle pawn, quests and tasks, and Firebase/Play Services.</p>
-        </div>
-        <div class="work">
-          <h3>Fight Hero</h3>
-          <div class="card__meta">Unity · iOS/Android</div>
-          <p>Owned the mech combat loop, enemy waves and upgrade balancing, and directed the art team on combat animation.</p>
-        </div>
-        <div class="work">
-          <h3>Tower of Demons</h3>
-          <div class="card__meta">Unity · Mobile</div>
-          <p>Added game modes, cosmetics, resolution-scalable UI and Firebase-backed player data.</p>
-        </div>
-        <div class="work">
-          <h3>Nutrients Sold Separately</h3>
-          <div class="card__meta">Unreal · Google Play · Epic game jam</div>
-          <p>Team of five, built for the "As Above, So Below" theme and released on the Play Store.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Fab ===== -->
+  <!-- ===== Products (plugins) ===== -->
   <section class="section" id="fab">
     <div class="wrap">
-      <div class="section__head">
-        <div>
-          <p class="eyebrow">Products</p>
-          <h2>Engine tools I sell on Fab</h2>
-          <p>I design, build, document and publish my own products on Fab, Epic Games' marketplace. All four are live.</p>
+      <h2 class="eyebrow eyebrow--section reveal">// Products (plugins)</h2>
+
+      <div class="panel reveal">
+        <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-plug"/></svg>Plugins<i>×</i></span></div>
+        <div class="pl">
+          <div class="pl__side" role="group" aria-label="Filter plugins">
+            <button type="button" data-filter="all" aria-pressed="true">All Plugins <span>4</span></button>
+            <button type="button" data-filter="unreal" aria-pressed="false">Unreal Engine <span>3</span></button>
+            <button type="button" data-filter="unity" aria-pressed="false">Unity <span>1</span></button>
+            <button type="button" data-filter="gameplay" aria-pressed="false">Gameplay <span>2</span></button>
+            <button type="button" data-filter="ai" aria-pressed="false">AI <span>1</span></button>
+            <button type="button" data-filter="world" aria-pressed="false">World &amp; GPS <span>1</span></button>
+          </div>
+
+          <div class="pl__main">
+            <div class="pl__top"><span class="search mono"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>Search plugins</span><span class="mono pl__count">All live on Fab · built and published solo</span></div>
+            <div class="plugs">
+              <article class="plug" data-tags="unreal gameplay" style="--d:.1s">
+                <img class="plug__thumb" loading="lazy" src="assets/img/hitz-screenshot-board.jpg" alt="" width="1672" height="941">
+                <div class="plug__body">
+                  <div class="plug__head"><h3>HITZ: Merge Tactics</h3><span class="ver">UE 5.8</span><span class="en"><span class="toggle" aria-hidden="true"></span>Enabled</span></div>
+                  <p>Server-authoritative auto-battler framework with board, shop, traits, combat and the full multiplayer round loop. Source-available.</p>
+                  <div class="plug__links">
+                    <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/ead02f11-78dc-43d0-9b92-e5edb8c4cd28" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+                    <a class="btn btn--outline btn--sm" href="https://hitz482.github.io/HitzMergeTactics/" target="_blank" rel="noopener">Docs</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="plug" data-tags="unity ai" style="--d:.2s">
+                <img class="plug__thumb" loading="lazy" src="assets/img/aisuite-cover.jpg" alt="" width="1280" height="720">
+                <div class="plug__body">
+                  <div class="plug__head"><h3>Hitz AI Suite</h3><span class="ver">Unity 6</span><span class="en"><span class="toggle" aria-hidden="true"></span>Enabled</span></div>
+                  <p>Perception, EQS, Behavior Trees, Smart Objects and crowd simulation for Unity, with a GraphView Behavior Tree editor. 337 automated tests.</p>
+                  <div class="plug__links">
+                    <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/53974d58-8b16-41f3-ba25-da18639515f5" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="plug" data-tags="unreal world" style="--d:.3s">
+                <img class="plug__thumb" loading="lazy" src="assets/img/geomap-cover.jpg" alt="" width="1280" height="720">
+                <div class="plug__body">
+                  <div class="plug__head"><h3>Hitz GeoMap</h3><span class="ver">UE 5.8</span><span class="en"><span class="toggle" aria-hidden="true"></span>Enabled</span></div>
+                  <p>Streams real roads, buildings, water and parks around the player's GPS position, with your own meshes and actors placed on real places. Five tile-provider presets, 13 styleable layers. Windows + Android.</p>
+                  <div class="plug__links">
+                    <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/11ad1758-2a82-41f1-824e-5a4e020bc047" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+                    <a class="btn btn--outline btn--sm" href="https://hitz482.github.io/HitzGeoMap/" target="_blank" rel="noopener">Product site</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="plug" data-tags="unreal gameplay" style="--d:.4s">
+                <img class="plug__thumb" loading="lazy" src="assets/img/gas-cover.jpg" alt="" width="1280" height="720">
+                <div class="plug__body">
+                  <div class="plug__head"><h3>HitzGAS Toolkit</h3><span class="ver">UE 5</span><span class="en"><span class="toggle" aria-hidden="true"></span>Enabled</span></div>
+                  <p>Gameplay Ability System without the boilerplate: three drop-in components, a live GAS debugger, six sample abilities and nine effects, and a generator that writes a replicated C++ AttributeSet.</p>
+                  <div class="plug__links">
+                    <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/5bbba0ca-9f37-4822-8fe5-ce48dcadfbb9" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+                    <a class="btn btn--outline btn--sm" href="https://hitz482.github.io/HitzGasToolkit/" target="_blank" rel="noopener">Product site</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="callout callout--flush">
+              <span>Also</span>
+              Combat animation packs on <a href="https://www.artstation.com/hitzsama" target="_blank" rel="noopener">ArtStation</a> and Fab (~$6,000 revenue): I directed the artist team and built the Unreal integration, with animation blueprints, state machines, and root-motion and in-place variants.
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="fab">
-        <article class="card">
-          <div class="card__media"><img loading="lazy" src="assets/img/hitz-screenshot-board.jpg" alt="Hex board with units placed in HITZ: Merge Tactics" width="1672" height="941"></div>
-          <div class="card__body">
-            <h3>HITZ: Merge Tactics</h3>
-            <div class="card__meta">Unreal Engine 5.8 · C++ framework · Live on Fab</div>
-            <p>Server-authoritative auto-battler framework with board, shop, traits, combat and the full multiplayer round loop. Featured above.</p>
-            <div class="links">
-              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/ead02f11-78dc-43d0-9b92-e5edb8c4cd28" target="_blank" rel="noopener">View on Fab</a>
-              <a class="btn btn--sm" href="https://hitz482.github.io/HitzMergeTactics/" target="_blank" rel="noopener">Docs</a>
-              <a class="btn btn--sm" href="https://github.com/hitz482/HitzMergeTacticsCodeBase" target="_blank" rel="noopener">Source</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__media"><img loading="lazy" src="assets/img/geomap-cover.jpg" alt="Hitz GeoMap: real-world map of a city streamed into Unreal Engine" width="1280" height="720"></div>
-          <div class="card__body">
-            <h3>Hitz GeoMap</h3>
-            <div class="card__meta">Unreal Engine 5.8 · C++ plugin · Windows + Android · Live on Fab</div>
-            <p>Streams real roads, buildings, water and parks around the player's GPS position as geometry, with your own meshes and actors placed on real places. Reads open vector tiles from five provider presets, with Android GPS, touch cameras and 13 styleable layers.</p>
-            <div class="links">
-              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/11ad1758-2a82-41f1-824e-5a4e020bc047" target="_blank" rel="noopener">View on Fab</a>
-              <a class="btn btn--sm" href="https://hitz482.github.io/HitzGeoMap/" target="_blank" rel="noopener">Product site</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__media"><img loading="lazy" src="assets/img/gas-cover.jpg" alt="HitzGAS Toolkit: live GAS debugger in the Unreal editor" width="1280" height="720"></div>
-          <div class="card__body">
-            <h3>HitzGAS Toolkit</h3>
-            <div class="card__meta">Unreal Engine 5 · C++ code plugin · Live on Fab</div>
-            <p>Gameplay Ability System without the boilerplate: three drop-in components, a live GAS debugger, a DataTable-driven attribute set, six sample abilities/effects, and a generator that writes a compilable, replicated C++ AttributeSet. Works in Blueprint-only projects.</p>
-            <div class="links">
-              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/5bbba0ca-9f37-4822-8fe5-ce48dcadfbb9" target="_blank" rel="noopener">View on Fab</a>
-              <a class="btn btn--sm" href="https://hitz482.github.io/HitzGasToolkit/" target="_blank" rel="noopener">Product site</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__media"><img loading="lazy" src="assets/img/aisuite-cover.jpg" alt="Hitz AI Suite boss fight sample in Unity" width="1280" height="720"></div>
-          <div class="card__body">
-            <h3>Hitz AI Suite</h3>
-            <div class="card__meta">Unity 6000.3 LTS+ · C# · Live on Fab</div>
-            <p>Perception, EQS, Behavior Trees, Smart Objects and crowd simulation, plus a bridge into Unity's own Behavior package — all sharing a GraphView-based Behavior Tree editor. A 500-agent crowd benchmark holds 0.19 ms median per frame with zero GC allocation (measured in the Unity Editor), backed by 337 automated tests.</p>
-            <div class="links">
-              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/53974d58-8b16-41f3-ba25-da18639515f5" target="_blank" rel="noopener">View on Fab</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="callout" style="margin-top:24px">
-        <span class="mono">Also</span>
-        Combat animation packs on <a href="https://www.artstation.com/hitzsama" target="_blank" rel="noopener">ArtStation</a> and Fab (~$6,000 revenue): I directed the artist team and built the Unreal integration, with animation blueprints, state machines, and root-motion and in-place variants.
       </div>
     </div>
   </section>
@@ -365,38 +440,37 @@
   <!-- ===== Asset packs ===== -->
   <section class="section" id="packs">
     <div class="wrap">
-      <div class="packs-panel">
-        <p class="eyebrow">Also on Fab</p>
-        <h2>Cozy Kingdom — low-poly asset packs</h2>
-        <p>A different kind of product: hand-authored low-poly environment packs for Unity and UE5, built with a custom Blender/Python procedural generation pipeline so every pack shares one art style and one demo layout.</p>
-
+      <h2 class="eyebrow eyebrow--section eyebrow--warm reveal">// Asset packs</h2>
+      <div class="packs-panel reveal">
+        <div class="packs-intro">
+          <p class="packs-title mono">Cozy<br>Kingdom</p>
+          <p>Hand-authored low-poly environment packs for Unity and UE5, built with a custom Blender/Python procedural pipeline so every pack shares one art style and one demo layout.</p>
+        </div>
         <div class="packs">
-          <article class="pack">
+          <article class="pack" style="--d:.1s">
             <div class="pack__media"><img loading="lazy" src="assets/img/kingdom-cover.png" alt="Cozy Kingdom Builder Kit overview render" width="1200" height="630"></div>
             <div class="pack__body">
               <h3>Cozy Kingdom Builder Kit</h3>
               <div class="pack__meta">751 assets · Unity + UE5 · Live</div>
-              <p>The base kit: modular houses, a castle, a farm, nature and water sets, ready to lay out as a village.</p>
-              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/6ff1dd0a-1eb8-45f7-b7e8-00009421a204" target="_blank" rel="noopener">View on Fab</a>
+              <p>Modular houses, a castle, a farm, nature and water sets, ready to lay out as a village.</p>
+              <a class="btn btn--warm btn--sm" href="https://www.fab.com/listings/6ff1dd0a-1eb8-45f7-b7e8-00009421a204" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
             </div>
           </article>
-
-          <article class="pack">
+          <article class="pack" style="--d:.2s">
             <div class="pack__media"><img loading="lazy" src="assets/img/xmas-cover.png" alt="Cozy Christmas Village overview render" width="1200" height="630"></div>
             <div class="pack__body">
               <h3>Cozy Christmas Village</h3>
               <div class="pack__meta">123 assets · Unity + UE5 · Live</div>
-              <p>A festive expansion: a market, a workshop, a rink and holiday decor built on the same base style.</p>
-              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/91fac1e6-2f5e-4908-8fdb-4f32dfdc6ad2" target="_blank" rel="noopener">View on Fab</a>
+              <p>A market, a workshop, a rink and holiday decor, built on the same base style.</p>
+              <a class="btn btn--warm btn--sm" href="https://www.fab.com/listings/91fac1e6-2f5e-4908-8fdb-4f32dfdc6ad2" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
             </div>
           </article>
-
-          <article class="pack pack--pending">
+          <article class="pack pack--pending" style="--d:.3s">
             <div class="pack__media"><img loading="lazy" src="assets/img/halloween-cover.png" alt="Cozy Halloween Village overview render" width="1200" height="630"></div>
             <div class="pack__body">
-              <h3>Cozy Halloween Village<span class="badge-pending">Pending approval</span></h3>
-              <div class="pack__meta">109 assets · Unity + UE5</div>
-              <p>A graveyard, a witch's manor, pumpkins and street decor — submitted to Fab, awaiting approval.</p>
+              <h3>Cozy Halloween Village</h3>
+              <div class="pack__meta">109 assets · Unity + UE5 · <span class="badge-pending">Pending approval</span></div>
+              <p>A graveyard, a witch's manor, pumpkins and street decor. Submitted to Fab and awaiting approval.</p>
             </div>
           </article>
         </div>
@@ -404,86 +478,145 @@
     </div>
   </section>
 
-  <!-- ===== Experience ===== -->
+  <!-- ===== Experience (Sequencer) ===== -->
   <section class="section" id="experience">
     <div class="wrap">
-      <div class="section__head">
-        <div>
-          <p class="eyebrow">Experience</p>
-          <h2>Where I've worked</h2>
+      <h2 class="eyebrow eyebrow--section reveal">// Experience</h2>
+
+      <div class="panel seq-panel reveal">
+        <div class="panel__bar">
+          <span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-film"/></svg>Sequencer<i>×</i></span>
+          <span class="transport" aria-hidden="true"><svg class="ic"><use href="#i-skipb"/></svg><svg class="ic"><use href="#i-play"/></svg><svg class="ic"><use href="#i-skipf"/></svg></span>
+          <span class="panel__right seq-hint">click a clip to inspect it</span>
         </div>
-      </div>
-      <ol class="timeline">
-        <li class="job">
-          <div class="job__when">Oct 2021 – Present<br>Jaipur, India</div>
-          <div>
+
+        <div class="seq-scroll">
+          <div class="seq">
+            <div class="seq__names">
+              <div class="seq__hdr">Tracks</div>
+              <div><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Education</div>
+              <div><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Hyperreality (Intern)</div>
+              <div><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Fiftyfive Gaming Studio</div>
+              <div><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Solo products (Fab)</div>
+              <div class="tall"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Key milestones</div>
+            </div>
+            <div class="seq__lanes">
+              <div class="ruler mono" aria-hidden="true">
+                <span style="left:0%">2018</span><span style="left:11.11%">2019</span><span style="left:22.22%">2020</span><span style="left:33.33%">2021</span><span style="left:44.44%">2022</span><span style="left:55.56%">2023</span><span style="left:66.67%">2024</span><span style="left:77.78%">2025</span><span style="left:88.89%">2026</span>
+              </div>
+              <div class="lane"><button type="button" class="clip" data-pane="edu" style="--x:5.56%;--w:44.44%;--d:.1s"><span>B.Tech · Computer Science</span></button></div>
+              <div class="lane"><button type="button" class="clip clip--narrow" data-pane="hr" style="--x:37.96%;--w:4.63%;--d:.25s"><span>Intern · Hyperreality</span></button></div>
+              <div class="lane"><button type="button" class="clip" data-pane="ff" style="--x:41.67%;--w:56.67%;--d:.4s"><span>Senior Game Developer · Oct 2021 – Present</span></button></div>
+              <div class="lane"><button type="button" class="clip clip--narrow clip--label-left" data-pane="fab" style="--x:94.89%;--w:3.44%;--d:.55s"><span>Merge Tactics, AI Suite, GeoMap, GAS, Cozy Kingdom</span></button></div>
+              <div class="lane tall" aria-hidden="true">
+                <span class="diamond" style="--x:42.1%;--d:.7s"></span><span class="dlabel down" style="--x:42.1%">Robo XR<small>Meta Quest · 2021</small></span>
+                <span class="diamond" style="--x:76.3%;--d:.8s"></span><span class="dlabel up" style="--x:76.3%">The Cursed Hour<small>Steam · Nov 2024</small></span>
+                <span class="diamond" style="--x:88.3%;--d:.9s"></span><span class="dlabel down" style="--x:88.3%">Ktrl Smash<small>Steam · Dec 2025</small></span>
+              </div>
+              <span class="playhead" style="--now:98.33%" data-label="NOW" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="seq-details">
+          <div class="seq-detail" data-pane="ff">
             <h3>Senior Game Developer</h3>
-            <div class="job__org">Fiftyfive Gaming Studio · teams of 5–6</div>
+            <div class="org">Fiftyfive Gaming Studio · Jaipur, India · Oct 2021 – Present · teams of 5–6</div>
             <ul>
               <li>Gameplay, combat and systems programming on titles for PC (Steam), mobile and VR.</li>
               <li>Owned multiplayer on <b>Ktrl Smash</b> and <b>The Cursed Hour</b>; led <b>DinoMap Explorer</b>.</li>
-              <li>Fixed a persistent iOS <span class="mono">bad_weak_ptr</span> crash caused by Firebase linking twice (Unity prebuilt libraries alongside EDM4U's Swift Package Manager resolution).</li>
-              <li>Led the studio's combat animation packs from idea to store.</li>
+              <li>Fixed a persistent iOS <code>bad_weak_ptr</code> crash caused by Firebase linking twice (Unity prebuilt libraries alongside EDM4U's Swift Package Manager resolution).</li>
+              <li>Led the studio's combat animation packs from idea to store (~$6,000 revenue).</li>
             </ul>
           </div>
-        </li>
-        <li class="job">
-          <div class="job__when">Jun 2021 – Oct 2021</div>
-          <div>
+          <div class="seq-detail" data-pane="hr">
             <h3>Unreal Game Developer (Intern)</h3>
-            <div class="job__org">Hyperreality Technologies</div>
+            <div class="org">Hyperreality Technologies · Jun – Oct 2021</div>
+            <ul><li>Sole developer on <b>Robo XR</b>, shipped to the Meta Quest Store: robot assembly, combat, enemy AI and DLC support.</li></ul>
+          </div>
+          <div class="seq-detail" data-pane="edu">
+            <h3>B.Tech, Computer Science</h3>
+            <div class="org">Poornima University, Jaipur · Cloud Computing specialization · 2018 – 2022</div>
+          </div>
+          <div class="seq-detail" data-pane="fab">
+            <h3>Independent products on Fab</h3>
+            <div class="org">Solo · Jul 2026 – Present</div>
             <ul>
-              <li>Sole developer on <b>Robo XR</b>, shipped to the Meta Quest Store.</li>
+              <li>Four engine tools: <b>HITZ: Merge Tactics</b>, <b>Hitz AI Suite</b>, <b>Hitz GeoMap</b> and <b>HitzGAS Toolkit</b>.</li>
+              <li><b>Cozy Kingdom</b> low-poly asset packs: Builder Kit and Christmas Village live, Halloween Village pending.</li>
             </ul>
           </div>
-        </li>
-        <li class="job">
-          <div class="job__when">2018 – 2022</div>
-          <div>
-            <h3>B.Tech, Computer Science</h3>
-            <div class="job__org">Poornima University, Jaipur · Cloud Computing specialization</div>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ===== Skills ===== -->
-  <section class="section" id="skills">
-    <div class="wrap">
-      <div class="section__head">
-        <div>
-          <p class="eyebrow">Toolbox</p>
-          <h2>Skills</h2>
         </div>
       </div>
-      <div class="skills">
-        <div><h3>Languages</h3><ul class="tags"><li>C++</li><li>C#</li><li>Blueprints</li></ul></div>
-        <div><h3>Multiplayer</h3><ul class="tags"><li>Server-authoritative sim</li><li>Actor replication</li><li>Dedicated servers (AWS)</li><li>Photon Fusion</li><li>EOS</li><li>Steam SDK</li><li>Voice/text chat</li></ul></div>
-        <div><h3>Unreal Engine 5</h3><ul class="tags"><li>C++ modules &amp; plugins</li><li>GAS</li><li>Gameplay Tags</li><li>Editor tooling</li><li>Anim BPs</li><li>MetaHuman</li></ul></div>
-        <div><h3>Unity</h3><ul class="tags"><li>URP</li><li>Burst</li><li>WebGL</li><li>Mobile</li><li>AR Foundation</li></ul></div>
-        <div><h3>Platforms &amp; backend</h3><ul class="tags"><li>Meta Quest</li><li>iOS / Android</li><li>Firebase</li><li>Play Services</li><li>AdMob</li></ul></div>
-        <div><h3>Profiling &amp; tools</h3><ul class="tags"><li>Unreal Insights</li><li>RenderDoc</li><li>GPU Visualizer</li><li>Git</li><li>Perforce</li></ul></div>
+    </div>
+  </section>
+
+  <!-- ===== Skills (Project Settings) ===== -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <h2 class="eyebrow eyebrow--section reveal">// Skills (project settings)</h2>
+
+      <div class="panel reveal">
+        <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-gear"/></svg>Project Settings<i>×</i></span></div>
+        <div class="ps">
+          <div class="ps__side" aria-hidden="true">
+            <div class="is-here">Gameplay</div><div>Systems</div><div>Networking</div><div>AI</div><div>Platforms</div><div>Tools &amp; Workflow</div>
+          </div>
+          <div class="ps__col">
+            <div class="prow" style="--d:.1s"><span class="k">Gameplay &amp; combat systems</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
+            <div class="prow" style="--d:.18s"><span class="k">Multiplayer (server-authoritative, dedicated)</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
+            <div class="prow" style="--d:.26s"><span class="k">AI (Behavior Trees, EQS, Perception, crowds)</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
+            <div class="prow" style="--d:.34s"><span class="k">Editor tooling (asset editors, validators)</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
+            <div class="prow" style="--d:.42s"><span class="k">Animation (Anim BPs, state machines, root motion)</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
+            <div class="prow" style="--d:.5s"><span class="k">Profiling &amp; optimization</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
+            <div class="prow" style="--d:.58s"><span class="k">Automated testing (EditMode, PlayMode)</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
+          </div>
+          <dl class="ps__col kvs">
+            <div class="kv"><dt>Engines</dt><dd>Unreal Engine 5 (C++, Blueprints), Unity 6 (C#)</dd></div>
+            <div class="kv"><dt>Languages</dt><dd>C++, C#, Python</dd></div>
+            <div class="kv"><dt>Networking</dt><dd>Photon Fusion, EOS, Steam SDK, AWS dedicated servers</dd></div>
+            <div class="kv"><dt>Platforms</dt><dd>PC, WebGL, iOS, Android, Meta Quest</dd></div>
+            <div class="kv"><dt>Backend</dt><dd>Firebase, Play Services, AdMob</dd></div>
+            <div class="kv"><dt>Profiling</dt><dd>Unreal Insights, RenderDoc, GPU Visualizer</dd></div>
+            <div class="kv"><dt>Tools</dt><dd>Git, Perforce, Visual Studio, Xcode, Blender (bpy)</dd></div>
+          </dl>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Contact ===== -->
-  <section class="section contact" id="contact">
+  <!-- ===== Contact (Output Log) ===== -->
+  <section class="section" id="contact">
     <div class="wrap">
-      <p class="eyebrow">Contact</p>
-      <h2>Let's build something multiplayer.</h2>
-      <p>I'm open to remote gameplay, multiplayer and tools roles on Unreal or Unity, full-time or contract. I'm based in India (IST, UTC+5:30).</p>
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="mailto:khandelwalaman5@gmail.com">Email me</a>
-        <a class="btn" href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-        <a class="btn" href="assets/Aman_Khandelwal_Resume_Full.pdf" target="_blank" rel="noopener">Full resume (PDF)</a>
-      </div>
-      <div class="contact__links">
-        <a href="https://github.com/hitz482" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.artstation.com/hitzsama" target="_blank" rel="noopener">ArtStation</a>
-        <a href="https://www.youtube.com/@amankhandelwal8816" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://www.linkedin.com/in/aman-khandelwal-b7a3551a1/" target="_blank" rel="noopener">LinkedIn</a>
+      <h2 class="eyebrow eyebrow--section reveal">// Contact</h2>
+      <div class="ct">
+        <div class="panel reveal">
+          <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-terminal"/></svg>Output Log<i>×</i></span></div>
+          <div class="log" data-log>
+            <div class="log__line"><span class="ts">[2026.11.08-14:02:11]</span><span class="msg">LogPortfolio: Initializing...</span></div>
+            <div class="log__line log__line--accent"><span class="ts">[2026.11.08-14:02:12]</span><span class="msg">LogPortfolio: Open to remote roles (IST, UTC+5:30)</span></div>
+            <div class="log__line"><span class="ts">[2026.11.08-14:02:13]</span><span class="msg">LogPortfolio: Gameplay · multiplayer · tools · Unreal / Unity</span></div>
+            <div class="log__line"><span class="ts">[2026.11.08-14:02:14]</span><span class="msg">LogPortfolio: Full-time or contract</span></div>
+            <div class="log__line log__line--ok"><span class="ts">[2026.11.08-14:02:15]</span><span class="msg">Build: Succeeded (0 errors, 0 warnings)</span></div>
+            <div class="log__prompt" aria-hidden="true">&gt; <i></i></div>
+          </div>
+        </div>
+
+        <div class="ct__main reveal" style="--d:.1s">
+          <h2>Let's build something multiplayer.</h2>
+          <p>I'm open to remote gameplay, multiplayer and tools roles on Unreal or Unity, full-time or contract. I'm based in India (IST, UTC+5:30).</p>
+          <div class="ct__cta">
+            <a class="btn btn--primary" href="mailto:khandelwalaman5@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
+            <a class="btn btn--cyan" href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Resume.pdf</a>
+            <a class="btn btn--outline" href="assets/Aman_Khandelwal_Resume_Full.pdf" target="_blank" rel="noopener">Full resume</a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/hitz482" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-branch"/></svg>github.com/hitz482</a>
+            <a href="https://www.linkedin.com/in/aman-khandelwal-b7a3551a1/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg>LinkedIn</a>
+            <a href="https://www.artstation.com/hitzsama" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-image"/></svg>ArtStation</a>
+            <a href="https://www.youtube.com/@amankhandelwal8816" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-yt"/></svg>YouTube</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -491,8 +624,8 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Aman Khandelwal</span>
-    <span>Game screenshots © their respective studios.</span>
+    <span class="foot-brand"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg>AMAN KHANDELWAL <em>// Senior Gameplay Programmer</em></span>
+    <span>// Games / Tools / Systems / Multiplayer · © 2026 · Game screenshots © their respective studios</span>
   </div>
 </footer>
 
@@ -501,18 +634,5 @@
   <img alt="">
 </dialog>
 
-<script>
-  // Click any screenshot to view it full size.
-  const box = document.getElementById("lightbox");
-  const big = box.querySelector("img");
-  document.querySelectorAll("[data-full]").forEach((el) => {
-    el.addEventListener("click", () => {
-      big.src = el.dataset.full;
-      big.alt = el.querySelector("img")?.alt || "";
-      box.showModal();
-    });
-  });
-  box.addEventListener("click", () => box.close());
-</script>
 </body>
 </html>
