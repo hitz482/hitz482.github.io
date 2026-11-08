@@ -1,0 +1,71 @@
+/* Page CSS: only what sits inside a visual and the kit lacks (references/system.md), plus the
+   app-frame recipe (sections-library.md, app-frame) and one --p-h per card group. */
+
+/* app-frame, as the recipe gives it */
+.app.ui { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); margin-top: var(--s-7); background: var(--u-bg); border: 1px solid var(--u-border); border-radius: var(--u-r); box-shadow: var(--u-shadow); }
+.app > .app__pane { position: relative; min-width: 0; min-height: 0; overflow: hidden; }
+.app > .app__pane + .app__pane { border-left: 1px solid var(--u-line); }
+.app > .app__pane > .ui-panel { width: 100%; border: 0; border-radius: 0; box-shadow: none; }
+.app > .app__pane::after { content: ""; position: absolute; inset: auto 0 0 0; height: 64px; background: linear-gradient(transparent, var(--u-bg)); pointer-events: none; }
+@media (min-width: 1024px) and (max-width: 1279px) { .app.ui { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); } }
+@media (max-width: 1023px) {
+  .app.ui { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+  .app > .app__pane--list { max-height: 252px; }
+  .app > .app__pane--list::after { display: none; }
+  .app .ui-win__side { display: none; }
+  .app .ui-win__body { grid-template-columns: minmax(0, 1fr); }
+  .app > .app__pane + .app__pane { border-left: 0; border-top: 1px solid var(--u-line); }
+}
+@media (max-width: 639px) {
+  .app.ui { grid-template-rows: minmax(0, 1fr); }
+  .app > .app__pane--list { display: none; }
+  .app > .app__pane + .app__pane { border-top: 0; }
+}
+
+/* the open pane: the client's own behavior-tree debugger, drawn live */
+.bt-pane { display: flex; flex-direction: column; height: 100%; background: var(--u-bg); color: var(--u-ink); }
+.bt-pane__bar { display: flex; align-items: center; gap: var(--s-4); padding: var(--s-3) var(--s-5); border-bottom: 1px solid var(--u-line); font: 500 var(--t-small)/1.4 var(--font-mono); }
+.bt-pane__name { color: var(--u-ink); }
+.bt-pane__status { margin-left: auto; color: var(--u-muted); }
+.bt { display: block; width: 100%; height: auto; padding: var(--s-6) var(--s-5) var(--s-4); }
+.bt-edge { fill: none; stroke: var(--u-line); stroke-width: 1.5; transition: stroke .2s; }
+.bt-node rect { fill: var(--u-surface, var(--u-bg)); stroke: var(--u-border); stroke-width: 1.2; transition: stroke .2s, fill .2s; }
+.bt-node text { fill: var(--u-ink); font: 500 14px var(--font-mono); }
+.bt-node .bt-sub { fill: var(--u-muted); font-size: 12px; }
+.bt .is-run rect { stroke: var(--p-accent); stroke-width: 2; }
+.bt .bt-edge.is-run { stroke: var(--p-accent); stroke-width: 2; }
+.bt .is-ok rect { stroke: #46c27a; stroke-width: 2; }
+.bt .bt-edge.is-ok { stroke: #46c27a; }
+.bt .is-fail rect { stroke: #e5484d; stroke-width: 2; }
+.bt .bt-edge.is-fail { stroke: #e5484d; }
+
+/* the client's screenshot on the split frame's stage */
+.stage > .shot > img { display: block; width: 100%; height: auto; border-radius: var(--u-r, 8px); border: 1px solid rgb(255 255 255 / .12); }
+
+/* three facts as plain lines */
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+
+/* the portrait at the size of its file */
+.portrait { display: block; width: min(400px, 100%); aspect-ratio: 1; object-fit: cover; border-radius: var(--r-lg); }
+
+/* one --p-h per card group */
+#games .panel { --p-h: 340px; }
+#products .panel { --p-h: 252px; }
+@media (min-width: 1024px) { #merge .frame--split { --ratio: 100%; } }
+
+/* tablets stack every card on its own row: the products' panels shorten so the section stays two screens */
+@media (min-width: 640px) and (max-width: 1023px) {
+  #products .panel { --p-h: 200px; }
+  #products .grid > .span-3 { grid-column: span 6; }
+}
+
+/* the product hero's phone crop, as its demo sets it (assets/layout/hero-product.html) */
+@media (max-width: 639px) {
+  .hero--product .hero__stage { aspect-ratio: 4 / 3; }
+  #products .panel { --p-h: 140px; }
+  #games .panel { --p-h: 520px; }
+  /* the phone copy of #merge drops its three fact lines so the section stays one screen */
+  #merge .facts { display: none; }
+  #merge .frame--split { --ratio: 75%; }
+  .portrait { width: 240px; }
+}

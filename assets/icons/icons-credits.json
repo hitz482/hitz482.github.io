@@ -1,0 +1,122 @@
+[
+  {
+    "file": "blender.svg",
+    "icon": "logos:blender",
+    "name": "Blender",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://www.blender.org/"
+  },
+  {
+    "file": "c-plusplus.svg",
+    "icon": "logos:c-plusplus",
+    "name": "C++",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://isocpp.org/"
+  },
+  {
+    "file": "c-sharp.svg",
+    "icon": "logos:c-sharp",
+    "name": "C Sharp",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://csharp.net/"
+  },
+  {
+    "file": "git-icon.svg",
+    "icon": "logos:git-icon",
+    "name": "Git",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://git-scm.com/"
+  },
+  {
+    "file": "perforce.svg",
+    "icon": "si:perforce",
+    "name": "Perforce",
+    "kind": "mono",
+    "source": "simple-icons@16.30.0",
+    "author": "Simple Icons Collaborators",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/simple-icons/simple-icons",
+    "trademark": true,
+    "colour": "one-colour fallback in the brand hex"
+  },
+  {
+    "file": "steam.svg",
+    "icon": "logos:steam",
+    "name": "Steam",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://store.steampowered.com/"
+  },
+  {
+    "file": "unity.svg",
+    "icon": "logos:unity",
+    "name": "Unity",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://unity3d.com/"
+  },
+  {
+    "file": "unrealengine.svg",
+    "icon": "logos:unrealengine-icon",
+    "name": "Unreal Engine",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://www.unrealengine.com/"
+  },
+  {
+    "file": "visual-studio.svg",
+    "icon": "logos:visual-studio",
+    "name": "Visual Studio",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://visualstudio.microsoft.com/vs/"
+  },
+  {
+    "file": "xcode.svg",
+    "icon": "logos:xcode",
+    "name": "Xcode",
+    "kind": "colour",
+    "source": "gilbarbara/logos@d6960edc1b7309d392c76e40d3a320df7f9ff85c",
+    "author": "Gil Barbara",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/gilbarbara/logos",
+    "trademark": true,
+    "markUrl": "https://developer.apple.com/xcode/"
+  }
+]

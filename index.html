@@ -1,293 +1,212 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-type="software" data-radius="sharp" data-ground="sage" data-buttons="pill" data-motion>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aman Khandelwal — Senior Gameplay &amp; Systems Programmer (UE5 / Unity)</title>
-  <meta name="description" content="Senior gameplay and systems programmer, 5+ years shipping multiplayer games in Unreal Engine 5 and Unity. Author of HITZ: Merge Tactics and Hitz AI Suite on Fab.">
-  <meta name="theme-color" content="#0b0c0f">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Aman Khandelwal — Senior Gameplay &amp; Systems Programmer (UE5 / Unity)">
-  <meta property="og:description" content="Multiplayer netcode, gameplay systems, AI frameworks and editor tooling. Shipped on Steam, Google Play, the App Store and Meta Quest.">
-  <meta property="og:image" content="https://hitz482.github.io/assets/img/hitz-screenshot-overview.jpg">
-  <meta property="og:url" content="https://hitz482.github.io/">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script>document.documentElement.classList.add("js")</script>
-  <link rel="stylesheet" href="styles.css">
-  <script src="main.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aman Khandelwal: gameplay programmer for UE5 and Unity studios</title>
+<meta name="description" content="Senior gameplay and systems programmer in Jaipur, India, open to remote roles. On Fab: Hitz AI Suite, Merge Tactics, Hitz GeoMap, HitzGAS Toolkit and the Cozy Kingdom, Christmas and Halloween packs.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aman Khandelwal: gameplay programmer for UE5 and Unity studios">
+<meta property="og:description" content="Multiplayer netcode, AI frameworks and editor tools for Unreal Engine 5 and Unity.">
+<meta property="og:image" content="https://hitz482.github.io/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#18191b">
+<link rel="canonical" href="https://hitz482.github.io/">
+<meta name="site-kind" content="software">
+<meta name="page-type" content="software">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..700&family=Funnel+Sans:wght@400..600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #18191b; --p-surface: #222427; --p-ink: #eff0f1; --p-muted: #9c9ea3;
+  --p-accent: #ff4a1f; --p-accent-ink: #18191b; --p-action: #ff4a1f; --p-action-ink: #18191b;
+  --p-inv-bg: #eff0f1; --p-inv-surface: #dedfe0; --p-inv-ink: #18191b; --p-inv-muted: #5b5c5e;
+  --p-inv-accent: #18191b; --p-inv-accent-ink: #eff0f1; --p-inv-action: #18191b; --p-inv-action-ink: #eff0f1;
+  --font-display: "Funnel Display", system-ui, sans-serif;
+  --font-text: "Funnel Sans", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.04em;
+  --ly-scale: 0.98;
+}
+</style>
+<link rel="stylesheet" href="assets/ui/base.css">
+<link rel="stylesheet" href="assets/ui/window/fragment.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script src="assets/backgrounds/backgrounds.js"></script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/line-carries-colour/moment.js">
+<link rel="modulepreload" href="assets/moments/giant-type-pass/moment.js">
+<link rel="stylesheet" href="page.css">
 </head>
 <body>
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7 3 12l5 5M16 7l5 5-5 5"/></symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
-  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/><path d="M7.5 15h9"/></symbol>
-  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 18 4-6"/></symbol>
-  <symbol id="i-cube" viewBox="0 0 24 24"><path d="M12 2 21 7v10l-9 5-9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></symbol>
-  <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6v2M12 16v2"/></symbol>
-  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h6l2 2h10v11H3z"/></symbol>
-  <symbol id="i-folder-open" viewBox="0 0 24 24"><path d="M3 7V5h6l2 2h8v3"/><path d="M3 19 6 10h16l-3 9z"/></symbol>
-  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01"/></symbol>
-  <symbol id="i-tree" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="4" rx="1"/><rect x="3" y="17" width="6" height="4" rx="1"/><rect x="15" y="17" width="6" height="4" rx="1"/><path d="M12 7v5M6 17v-5h12v5"/></symbol>
-  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20v-9M10 20V5M16 20v-6M2 20h20"/></symbol>
-  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v5M15 2v5M6 7h12v4a6 6 0 0 1-12 0zM12 17v5"/></symbol>
-  <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol>
-  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></symbol>
-  <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="m6 9 3 3-3 3M12 15h6"/></symbol>
-  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></symbol>
-  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
-  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
-  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
-  <symbol id="i-gamepad" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="5"/><path d="M7 10v4M5 12h4"/><path d="M16 11h.01M18 13h.01" stroke-width="2.6"/></symbol>
-  <symbol id="i-dino" viewBox="0 0 24 24"><path d="M3 16c2-6 6-9 11-9 2 0 3 1 3 1l2-2 1 1-2 2s1 2 1 4c0 3-3 5-7 5-4 0-7-1-9-2z"/><path d="M16 9.5h.01" stroke-width="2.6"/></symbol>
-  <symbol id="i-candle" viewBox="0 0 24 24"><path d="M12 2c2 3-2 4-2 7a2 2 0 0 0 4 0c0-1-1-1.5-1-2.5"/><rect x="9" y="12" width="6" height="9" rx="1"/></symbol>
-  <symbol id="i-xr" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="4"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/></symbol>
-  <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 16v-4l2-5h14l2 5v4z"/><path d="M3 12h18"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></symbol>
-  <symbol id="i-sword" viewBox="0 0 24 24"><path d="M14.5 3H21v6.5L10 20.5 3.5 14z"/><path d="M6 17l-3 3M8 12l4 4"/></symbol>
-  <symbol id="i-tower" viewBox="0 0 24 24"><path d="M6 21V9h12v12M5 9h14M6 5v4M10 5v4M14 5v4M18 5v4M10 21v-5h4v5"/></symbol>
-  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C5 10 11 5 20 5c0 9-5 15-14 15"/><path d="m5 19 8-8"/></symbol>
-  <symbol id="i-unity" viewBox="0 0 24 24"><path d="M12 3 21 19H3z"/></symbol>
-  <symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M6.8 7.6 10.6 16.2M17.2 7.6 13.4 16.2M7.2 6h9.6"/></symbol>
-  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/></symbol>
-  <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="7" r="2"/><path d="M6 7v10M18 9c0 5-7 4-11 8"/></symbol>
-  <symbol id="i-cursor" viewBox="0 0 24 24"><path d="M5 3l13 8-6 1.5L9 19z"/></symbol>
-  <symbol id="i-move" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/></symbol>
-  <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 4v5h-5"/></symbol>
-  <symbol id="i-scale" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/><path d="M4 10h6V4M20 14h-6v6"/></symbol>
-  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
-  <symbol id="i-memory" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
-  <symbol id="i-agents" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M15 20a5 5 0 0 1 7-4.5"/></symbol>
-  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z" fill="currentColor" stroke="none"/></symbol>
-  <symbol id="i-skipb" viewBox="0 0 24 24"><path d="M6 5v14M19 5 9 12l10 7z"/></symbol>
-  <symbol id="i-skipf" viewBox="0 0 24 24"><path d="M18 5v14M5 5l10 7-10 7z"/></symbol>
-  <symbol id="i-yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9v6l5-3z"/></symbol>
-  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="9" cy="9" r="2"/><path d="m21 16-5-5L5 20"/></symbol>
-</svg>
-
-<div class="titlebar" aria-hidden="true">
-  <div class="wrap titlebar__row">
-    <span class="titlebar__mark">U</span>
-    <nav class="titlebar__menu"><span>File</span><span>Edit</span><span>Window</span><span>Tools</span><span>Build</span><span>Select</span><span>Actor</span><span>Help</span></nav>
-    <div class="titlebar__win"><i></i><i></i><i></i></div>
-  </div>
-</div>
-
-<div class="vtabbar" aria-hidden="true">
-  <div class="wrap vtabbar__row">
-    <span class="vtabbar__tab"><svg class="ic"><use href="#i-cube"/></svg>Viewport <i>×</i></span>
-    <span class="vtabbar__drop">Perspective ⌄</span>
-    <span class="vtabbar__drop">Lit ⌄</span>
-    <span class="vtabbar__drop">Show ⌄</span>
-    <span class="vtabbar__tools">
-      <span class="is-on"><svg class="ic"><use href="#i-cursor"/></svg></span>
-      <span><svg class="ic"><use href="#i-move"/></svg></span>
-      <span><svg class="ic"><use href="#i-rotate"/></svg></span>
-      <span><svg class="ic"><use href="#i-scale"/></svg></span>
-    </span>
-    <span class="vtabbar__play"><i><svg class="ic"><use href="#i-play"/></svg></i><i>■</i></span>
-    <span class="vtabbar__drop">Build ⌄</span>
-    <span class="vtabbar__right">
-      <svg class="ic"><use href="#i-alert"/></svg><svg class="ic"><use href="#i-chart"/></svg><svg class="ic"><use href="#i-branch"/></svg><svg class="ic"><use href="#i-gear"/></svg><svg class="ic"><use href="#i-user"/></svg>
-    </span>
-  </div>
-</div>
+<!-- type: software (page type software, site-kind software)
+     deal: hero product (the Warden capture across the screen), palette graphite-safety-orange, type funnel,
+     radius sharp, ground sage, nav nav-mega, close close-type, footer footer-columns, rhythm space,
+     buttons pill, mark arc, grounds none, effect gradient-mesh in the one [data-visual] frame (#merge)
+     moments: giant-type-pass in #ping, line-carries-colour in #experience
+     loop: the behavior tree in the #ai app frame -->
 
 <header class="nav">
-  <div class="wrap">
-    <a class="nav__brand" href="#top"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg>AMAN KHANDELWAL</a>
-    <ul class="nav__links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#games">Games</a></li>
-      <li><a href="#fab">Products</a></li>
-      <li><a href="#packs">Asset Packs</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a class="btn btn--cyan btn--sm" href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Resume</a>
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Aman Khandelwal</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item">
+        <a class="nav__link" href="#products">Tools <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <div class="menu-col span-3">
+              <p class="t-label">Frameworks</p>
+              <a href="#ai">Hitz AI Suite<span>Behavior trees for Unity</span></a>
+              <a href="#merge">Merge Tactics<span>Auto-battler framework for UE5</span></a>
+            </div>
+            <div class="menu-col span-3">
+              <p class="t-label">Plugins and packs</p>
+              <a href="#geomap">Hitz GeoMap<span>Real-world maps for UE5</span></a>
+              <a href="#gas">HitzGAS Toolkit<span>GAS on any Blueprint actor</span></a>
+              <a href="#cozy">Cozy Kingdom<span>Low-poly packs for Unity and UE5</span></a>
+            </div>
+            <a class="menu-card span-3 start-10" href="https://www.fab.com/listings/53974d58-8b16-41f3-ba25-da18639515f5">
+              <div class="panel"><img class="frame__img" src="assets/img/bt-editor.jpg" alt="The Hitz AI Suite behavior tree editor in Unity" width="1920" height="800" loading="lazy" data-source="client" data-subject="Hitz AI Suite behavior tree editor"></div>
+              <span class="t-card">Hitz AI Suite is live</span>
+              <span class="t-small muted">See the listing on Fab</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="#games">Games</a></div>
+      <div class="nav__item"><a class="nav__link" href="#experience">Experience</a></div>
+      <div class="nav__item"><a class="nav__link" href="#questions">Questions</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="mailto:khandelwalaman5@gmail.com">Email me<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
   </div>
 </header>
 
 <main id="top">
-
-  <!-- ===== Hero ===== -->
-  <section class="hero">
-    <div class="wrap hero__grid">
-      <div>
-        <p class="eyebrow hero-in">// Portfolio</p>
-        <h1 class="hero__name hero-in" style="--d:.05s" aria-label="Aman Khandelwal"><span data-type>AMAN</span><br><span class="nowrap"><span data-type>KHANDELWAL</span><i class="hero__cursor" aria-hidden="true"></i></span></h1>
-        <p class="hero__role mono hero-in" style="--d:.15s">Senior Gameplay Programmer</p>
-        <p class="hero__tags mono hero-in" style="--d:.2s">Gameplay Systems / Combat Design / Multiplayer<br>Unity / Unreal Engine / Game Development</p>
-
-        <ul class="skillchips" aria-label="Core stack">
-          <li class="hero-in" style="--d:.28s" title="Unreal Engine 5"><span class="mono">UE5</span></li>
-          <li class="hero-in" style="--d:.32s" title="Unity"><svg class="ic" aria-hidden="true"><use href="#i-unity"/></svg></li>
-          <li class="hero-in" style="--d:.36s" title="C#"><span class="mono">C#</span></li>
-          <li class="hero-in" style="--d:.40s" title="Systems &amp; AI"><svg class="ic" aria-hidden="true"><use href="#i-nodes"/></svg></li>
-          <li class="hero-in" style="--d:.44s" title="Gameplay"><svg class="ic" aria-hidden="true"><use href="#i-gamepad"/></svg></li>
-          <li class="hero-in" style="--d:.48s" title="C++"><span class="mono">&lt;/&gt;</span></li>
-        </ul>
-
-        <div class="hero__cta hero-in" style="--d:.5s">
-          <a class="btn btn--primary btn--lg" href="#work"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg>View Projects</a>
-          <a class="btn btn--outline btn--lg" href="#experience"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg>About Me</a>
+  <section class="hero hero--product" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text hero__in">
+      <div class="hero__head">
+        <div>
+          <h1 id="hero-h">Gameplay programmer for UE5 and Unity</h1>
+          <p class="hero__lead">Aman Khandelwal, Jaipur. Five years shipping multiplayer games on Steam, mobile and Meta Quest. Open to remote roles.</p>
         </div>
-        <p class="hero__links mono hero-in" style="--d:.55s">
-          <a href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener">Download resume</a> ·
-          <a href="mailto:khandelwalaman5@gmail.com">khandelwalaman5@gmail.com</a>
-        </p>
-
-        <p class="eyebrow hero-in" style="--d:.6s;margin-top:30px">// Selected Projects</p>
-        <div class="projpills hero-in" style="--d:.65s">
-          <a class="projpill" href="#ktrl-smash"><svg class="ic" aria-hidden="true"><use href="#i-gamepad"/></svg>Ktrl Smash</a>
-          <a class="projpill" href="#dinomap"><svg class="ic" aria-hidden="true"><use href="#i-dino"/></svg>DinoMap Explorer</a>
-          <a class="projpill" href="#cursed-hour"><svg class="ic" aria-hidden="true"><use href="#i-candle"/></svg>The Cursed Hour</a>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="mailto:khandelwalaman5@gmail.com">Email me<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="assets/Aman_Khandelwal_Resume.pdf">Download resume</a>
         </div>
       </div>
-
-      <div class="heroshot brackets hero-in" style="--d:.2s">
-        <svg class="gizmo" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 20V4" stroke="#5b8cff" stroke-width="1.6"/><path d="M20 20H34" stroke="#e5484d" stroke-width="1.6"/><path d="M20 20 10 30" stroke="#46c27a" stroke-width="1.6"/><text x="18" y="3" fill="#5b8cff" font-size="7" font-family="monospace">Z</text><text x="35" y="23" fill="#e5484d" font-size="7" font-family="monospace">X</text><text x="6" y="34" fill="#46c27a" font-size="7" font-family="monospace">Y</text></svg>
-        <div class="photo scan"><img src="assets/img/profile-photo.jpg" alt="Aman Khandelwal on the Manali–Leh Highway" width="400" height="400"></div>
-        <div class="hud mono" aria-hidden="true">[LOCATION: MANALI–LEH HWY]<br>[STATUS: EXPLORING]</div>
+      <div class="hero__stage">
+        <img src="assets/img/warden-slam.jpg" alt="The Warden boss mid-slam in the Hitz AI Suite boss fight, a red warning disc under it on the arena floor" style="--ly-pos: 50% 58%" fetchpriority="high" width="1920" height="1080" data-source="client" data-subject="Hitz AI Suite boss fight capture">
       </div>
-    </div>
-
-    <div class="wrap">
-      <div class="statstrip reveal">
-        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><div><b data-to="5" data-suf="+">5+</b><small>Years shipping games</small></div></div>
-        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg><div><b data-to="13.8" data-dec="1" data-suf="k">13.8k</b><small>Lines of C++ · solo framework</small></div></div>
-        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-flask"/></svg><div><b data-to="337">337</b><small>Automated tests passing</small></div></div>
-        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-gauge"/></svg><div><b data-to="0.19" data-dec="2" data-suf=" ms">0.19 ms</b><small>500-agent crowd frame</small></div></div>
-        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-cube"/></svg><div><b data-to="750" data-suf="+">750+</b><small>Low-poly assets on Fab</small></div></div>
-        <div class="kpi"><svg class="ic" aria-hidden="true"><use href="#i-coin"/></svg><div><b data-to="6" data-pre="~$" data-suf="k">~$6k</b><small>Animation-pack revenue</small></div></div>
-      </div>
-    </div>
+    </div></div>
   </section>
 
-  <!-- ===== Featured: HITZ Merge Tactics ===== -->
-  <section class="section" id="work">
+  <section class="section" id="ai" aria-labelledby="ai-h">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <div>
-          <p class="eyebrow">// Featured case study · solo · on Fab</p>
-          <h2 class="sec-title">HITZ: Merge Tactics</h2>
-        </div>
-        <ul class="chips"><li>UE 5.8</li><li>C++</li><li>Auto-battler</li><li>Replication</li><li>Multiplayer</li></ul>
-      </div>
-
-      <div class="grid-merge">
-        <div class="panel reveal">
-          <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-cube"/></svg>BoardLayout_Hex<i>×</i></span><span class="panel__right">click a thumbnail to swap</span></div>
-          <div class="vp-tools" aria-hidden="true"><span>Perspective ⌄</span><span>Lit ⌄</span><span>Show ⌄</span><svg class="ic"><use href="#i-cursor"/></svg><svg class="ic"><use href="#i-move"/></svg><svg class="ic"><use href="#i-rotate"/></svg></div>
-          <div class="vp-stage">
-            <div class="brackets brackets--sm">
-              <button class="shot vp-main scan" data-full="assets/img/hitz-screenshot-overview.jpg" aria-label="Enlarge screenshot">
-                <img src="assets/img/hitz-screenshot-overview.jpg" alt="Overview of the HITZ framework: board layouts, shop, traits, combat, 3D viewer and material painter" width="1672" height="941">
-              </button>
-            </div>
-          </div>
-          <div class="vp-thumbs">
-            <button class="vp-thumb is-active" data-src="assets/img/hitz-screenshot-overview.jpg" aria-label="Show framework overview"><img loading="lazy" src="assets/img/hitz-screenshot-overview.jpg" alt="Overview of the HITZ framework: board layouts, shop, traits, combat, 3D viewer and material painter" width="1672" height="941"></button>
-            <button class="vp-thumb" data-src="assets/img/hitz-screenshot-combat.jpg" aria-label="Show combat and prep phases"><img loading="lazy" src="assets/img/hitz-screenshot-combat.jpg" alt="Combat and prep phases on a hex grid" width="1672" height="941"></button>
-            <button class="vp-thumb" data-src="assets/img/hitz-screenshot-editor.jpg" aria-label="Show board layout painter"><img loading="lazy" src="assets/img/hitz-screenshot-editor.jpg" alt="Board layout data asset and material painter in the editor" width="1672" height="941"></button>
-            <button class="vp-thumb" data-src="assets/img/hitz-screenshot-preview.jpg" aria-label="Show unit preview editor"><img loading="lazy" src="assets/img/hitz-screenshot-preview.jpg" alt="Unit definition editor with live 3D preview" width="1672" height="941"></button>
-          </div>
-        </div>
-
-        <div class="stack">
-          <div class="panel reveal" style="--d:.1s">
-            <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>Details<i>×</i></span></div>
-            <dl class="props">
-              <div><dt>Overview</dt><dd>Server-authoritative auto-battler framework for Unreal Engine 5.8. Built alone (~13,800 lines of C++), published as a paid, source-available product, and designed so buyers ship a full game without writing C++.</dd></div>
-              <div><dt>Netcode</dt><dd>The server locks board snapshots, simulates, and replicates a compact event log that clients replay. Clients never compute outcomes, so match results can't be cheated.</dd></div>
-              <div><dt>Modules</dt><dd><code>HMT_Core</code> 6.2k lines, <code>HMT_CoreEditor</code> 1.3k and <code>HMT_GASBridge</code> 0.3k, plus a 6.0k sample game. Drops into a project by copying three folders.</dd></div>
-              <div><dt>Extension</dt><dd>Four Blueprint interfaces (stat provider, targeting, trait effect, ability executor) cover every extension point. A GAS bridge maps stats onto an existing <code>AttributeSet</code> per unit.</dd></div>
-              <div><dt>Editor tools</dt><dd>Click-to-paint board editor, unit editor with live 3D preview and montage playback, and a save-time validator across seven data-asset types.</dd></div>
-              <div><dt>Round loop</dt><dd>Prep, combat and results phases, recency-weighted pairing, ghost boards for odd lobbies, PvE rounds, spectating and late-join. Hex and square grids from one asset.</dd></div>
-            </dl>
-            <div class="panel__actions">
-              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/ead02f11-78dc-43d0-9b92-e5edb8c4cd28" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg>View on Fab</a>
-              <a class="btn btn--outline btn--sm" href="https://github.com/hitz482/HitzMergeTacticsCodeBase" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg>Source</a>
-              <a class="btn btn--outline btn--sm" href="https://hitz482.github.io/HitzMergeTactics/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Docs</a>
-            </div>
-          </div>
-
-          <div class="panel reveal" style="--d:.2s">
-            <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-tree"/></svg>GameplayFlow (Blueprint)<i>×</i></span></div>
-            <div class="bp" role="img" aria-label="Server locks a snapshot, simulates combat, replicates a compact event log, and clients replay it visually.">
-              <div class="bp-node"><b>Lock snapshot</b><small>Server · authority</small></div>
-              <span class="bp-wire"></span>
-              <div class="bp-node"><b>Simulate</b><small>Combat · targeting</small></div>
-              <span class="bp-wire"></span>
-              <div class="bp-node bp-node--hot"><b>Replicate</b><small>Compact event log</small></div>
-              <span class="bp-wire"></span>
-              <div class="bp-node"><b>Client replay</b><small>Anims · VFX · UI</small></div>
-            </div>
-            <p class="panel__note">Clients only replay the server's event log. They never compute a match outcome themselves.</p>
-          </div>
+      <div class="grid grid--top">
+        <h2 class="span-5" id="ai-h">Hitz AI Suite, behavior trees for Unity</h2>
+        <div class="span-6 start-7">
+          <p>My AI framework on Fab, with EQS, perception and crowds too. When the Warden's path to the player fails, its selector falls back to cover. 500 agents run at 0.19 ms median a frame, measured in the Unity Editor.</p>
+          <a class="link" href="https://www.fab.com/listings/53974d58-8b16-41f3-ba25-da18639515f5">See Hitz AI Suite on Fab</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== Hitz AI Suite ===== -->
-  <section class="section" id="ai">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div>
-          <p class="eyebrow">// Second case study · solo · on Fab</p>
-          <h2 class="sec-title">Hitz AI Suite</h2>
-          <p class="sec-lede">Unreal-style AI for Unity: Perception, EQS, Behavior Trees, Smart Objects and crowd simulation, with a GraphView Behavior Tree editor and a bridge into Unity's own Behavior package.</p>
+      <div class="ui app fill" role="img" aria-label="The Hitz AI Suite debugger: the agents of the boss fight beside the Warden's behavior tree as it runs" data-ui-pause-host>
+        <div class="app__pane app__pane--list">
+          <div class="ui ui-panel ui-win" data-ui="window" data-open="Idle" data-work="Running" data-done="Done">
+            <div class="ui-win__bar">
+              <span class="ui-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="ui-win__crumb">Boss Fight <i>/</i> <b>Agents</b></span>
+              <span class="ui-spacer"></span>
+              <span class="ui-win__search" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg><span class="ui-win__ph">Search</span><span class="ui-kbd">/</span></span>
+            </div>
+            <div class="ui-win__body">
+              <nav class="ui-win__side" aria-hidden="true">
+                <span class="ui-win__nav is-on"><svg class="ui-icon" viewBox="0 0 16 16"><circle cx="8" cy="6" r="2.5"/><path d="M3.5 13.5c.6-2.3 2.4-3.5 4.5-3.5s3.9 1.2 4.5 3.5"/></svg>Agents<em>10</em></span>
+                <span class="ui-win__nav"><svg class="ui-icon" viewBox="0 0 16 16"><path d="M8 2.5v4M4 13.5V10h8v3.5M8 6.5V10"/></svg>Trees<em>2</em></span>
+                <span class="ui-win__nav"><svg class="ui-icon" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5"/><path d="M8 5v3l2 1.5"/></svg>Profiler</span>
+                <span class="ui-win__label">Layers</span>
+                <span class="ui-win__nav"><span class="ui-win__hash">#</span>Boss</span>
+                <span class="ui-win__nav"><span class="ui-win__hash">#</span>Crowd</span>
+              </nav>
+              <div class="ui-win__main">
+                <div class="ui-win__cols" aria-hidden="true"><span>Agent</span><span>Task</span><span>State</span><span>Layer</span></div>
+                <ul class="ui-win__rows">
+                  <li class="ui-win__row" data-row><span class="ui-avatar" data-tone="2">WD</span><span class="ui-win__who">Warden</span><span class="ui-win__sub">Selector, attack or cover</span><span class="ui-win__st is-you" data-st>Running</span><span class="ui-win__age">Boss</span></li>
+                  <li class="ui-win__row" data-row><span class="ui-avatar" data-tone="3">M1</span><span class="ui-win__who">Minion 1</span><span class="ui-win__sub">Move to target</span><span class="ui-win__st" data-st>Running</span><span class="ui-win__age">Crowd</span></li>
+                  <li class="ui-win__row" data-row><span class="ui-avatar" data-tone="3">M2</span><span class="ui-win__who">Minion 2</span><span class="ui-win__sub">Move to target</span><span class="ui-win__st" data-st>Running</span><span class="ui-win__age">Crowd</span></li>
+                  <li class="ui-win__row" data-row><span class="ui-avatar" data-tone="4">M3</span><span class="ui-win__who">Minion 3</span><span class="ui-win__sub">Make way for the Warden</span><span class="ui-win__st" data-st>Running</span><span class="ui-win__age">Crowd</span></li>
+                  <li class="ui-win__row" data-row><span class="ui-avatar" data-tone="3">M4</span><span class="ui-win__who">Minion 4</span><span class="ui-win__sub">Return to spot</span><span class="ui-win__st is-done" data-st>Done</span><span class="ui-win__age">Crowd</span></li>
+                  <li class="ui-win__row" data-row><span class="ui-avatar" data-tone="2">M5</span><span class="ui-win__who">Minion 5</span><span class="ui-win__sub">EQS: find a flank point</span><span class="ui-win__st" data-st>Running</span><span class="ui-win__age">Crowd</span></li>
+                  <li class="ui-win__row" data-row><span class="ui-avatar" data-tone="3">M6</span><span class="ui-win__who">Minion 6</span><span class="ui-win__sub">Wait for a summon spot</span><span class="ui-win__st" data-st>Idle</span><span class="ui-win__age">Crowd</span></li>
+                  <li class="ui-win__row" data-row><span class="ui-avatar" data-tone="1">S1</span><span class="ui-win__who">Shrine north</span><span class="ui-win__sub">Smart object, free</span><span class="ui-win__st is-done" data-st>Done</span><span class="ui-win__age">World</span></li>
+                  <li class="ui-win__row" data-row><span class="ui-avatar" data-tone="1">S2</span><span class="ui-win__who">Shrine south</span><span class="ui-win__sub">Smart object, claimed</span><span class="ui-win__st" data-st>Running</span><span class="ui-win__age">World</span></li>
+                  <li class="ui-win__row" data-row><span class="ui-avatar" data-tone="4">PL</span><span class="ui-win__who">Player</span><span class="ui-win__sub">Seen by the Warden</span><span class="ui-win__st" data-st>Idle</span><span class="ui-win__age">Target</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <ul class="chips"><li>Unity 6</li><li>C#</li><li>Behavior Trees</li><li>EQS</li><li>Crowds</li></ul>
-      </div>
-
-      <div class="grid-ai">
-        <div class="panel reveal">
-          <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-tree"/></svg>BehaviorTree_HitzAI<i>×</i></span><span class="panel__right bt-status" aria-live="off">Idle</span></div>
-          <div class="bt-wrap">
-            <svg class="bt" viewBox="0 0 660 250" role="img" aria-label="Behavior tree: a Selector tries a Sequence that finds and moves to a target, then falls back to a Sequence that finds and moves to cover.">
-              <path class="edge" data-n="seqL" d="M330 52V76H170V100"/>
-              <path class="edge" data-n="seqR" d="M330 52V76H490V100"/>
-              <path class="edge" data-n="eqsL" d="M170 136V161H85V186"/>
-              <path class="edge" data-n="mvL" d="M170 136V161H245V186"/>
-              <path class="edge" data-n="eqsR" d="M490 136V161H420V186"/>
-              <path class="edge" data-n="mvR" d="M490 136V161H582V186"/>
-              <g class="node" data-n="sel"><rect x="260" y="14" width="140" height="38" rx="5"/><text x="330" y="38" text-anchor="middle">Selector</text></g>
-              <g class="node" data-n="seqL"><rect x="95" y="100" width="150" height="36" rx="5"/><text x="170" y="123" text-anchor="middle">Sequence</text></g>
-              <g class="node" data-n="seqR"><rect x="415" y="100" width="150" height="36" rx="5"/><text x="490" y="123" text-anchor="middle">Sequence</text></g>
-              <g class="node" data-n="eqsL"><rect x="10" y="186" width="150" height="48" rx="5"/><text x="85" y="206" text-anchor="middle">EQS Query</text><text class="sub" x="85" y="224" text-anchor="middle">(Find Target)</text></g>
-              <g class="node" data-n="mvL"><rect x="180" y="186" width="130" height="48" rx="5"/><text x="245" y="206" text-anchor="middle">Move To</text><text class="sub" x="245" y="224" text-anchor="middle">(Target)</text></g>
-              <g class="node" data-n="eqsR"><rect x="345" y="186" width="150" height="48" rx="5"/><text x="420" y="206" text-anchor="middle">EQS Query</text><text class="sub" x="420" y="224" text-anchor="middle">(Find Cover)</text></g>
-              <g class="node" data-n="mvR"><rect x="515" y="186" width="135" height="48" rx="5"/><text x="582" y="206" text-anchor="middle">Move To</text><text class="sub" x="582" y="224" text-anchor="middle">(Cover)</text></g>
+        <div class="app__pane app__pane--open">
+          <div class="ui ui-panel bt-pane" data-bt>
+            <div class="bt-pane__bar">
+              <span class="bt-pane__name">BehaviorTree_Warden</span>
+              <span class="bt-pane__status" data-bt-status>Running: Selector</span>
+            </div>
+            <svg class="bt" viewBox="0 0 660 250" aria-hidden="true">
+              <path class="bt-edge" data-n="seqL" d="M330 52V76H170V100"/>
+              <path class="bt-edge" data-n="seqR" d="M330 52V76H490V100"/>
+              <path class="bt-edge" data-n="eqsL" d="M170 136V161H85V186"/>
+              <path class="bt-edge" data-n="mvL" d="M170 136V161H245V186"/>
+              <path class="bt-edge" data-n="eqsR" d="M490 136V161H420V186"/>
+              <path class="bt-edge" data-n="mvR" d="M490 136V161H582V186"/>
+              <g class="bt-node" data-n="sel"><rect x="260" y="14" width="140" height="38" rx="4"/><text x="330" y="38" text-anchor="middle">Selector</text></g>
+              <g class="bt-node" data-n="seqL"><rect x="95" y="100" width="150" height="36" rx="4"/><text x="170" y="123" text-anchor="middle">Attack</text></g>
+              <g class="bt-node" data-n="seqR"><rect x="415" y="100" width="150" height="36" rx="4"/><text x="490" y="123" text-anchor="middle">Cover</text></g>
+              <g class="bt-node" data-n="eqsL"><rect x="10" y="186" width="150" height="48" rx="4"/><text x="85" y="206" text-anchor="middle">EQS query</text><text class="bt-sub" x="85" y="224" text-anchor="middle">find target</text></g>
+              <g class="bt-node" data-n="mvL"><rect x="180" y="186" width="130" height="48" rx="4"/><text x="245" y="206" text-anchor="middle">Move to</text><text class="bt-sub" x="245" y="224" text-anchor="middle">target</text></g>
+              <g class="bt-node" data-n="eqsR"><rect x="345" y="186" width="150" height="48" rx="4"/><text x="420" y="206" text-anchor="middle">EQS query</text><text class="bt-sub" x="420" y="224" text-anchor="middle">find cover</text></g>
+              <g class="bt-node" data-n="mvR"><rect x="515" y="186" width="135" height="48" rx="4"/><text x="582" y="206" text-anchor="middle">Move to</text><text class="bt-sub" x="582" y="224" text-anchor="middle">cover</text></g>
             </svg>
           </div>
-          <div class="bt-legend" aria-hidden="true"><span><i class="lg lg--run"></i>Running</span><span><i class="lg lg--ok"></i>Succeeded</span><span><i class="lg lg--fail"></i>Failed</span></div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="panel reveal" style="--d:.1s">
-          <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg>Profiler<i>×</i></span><span class="panel__right">S500 benchmark</span></div>
-          <div class="prof">
-            <div class="prof__cards">
-              <div class="pcard"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><b data-to="0.19" data-dec="2" data-suf=" ms">0.19 ms</b><small>Median frame</small></div>
-              <div class="pcard"><svg class="ic" aria-hidden="true"><use href="#i-memory"/></svg><b>0 B</b><small>GC alloc</small></div>
-              <div class="pcard"><svg class="ic" aria-hidden="true"><use href="#i-agents"/></svg><b data-to="500">500</b><small>Agents</small></div>
-            </div>
-            <div class="tests">
-              <svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>
-              <div><b><span data-to="337">337</span> tests passed</b><small>271 EditMode · 66 PlayMode</small></div>
-            </div>
-            <div class="tests__bar" aria-hidden="true"><i></i></div>
-            <p class="prof__note">Measured in the Unity Editor. Release builds strip all debug and editor-only tooling.</p>
-            <div class="panel__actions panel__actions--flush">
-              <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/53974d58-8b16-41f3-ba25-da18639515f5" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg>View on Fab</a>
+  <section class="section" id="merge" aria-labelledby="merge-h">
+    <div class="wrap">
+      <div class="grid grid--top">
+        <div class="span-5 stack-6">
+          <h2 id="merge-h">Merge Tactics, an auto-battler framework for Unreal</h2>
+          <p class="t-lead">HITZ: Merge Tactics is 13,800 lines of C++ that I wrote alone and sell on Fab. The server simulates each round and sends clients an event log to replay, so no client can fake a result.</p>
+          <ul class="facts">
+            <li>Four Blueprint interfaces, so buyers extend it without C++</li>
+            <li>A GAS bridge that maps stats onto an existing AttributeSet</li>
+            <li>Hex and square grids from one board asset</li>
+          </ul>
+          <a class="link" href="https://github.com/hitz482/HitzMergeTacticsCodeBase">Read the source on GitHub</a>
+        </div>
+        <div class="frame frame--split span-6 start-7" data-visual data-fx="gradient-mesh" data-fx-seed="7">
+          <div class="stage stage--fade-br">
+            <div class="at-corner wide shot" style="--ax: 56px; --ay: 56px; --w: 760px">
+              <img src="assets/img/hitz-screenshot-editor.jpg" alt="The HITZ: Merge Tactics board layout editor in Unreal Engine, painting hex and square boards" loading="lazy" width="1672" height="941" data-source="client" data-subject="HITZ: Merge Tactics board editor">
             </div>
           </div>
         </div>
@@ -295,344 +214,160 @@
     </div>
   </section>
 
-  <!-- ===== Shipped games ===== -->
-  <section class="section" id="games">
+  <section class="section statement" id="ping" data-moment="giant-type-pass" data-moment-opts='{"image": "../../img/warden-orbs.jpg", "travel": 60, "focusY": 60}' aria-labelledby="ping-h">
     <div class="wrap">
-      <h2 class="eyebrow eyebrow--section reveal">// Shipped games</h2>
-
-      <div class="panel reveal">
-        <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>Content Browser<i>×</i></span></div>
-        <div class="cb">
-          <nav class="tree" aria-label="Site folders">
-            <span class="tree__root"><svg class="ic" aria-hidden="true"><use href="#i-folder-open"/></svg>Content</span>
-            <a class="is-here" href="#games"><svg class="ic" aria-hidden="true"><use href="#i-folder-open"/></svg>Shipped</a>
-            <a href="#work"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>CaseStudies</a>
-            <a href="#fab"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>Plugins</a>
-            <a href="#packs"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>AssetPacks</a>
-            <a href="#experience"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>Experience</a>
-          </nav>
-
-          <div class="cb__main">
-            <div class="crumb mono"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>Content <span>›</span> Shipped<span class="count">8 items</span></div>
-
-            <div class="tiles-big">
-              <article class="tile" id="ktrl-smash">
-                <button class="shot tile__thumb" data-full="assets/img/ktrl-1.jpg" aria-label="Enlarge: Ktrl Smash gameplay"><img loading="lazy" src="assets/img/ktrl-1.jpg" alt="Ktrl Smash arena gameplay with scoreboard and elimination feed" width="1600" height="900"></button>
-                <div class="tile__body">
-                  <h3>Ktrl Smash</h3>
-                  <div class="meta">Multiplayer arena brawler · Unity · Photon Fusion · AWS · Steam + WebGL · Dec 2025</div>
-                  <p>Free-to-play online PvP brawler, rated Mostly Positive on Steam. I built the multiplayer layer on Photon Fusion and worked with devops to deploy dedicated servers on AWS.</p>
-                  <div class="callout">
-                    <span>Debugging story</span>
-                    Ping climbed over each session: <b class="metric">20→60 ms</b> on Windows, <b class="metric">40→100 ms</b> on WebGL. The cause was per-frame work piling up on WebGL's single main thread, made worse by chatty network updates and redundant replicated state. I audited coroutines, cut update rate and payload size, and removed unneeded replicated variables. Ping now stays flat for the whole session.
-                  </div>
-                  <a class="btn btn--outline btn--sm" href="https://store.steampowered.com/app/4223440/Ktrl_Smash/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg>Steam page</a>
-                </div>
-              </article>
-
-              <article class="tile" id="cursed-hour">
-                <button class="shot tile__thumb" data-full="assets/img/cursed-1.jpg" aria-label="Enlarge: The Cursed Hour key art"><img loading="lazy" src="assets/img/cursed-1.jpg" alt="The Cursed Hour key art: a ghost with red eyes in a dark corridor" width="1600" height="900"></button>
-                <div class="tile__body">
-                  <h3>The Cursed Hour</h3>
-                  <div class="meta">4-player online co-op horror · Unreal Engine 5 · EOS + Steam SDK · Nov 2024</div>
-                  <p>Co-op survival horror in a haunted mansion. I pitched the original concept and owned the core multiplayer systems through to launch: the ghost NPC, the lobby and session layer, and text and voice chat.</p>
-                  <div class="callout">
-                    <span>Engineering note</span>
-                    I integrated Epic Online Services and the Steam SDK side by side for a planned cross-platform rollout, keeping the session layer backend-agnostic. Around <b class="metric">18–23k</b> estimated players and <b class="metric">129</b> reviews.
-                  </div>
-                  <a class="btn btn--outline btn--sm" href="https://store.steampowered.com/app/3297310/The_Cursed_Hour/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg>Steam page</a>
-                </div>
-              </article>
-            </div>
-
-            <div class="tiles-small">
-              <article class="tile tile--sm" id="dinomap"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-dino"/></svg></span><div><h3>DinoMap Explorer</h3><div class="meta">Unity · AR Foundation · iOS/Android · Team lead</div><p>Location-based AR game for finding and collecting dinosaurs. Built the AR capture flow, encyclopedia and NFT integration; parts became shared studio components.</p></div></article>
-              <article class="tile tile--sm"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-xr"/></svg></span><div><h3>Robo XR</h3><div class="meta">Unreal · Meta Quest · Sole developer</div><p>Robot build-and-battle VR game on the Meta Quest Store. Built robot assembly, combat, enemy AI and DLC support.</p></div></article>
-              <article class="tile tile--sm"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg></span><div><h3>Rift Riders</h3><div class="meta">Unreal · iOS/Android</div><p>Proposed the concept, then built endless track generation, the vehicle pawn, quests and tasks, and Firebase/Play Services.</p></div></article>
-              <article class="tile tile--sm"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-sword"/></svg></span><div><h3>Fight Hero</h3><div class="meta">Unity · iOS/Android</div><p>Owned the mech combat loop, enemy waves and upgrade balancing, and directed the art team on combat animation.</p></div></article>
-              <article class="tile tile--sm"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-tower"/></svg></span><div><h3>Tower of Demons</h3><div class="meta">Unity · Mobile</div><p>Added game modes, cosmetics, resolution-scalable UI and Firebase-backed player data.</p></div></article>
-              <article class="tile tile--sm"><span class="tile__icon"><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg></span><div><h3>Nutrients Sold Separately</h3><div class="meta">Unreal · Google Play · Epic game jam</div><p>Team of five, built for the "As Above, So Below" theme and released on the Play Store.</p></div></article>
-            </div>
-          </div>
-        </div>
+      <h2 class="mo-gt__type" id="ping-h">Ping stays<br>flat</h2>
+      <div class="mo-gt__row">
+        <p>On Ktrl Smash, ping climbed from 20 to 60 ms over a session on Windows and from 40 to 100 ms on WebGL. I traced it to per-frame work on WebGL's single main thread and cut the update rate and the payload.</p>
+        <a class="link" href="#ktrl">See Ktrl Smash</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== Products (plugins) ===== -->
-  <section class="section" id="fab">
+  <section class="section" id="games" style="--hm: 2" aria-labelledby="games-h">
     <div class="wrap">
-      <h2 class="eyebrow eyebrow--section reveal">// Products (plugins)</h2>
-
-      <div class="panel reveal">
-        <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-plug"/></svg>Plugins<i>×</i></span></div>
-        <div class="pl">
-          <div class="pl__side" role="group" aria-label="Filter plugins">
-            <button type="button" data-filter="all" aria-pressed="true">All Plugins <span>4</span></button>
-            <button type="button" data-filter="unreal" aria-pressed="false">Unreal Engine <span>3</span></button>
-            <button type="button" data-filter="unity" aria-pressed="false">Unity <span>1</span></button>
-            <button type="button" data-filter="gameplay" aria-pressed="false">Gameplay <span>2</span></button>
-            <button type="button" data-filter="ai" aria-pressed="false">AI <span>1</span></button>
-            <button type="button" data-filter="world" aria-pressed="false">World &amp; GPS <span>1</span></button>
-          </div>
-
-          <div class="pl__main">
-            <div class="pl__top"><span class="search mono"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>Search plugins</span><span class="mono pl__count">All live on Fab · built and published solo</span></div>
-            <div class="plugs">
-              <article class="plug" data-tags="unreal gameplay" style="--d:.1s">
-                <img class="plug__thumb" loading="lazy" src="assets/img/hitz-screenshot-board.jpg" alt="" width="1672" height="941">
-                <div class="plug__body">
-                  <div class="plug__head"><h3>HITZ: Merge Tactics</h3><span class="ver">UE 5.8</span><span class="en"><span class="toggle" aria-hidden="true"></span>Enabled</span></div>
-                  <p>Server-authoritative auto-battler framework with board, shop, traits, combat and the full multiplayer round loop. Source-available.</p>
-                  <div class="plug__links">
-                    <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/ead02f11-78dc-43d0-9b92-e5edb8c4cd28" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
-                    <a class="btn btn--outline btn--sm" href="https://hitz482.github.io/HitzMergeTactics/" target="_blank" rel="noopener">Docs</a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="plug" data-tags="unity ai" style="--d:.2s">
-                <img class="plug__thumb" loading="lazy" src="assets/img/aisuite-cover.jpg" alt="" width="1280" height="720">
-                <div class="plug__body">
-                  <div class="plug__head"><h3>Hitz AI Suite</h3><span class="ver">Unity 6</span><span class="en"><span class="toggle" aria-hidden="true"></span>Enabled</span></div>
-                  <p>Perception, EQS, Behavior Trees, Smart Objects and crowd simulation for Unity, with a GraphView Behavior Tree editor. 337 automated tests.</p>
-                  <div class="plug__links">
-                    <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/53974d58-8b16-41f3-ba25-da18639515f5" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="plug" data-tags="unreal world" style="--d:.3s">
-                <img class="plug__thumb" loading="lazy" src="assets/img/geomap-cover.jpg" alt="" width="1280" height="720">
-                <div class="plug__body">
-                  <div class="plug__head"><h3>Hitz GeoMap</h3><span class="ver">UE 5.8</span><span class="en"><span class="toggle" aria-hidden="true"></span>Enabled</span></div>
-                  <p>Streams real roads, buildings, water and parks around the player's GPS position, with your own meshes and actors placed on real places. Five tile-provider presets, 13 styleable layers. Windows + Android.</p>
-                  <div class="plug__links">
-                    <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/11ad1758-2a82-41f1-824e-5a4e020bc047" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
-                    <a class="btn btn--outline btn--sm" href="https://hitz482.github.io/HitzGeoMap/" target="_blank" rel="noopener">Product site</a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="plug" data-tags="unreal gameplay" style="--d:.4s">
-                <img class="plug__thumb" loading="lazy" src="assets/img/gas-cover.jpg" alt="" width="1280" height="720">
-                <div class="plug__body">
-                  <div class="plug__head"><h3>HitzGAS Toolkit</h3><span class="ver">UE 5</span><span class="en"><span class="toggle" aria-hidden="true"></span>Enabled</span></div>
-                  <p>Gameplay Ability System without the boilerplate: three drop-in components, a live GAS debugger, six sample abilities and nine effects, and a generator that writes a replicated C++ AttributeSet.</p>
-                  <div class="plug__links">
-                    <a class="btn btn--primary btn--sm" href="https://www.fab.com/listings/5bbba0ca-9f37-4822-8fe5-ce48dcadfbb9" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
-                    <a class="btn btn--outline btn--sm" href="https://hitz482.github.io/HitzGasToolkit/" target="_blank" rel="noopener">Product site</a>
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <div class="callout callout--flush">
-              <span>Also</span>
-              Combat animation packs on <a href="https://www.artstation.com/hitzsama" target="_blank" rel="noopener">ArtStation</a> and Fab (~$6,000 revenue): I directed the artist team and built the Unreal integration, with animation blueprints, state machines, and root-motion and in-place variants.
-            </div>
-          </div>
-        </div>
+      <div class="section-head">
+        <h2 id="games-h">Multiplayer games I shipped. <span class="muted">Both are live on Steam.</span></h2>
+      </div>
+      <div class="grid">
+        <a class="card card--row card--open span-6" id="ktrl" href="https://store.steampowered.com/app/4223440/Ktrl_Smash/">
+          <h3>Built Ktrl Smash's online play on Steam</h3>
+          <p>A free-to-play PvP brawler, out in December 2025 on Steam and WebGL: Photon Fusion, with dedicated servers on AWS.</p>
+          <div class="panel"><img class="frame__img" src="assets/img/ktrl-1.jpg" alt="Ktrl Smash arena gameplay with the scoreboard and the elimination feed" loading="lazy" width="1600" height="900" data-source="client" data-subject="Ktrl Smash gameplay"></div>
+        </a>
+        <a class="card card--row card--open span-6" id="cursed" href="https://store.steampowered.com/app/3297310/The_Cursed_Hour/">
+          <h3>Built The Cursed Hour's co-op on Steam</h3>
+          <p>A four-player co-op horror game, out in November 2024 on Steam: the ghost AI, lobbies, and voice and text chat.</p>
+          <div class="panel"><img class="frame__img" src="assets/img/cursed-1.jpg" alt="The Cursed Hour key art: a ghost with red eyes in a dark corridor" loading="lazy" width="1600" height="900" data-source="client" data-subject="The Cursed Hour key art"></div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ===== Asset packs ===== -->
-  <section class="section" id="packs">
+  <section class="section g2" id="products" aria-labelledby="products-h">
     <div class="wrap">
-      <h2 class="eyebrow eyebrow--section eyebrow--warm reveal">// Asset packs</h2>
-      <div class="packs-panel reveal">
-        <div class="packs-intro">
-          <p class="packs-title mono">Cozy<br>Kingdom</p>
-          <p>Hand-authored low-poly environment packs for Unity and UE5, built with a custom Blender/Python procedural pipeline so every pack shares one art style and one demo layout.</p>
+      <div class="group">
+        <div class="section-head">
+          <h2 id="products-h">Engine tools I sell on Fab. <span class="muted">Plugins and asset packs, built alone.</span></h2>
         </div>
-        <div class="packs">
-          <article class="pack" style="--d:.1s">
-            <div class="pack__media"><img loading="lazy" src="assets/img/kingdom-cover.png" alt="Cozy Kingdom Builder Kit overview render" width="1200" height="630"></div>
-            <div class="pack__body">
-              <h3>Cozy Kingdom Builder Kit</h3>
-              <div class="pack__meta">751 assets · Unity + UE5 · Live</div>
-              <p>Modular houses, a castle, a farm, nature and water sets, ready to lay out as a village.</p>
-              <a class="btn btn--warm btn--sm" href="https://www.fab.com/listings/6ff1dd0a-1eb8-45f7-b7e8-00009421a204" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
-            </div>
-          </article>
-          <article class="pack" style="--d:.2s">
-            <div class="pack__media"><img loading="lazy" src="assets/img/xmas-cover.png" alt="Cozy Christmas Village overview render" width="1200" height="630"></div>
-            <div class="pack__body">
-              <h3>Cozy Christmas Village</h3>
-              <div class="pack__meta">123 assets · Unity + UE5 · Live</div>
-              <p>A market, a workshop, a rink and holiday decor, built on the same base style.</p>
-              <a class="btn btn--warm btn--sm" href="https://www.fab.com/listings/91fac1e6-2f5e-4908-8fdb-4f32dfdc6ad2" target="_blank" rel="noopener">View on Fab<svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
-            </div>
-          </article>
-          <article class="pack pack--pending" style="--d:.3s">
-            <div class="pack__media"><img loading="lazy" src="assets/img/halloween-cover.png" alt="Cozy Halloween Village overview render" width="1200" height="630"></div>
-            <div class="pack__body">
-              <h3>Cozy Halloween Village</h3>
-              <div class="pack__meta">109 assets · Unity + UE5 · <span class="badge-pending">Pending approval</span></div>
-              <p>A graveyard, a witch's manor, pumpkins and street decor. Submitted to Fab and awaiting approval.</p>
-            </div>
-          </article>
+        <div class="grid">
+          <a class="card card--row card--open span-12" id="geomap" href="https://www.fab.com/listings/11ad1758-2a82-41f1-824e-5a4e020bc047">
+            <h3>Hitz GeoMap streams real-world maps into Unreal</h3>
+            <p>Roads, buildings and water appear around the player's GPS position, from five map providers. Windows and Android.</p>
+            <div class="panel"><img class="frame__img" src="assets/img/geomap-cover.jpg" alt="Hitz GeoMap streaming a real city's streets and river into Unreal Engine" loading="lazy" width="1280" height="720" data-source="client" data-subject="Hitz GeoMap"></div>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== Experience (Sequencer) ===== -->
-  <section class="section" id="experience">
-    <div class="wrap">
-      <h2 class="eyebrow eyebrow--section reveal">// Experience</h2>
-
-      <div class="panel seq-panel reveal">
-        <div class="panel__bar">
-          <span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-film"/></svg>Sequencer<i>×</i></span>
-          <span class="transport" aria-hidden="true"><svg class="ic"><use href="#i-skipb"/></svg><svg class="ic"><use href="#i-play"/></svg><svg class="ic"><use href="#i-skipf"/></svg></span>
-          <span class="panel__right seq-hint">click a clip to inspect it</span>
-        </div>
-
-        <div class="seq-scroll">
-          <div class="seq">
-            <div class="seq__names">
-              <div class="seq__hdr">Tracks</div>
-              <div><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Education</div>
-              <div><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Hyperreality (Intern)</div>
-              <div><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Fiftyfive Gaming Studio</div>
-              <div><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Solo products (Fab)</div>
-              <div class="tall"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg>Key milestones</div>
-            </div>
-            <div class="seq__lanes">
-              <div class="ruler mono" aria-hidden="true">
-                <span style="left:0%">2018</span><span style="left:11.11%">2019</span><span style="left:22.22%">2020</span><span style="left:33.33%">2021</span><span style="left:44.44%">2022</span><span style="left:55.56%">2023</span><span style="left:66.67%">2024</span><span style="left:77.78%">2025</span><span style="left:88.89%">2026</span>
+      <div class="grid">
+        <a class="card card--row card--open span-3" id="gas" href="https://www.fab.com/listings/5bbba0ca-9f37-4822-8fe5-ce48dcadfbb9">
+          <h3>HitzGAS Toolkit adds GAS to actors</h3>
+          <p>Three components, a live debugger and an AttributeSet generator.</p>
+          <div class="panel" data-fx="gradient-mesh" data-fx-seed="23" data-fx-params='{"drift":0}'>
+            <div class="stage stage--fade-br">
+              <div class="at-corner wide shot" style="--ax: 24px; --ay: 32px; --w: 520px">
+                <img src="assets/img/gas-cover.jpg" alt="The HitzGAS Toolkit debugger open in the Unreal editor" loading="lazy" width="1280" height="720" data-source="client" data-subject="HitzGAS Toolkit">
               </div>
-              <div class="lane"><button type="button" class="clip" data-pane="edu" style="--x:5.56%;--w:44.44%;--d:.1s"><span>B.Tech · Computer Science</span></button></div>
-              <div class="lane"><button type="button" class="clip clip--narrow" data-pane="hr" style="--x:37.96%;--w:4.63%;--d:.25s"><span>Intern · Hyperreality</span></button></div>
-              <div class="lane"><button type="button" class="clip" data-pane="ff" style="--x:41.67%;--w:56.67%;--d:.4s"><span>Senior Game Developer · Oct 2021 – Present</span></button></div>
-              <div class="lane"><button type="button" class="clip clip--narrow clip--label-left" data-pane="fab" style="--x:94.89%;--w:3.44%;--d:.55s"><span>Merge Tactics, AI Suite, GeoMap, GAS, Cozy Kingdom</span></button></div>
-              <div class="lane tall" aria-hidden="true">
-                <span class="diamond" style="--x:42.1%;--d:.7s"></span><span class="dlabel down" style="--x:42.1%">Robo XR<small>Meta Quest · 2021</small></span>
-                <span class="diamond" style="--x:76.3%;--d:.8s"></span><span class="dlabel up" style="--x:76.3%">The Cursed Hour<small>Steam · Nov 2024</small></span>
-                <span class="diamond" style="--x:88.3%;--d:.9s"></span><span class="dlabel down" style="--x:88.3%">Ktrl Smash<small>Steam · Dec 2025</small></span>
-              </div>
-              <span class="playhead" style="--now:98.33%" data-label="NOW" aria-hidden="true"></span>
             </div>
           </div>
-        </div>
-
-        <div class="seq-details">
-          <div class="seq-detail" data-pane="ff">
-            <h3>Senior Game Developer</h3>
-            <div class="org">Fiftyfive Gaming Studio · Jaipur, India · Oct 2021 – Present · teams of 5–6</div>
-            <ul>
-              <li>Gameplay, combat and systems programming on titles for PC (Steam), mobile and VR.</li>
-              <li>Owned multiplayer on <b>Ktrl Smash</b> and <b>The Cursed Hour</b>; led <b>DinoMap Explorer</b>.</li>
-              <li>Fixed a persistent iOS <code>bad_weak_ptr</code> crash caused by Firebase linking twice (Unity prebuilt libraries alongside EDM4U's Swift Package Manager resolution).</li>
-              <li>Led the studio's combat animation packs from idea to store (~$6,000 revenue).</li>
-            </ul>
-          </div>
-          <div class="seq-detail" data-pane="hr">
-            <h3>Unreal Game Developer (Intern)</h3>
-            <div class="org">Hyperreality Technologies · Jun – Oct 2021</div>
-            <ul><li>Sole developer on <b>Robo XR</b>, shipped to the Meta Quest Store: robot assembly, combat, enemy AI and DLC support.</li></ul>
-          </div>
-          <div class="seq-detail" data-pane="edu">
-            <h3>B.Tech, Computer Science</h3>
-            <div class="org">Poornima University, Jaipur · Cloud Computing specialization · 2018 – 2022</div>
-          </div>
-          <div class="seq-detail" data-pane="fab">
-            <h3>Independent products on Fab</h3>
-            <div class="org">Solo · Jul 2026 – Present</div>
-            <ul>
-              <li>Four engine tools: <b>HITZ: Merge Tactics</b>, <b>Hitz AI Suite</b>, <b>Hitz GeoMap</b> and <b>HitzGAS Toolkit</b>.</li>
-              <li><b>Cozy Kingdom</b> low-poly asset packs: Builder Kit and Christmas Village live, Halloween Village pending.</li>
-            </ul>
-          </div>
-        </div>
+        </a>
+        <a class="card card--row card--open span-3" id="cozy" href="https://www.fab.com/listings/6ff1dd0a-1eb8-45f7-b7e8-00009421a204">
+          <h3>Cozy Kingdom builds a town</h3>
+          <p>751 low-poly houses, walls, farms and trees.</p>
+          <div class="panel"><img class="frame__img" src="assets/img/kingdom-cover.jpg" alt="A low-poly castle town from the Cozy Kingdom Builder Kit" loading="lazy" width="1200" height="630" data-source="client" data-subject="Cozy Kingdom Builder Kit"></div>
+        </a>
+        <a class="card card--row card--open span-3" href="https://www.fab.com/listings/91fac1e6-2f5e-4908-8fdb-4f32dfdc6ad2">
+          <h3>Cozy Christmas Village adds a market</h3>
+          <p>123 stalls, rinks and snowy houses.</p>
+          <div class="panel"><img class="frame__img" src="assets/img/xmas-cover.jpg" alt="A snowy low-poly village from Cozy Christmas Village" loading="lazy" width="1200" height="630" data-source="client" data-subject="Cozy Christmas Village"></div>
+        </a>
+        <article class="card card--row card--open span-3">
+          <h3>Cozy Halloween Village adds a manor</h3>
+          <p>109 pieces, waiting for Fab's approval.</p>
+          <div class="panel"><img class="frame__img" src="assets/img/halloween-cover.jpg" alt="A low-poly Halloween village with pumpkins and a manor" loading="lazy" width="1200" height="630" data-source="client" data-subject="Cozy Halloween Village"></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ===== Skills (Project Settings) ===== -->
-  <section class="section" id="skills">
-    <div class="wrap">
-      <h2 class="eyebrow eyebrow--section reveal">// Skills (project settings)</h2>
-
-      <div class="panel reveal">
-        <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-gear"/></svg>Project Settings<i>×</i></span></div>
-        <div class="ps">
-          <div class="ps__side" aria-hidden="true">
-            <div class="is-here">Gameplay</div><div>Systems</div><div>Networking</div><div>AI</div><div>Platforms</div><div>Tools &amp; Workflow</div>
-          </div>
-          <div class="ps__col">
-            <div class="prow" style="--d:.1s"><span class="k">Gameplay &amp; combat systems</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
-            <div class="prow" style="--d:.18s"><span class="k">Multiplayer (server-authoritative, dedicated)</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
-            <div class="prow" style="--d:.26s"><span class="k">AI (Behavior Trees, EQS, Perception, crowds)</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
-            <div class="prow" style="--d:.34s"><span class="k">Editor tooling (asset editors, validators)</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
-            <div class="prow" style="--d:.42s"><span class="k">Animation (Anim BPs, state machines, root motion)</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
-            <div class="prow" style="--d:.5s"><span class="k">Profiling &amp; optimization</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
-            <div class="prow" style="--d:.58s"><span class="k">Automated testing (EditMode, PlayMode)</span><span class="chk"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></i>Enabled</span></div>
-          </div>
-          <dl class="ps__col kvs">
-            <div class="kv"><dt>Engines</dt><dd>Unreal Engine 5 (C++, Blueprints), Unity 6 (C#)</dd></div>
-            <div class="kv"><dt>Languages</dt><dd>C++, C#, Python</dd></div>
-            <div class="kv"><dt>Networking</dt><dd>Photon Fusion, EOS, Steam SDK, AWS dedicated servers</dd></div>
-            <div class="kv"><dt>Platforms</dt><dd>PC, WebGL, iOS, Android, Meta Quest</dd></div>
-            <div class="kv"><dt>Backend</dt><dd>Firebase, Play Services, AdMob</dd></div>
-            <div class="kv"><dt>Profiling</dt><dd>Unreal Insights, RenderDoc, GPU Visualizer</dd></div>
-            <div class="kv"><dt>Tools</dt><dd>Git, Perforce, Visual Studio, Xcode, Blender (bpy)</dd></div>
-          </dl>
+  <section class="section ground-inverse g2m" id="experience" data-moment="line-carries-colour" data-moment-opts='{"from": "base"}' aria-labelledby="experience-h">
+    <div class="wrap grid grid--top">
+        <div class="span-5 stack-6">
+          <h2 id="experience-h">Studio experience in UE5 and Unity</h2>
+          <p class="t-lead">Most of it at Fiftyfive Gaming Studio in Jaipur, in teams of five or six, shipping titles for PC, mobile and VR.</p>
+          <p>Other titles: Robo XR on Meta Quest, Rift Riders and Fight Hero on mobile, and Tower of Demons.</p>
+          <p>I also fixed an iOS crash from Firebase linking twice, through Unity's prebuilt libraries and Swift Package Manager.</p>
         </div>
-      </div>
+        <div class="span-6 start-7 stack-6">
+          <img class="portrait" src="assets/img/profile-photo.jpg" alt="Aman Khandelwal on the Manali–Leh Highway" width="400" height="400" loading="lazy" data-source="client" data-subject="Aman Khandelwal">
+          <ul class="rows">
+            <li><span class="rows__name">Senior Game Developer, Fiftyfive Gaming Studio</span><span class="rows__value">Oct 2021 to now</span></li>
+            <li><span class="rows__name">Unreal Game Developer, Hyperreality Technologies</span><span class="rows__value">Jun to Oct 2021</span></li>
+            <li><span class="rows__name">Fab publisher, solo</span><span class="rows__value">Jul 2026 to now</span></li>
+            <li><span class="rows__name">B.Tech, Computer Science, Poornima University</span><span class="rows__value">2018 to 2022</span></li>
+          </ul>
+        </div>
     </div>
   </section>
 
-  <!-- ===== Contact (Output Log) ===== -->
-  <section class="section" id="contact">
-    <div class="wrap">
-      <h2 class="eyebrow eyebrow--section reveal">// Contact</h2>
-      <div class="ct">
-        <div class="panel reveal">
-          <div class="panel__bar"><span class="panel__tab"><svg class="ic" aria-hidden="true"><use href="#i-terminal"/></svg>Output Log<i>×</i></span></div>
-          <div class="log" data-log>
-            <div class="log__line"><span class="ts">[2026.11.08-14:02:11]</span><span class="msg">LogPortfolio: Initializing...</span></div>
-            <div class="log__line log__line--accent"><span class="ts">[2026.11.08-14:02:12]</span><span class="msg">LogPortfolio: Open to remote roles (IST, UTC+5:30)</span></div>
-            <div class="log__line"><span class="ts">[2026.11.08-14:02:13]</span><span class="msg">LogPortfolio: Gameplay · multiplayer · tools · Unreal / Unity</span></div>
-            <div class="log__line"><span class="ts">[2026.11.08-14:02:14]</span><span class="msg">LogPortfolio: Full-time or contract</span></div>
-            <div class="log__line log__line--ok"><span class="ts">[2026.11.08-14:02:15]</span><span class="msg">Build: Succeeded (0 errors, 0 warnings)</span></div>
-            <div class="log__prompt" aria-hidden="true">&gt; <i></i></div>
+  <section class="section g2m" id="questions" aria-labelledby="questions-h">
+    <div class="wrap grid grid--top">
+        <div class="span-5 stack-6">
+          <h2 id="questions-h">Questions studios ask</h2>
+          <div class="ic-list">
+            <div class="ic-row"><span class="ic-row__main"><span class="ic-row__title">Unreal Engine 5</span><span class="ic-row__meta">C++, Blueprints, GAS</span></span><span class="ic-tile ic-tile--48"><img class="ic" src="assets/icons/unrealengine.svg" alt="" loading="lazy" width="40" height="40"></span></div>
+            <div class="ic-row"><span class="ic-row__main"><span class="ic-row__title">Unity</span><span class="ic-row__meta">C#, Burst, Photon Fusion</span></span><span class="ic-tile ic-tile--48"><img class="ic" src="assets/icons/unity.svg" alt="" loading="lazy" width="39" height="40"></span></div>
+            <div class="ic-row"><span class="ic-row__main"><span class="ic-row__title">Git and Perforce</span><span class="ic-row__meta">Version control</span></span><span class="ic-tile ic-tile--48"><img class="ic" src="assets/icons/git-icon.svg" alt="" loading="lazy" width="40" height="40"></span></div>
+            <div class="ic-row"><span class="ic-row__main"><span class="ic-row__title">Visual Studio and Xcode</span><span class="ic-row__meta">PC, iOS and Android builds</span></span><span class="ic-tile ic-tile--48"><img class="ic" src="assets/icons/visual-studio.svg" alt="" loading="lazy" width="40" height="40"></span></div>
+            <div class="ic-row"><span class="ic-row__main"><span class="ic-row__title">Blender</span><span class="ic-row__meta">Python asset pipelines</span></span><span class="ic-tile ic-tile--48"><img class="ic" src="assets/icons/blender.svg" alt="" loading="lazy" width="40" height="33"></span></div>
           </div>
         </div>
-
-        <div class="ct__main reveal" style="--d:.1s">
-          <h2>Let's build something multiplayer.</h2>
-          <p>I'm open to remote gameplay, multiplayer and tools roles on Unreal or Unity, full-time or contract. I'm based in India (IST, UTC+5:30).</p>
-          <div class="ct__cta">
-            <a class="btn btn--primary" href="mailto:khandelwalaman5@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
-            <a class="btn btn--cyan" href="assets/Aman_Khandelwal_Resume.pdf" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>Resume.pdf</a>
-            <a class="btn btn--outline" href="assets/Aman_Khandelwal_Resume_Full.pdf" target="_blank" rel="noopener">Full resume</a>
-          </div>
-          <div class="socials">
-            <a href="https://github.com/hitz482" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-branch"/></svg>github.com/hitz482</a>
-            <a href="https://www.linkedin.com/in/aman-khandelwal-b7a3551a1/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg>LinkedIn</a>
-            <a href="https://www.artstation.com/hitzsama" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-image"/></svg>ArtStation</a>
-            <a href="https://www.youtube.com/@amankhandelwal8816" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-yt"/></svg>YouTube</a>
-          </div>
+        <div class="faq span-6 start-7">
+          <div class="faq__item"><h3>Do you work remotely from India?</h3><p>Yes. I'm in Jaipur on IST (UTC+5:30) and open to remote roles.</p></div>
+          <div class="faq__item"><h3>Do you take full-time or contract Unity work?</h3><p>Either, in Unity or Unreal.</p></div>
+          <div class="faq__item"><h3>Is your Unreal code public?</h3><p>Merge Tactics is source-available on <a href="https://github.com/hitz482/HitzMergeTacticsCodeBase">GitHub</a>, with its <a href="https://hitz482.github.io/HitzMergeTactics/">docs</a>.</p></div>
+          <div class="faq__item"><h3>Do you know Unreal's GAS?</h3><p>Yes. I built a GAS bridge for Merge Tactics and sell HitzGAS Toolkit on Fab.</p></div>
+          <div class="faq__item"><h3>Which Unity and Unreal tools do you sell?</h3><p>Four plugins and three asset packs on Fab.</p></div>
+          <div class="faq__item"><h3>Can I download your resume?</h3><p>Yes: a <a href="assets/Aman_Khandelwal_Resume.pdf">two-page resume</a> and a <a href="assets/Aman_Khandelwal_Resume_Full.pdf">longer one</a>.</p></div>
         </div>
-      </div>
     </div>
   </section>
 </main>
 
-<footer>
+<footer class="footer closing" id="contact" aria-labelledby="close-h">
   <div class="wrap">
-    <span class="foot-brand"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg>AMAN KHANDELWAL <em>// Senior Gameplay Programmer</em></span>
-    <span>// Games / Tools / Systems / Multiplayer · © 2026 · Game screenshots © their respective studios</span>
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Email me about a role</h2>
+        <p class="t-small muted">Remote, from India on IST (UTC+5:30). Full-time or contract.</p>
+      </div>
+      <a class="btn btn--primary btn--xl btn--wide" href="mailto:khandelwalaman5@gmail.com">Email me<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Aman Khandelwal</a>
+          <p class="footer__lede">Gameplay and systems code for UE5 and Unity</p>
+        </div>
+        <div class="span-2 footer__col"><h3>Work</h3><ul><li><a href="#ai">Hitz AI Suite</a></li><li><a href="#merge">Merge Tactics</a></li><li><a href="#products">Fab tools</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Games</h3><ul><li><a href="#ktrl">Ktrl Smash</a></li><li><a href="#cursed">The Cursed Hour</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>About</h3><ul><li><a href="#experience">Experience</a></li><li><a href="assets/Aman_Khandelwal_Resume_Full.pdf">Full resume</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Elsewhere</h3><ul><li><a href="https://github.com/hitz482">GitHub</a></li><li><a href="https://www.linkedin.com/in/aman-khandelwal-b7a3551a1/">LinkedIn</a></li><li><a href="https://www.artstation.com/hitzsama">ArtStation</a></li><li><a href="https://www.youtube.com/@amankhandelwal8816">YouTube</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Aman Khandelwal</span>
+        <span>Game art &copy; its studios. Product names and logos are trademarks of their owners.</span>
+      </div>
+    </div>
   </div>
 </footer>
 
-<dialog class="lightbox" id="lightbox">
-  <button type="button" aria-label="Close">×</button>
-  <img alt="">
-</dialog>
+<nav class="actionbar" aria-label="Quick actions">
+  <a class="btn btn--primary" href="mailto:khandelwalaman5@gmail.com">Email me</a>
+</nav>
 
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script type="module" src="bt.js"></script>
 </body>
 </html>
