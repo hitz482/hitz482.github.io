@@ -47,7 +47,6 @@
 <link rel="modulepreload" href="assets/moments/moments.js">
 <link rel="modulepreload" href="assets/moments/lib.js">
 <link rel="modulepreload" href="assets/moments/line-carries-colour/moment.js">
-<link rel="modulepreload" href="assets/moments/giant-type-pass/moment.js">
 <link rel="stylesheet" href="page.css">
 </head>
 <body>
@@ -105,7 +104,7 @@
       <div class="hero__head">
         <div>
           <h1 id="hero-h">Gameplay programmer for UE5 and Unity</h1>
-          <p class="hero__lead">Aman Khandelwal, Jaipur. Five years shipping multiplayer games on Steam, mobile and Meta Quest. Open to remote roles.</p>
+          <p class="hero__lead">Aman Khandelwal, Jaipur. Five years of Unreal Engine 5 and Unity: server-authoritative multiplayer, gameplay systems and AI. Open to remote roles.</p>
         </div>
         <div class="btn-row">
           <a class="btn btn--primary" href="mailto:khandelwalaman5@gmail.com">Email me<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
@@ -118,10 +117,116 @@
     </div></div>
   </section>
 
+  <section class="section g2" id="merge" aria-labelledby="merge-h">
+    <div class="wrap">
+      <div class="group">
+        <div class="grid grid--top">
+          <div class="span-5 stack-6">
+            <h2 id="merge-h">Merge Tactics, an auto-battler framework for Unreal</h2>
+            <p class="stackline">Unreal Engine 5.8 · C++ · replication · GAS · Fab</p>
+            <p class="t-lead">13,800 lines of C++ that I wrote alone and sell on Fab. The server simulates each round and sends clients an event log to replay, so no client can fake a result.</p>
+            <ul class="facts">
+              <li>Four Blueprint interfaces, so buyers extend it without C++</li>
+              <li>A GAS bridge that maps stats onto an existing AttributeSet</li>
+              <li>Hex and square grids from one board asset</li>
+            </ul>
+            <a class="link" href="https://github.com/hitz482/HitzMergeTacticsCodeBase">Read the source on GitHub</a>
+          </div>
+          <div class="frame frame--split span-6 start-7" data-visual data-fx="gradient-mesh" data-fx-seed="7">
+            <div class="stage stage--fade-br">
+              <div class="at-corner wide shot" style="--ax: 40px; --ay: 40px; --w: 900px">
+                <img src="assets/img/hitz-screenshot-editor.jpg" alt="The HITZ: Merge Tactics board layout editor in Unreal Engine, painting hex and square boards" loading="lazy" width="1672" height="941" data-source="client" data-subject="HITZ: Merge Tactics board editor">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--top">
+        <div class="span-5 stack-6">
+          <p class="t-card">Merge Tactics match flow, server to client</p>
+          <ol class="steps-list">
+            <li><b>Prep.</b> Players place units on the board.</li>
+            <li><b>Lock.</b> The server snapshots both boards.</li>
+            <li><b>Simulate.</b> The server runs combat: targeting, abilities, traits.</li>
+            <li><b>Replicate.</b> It sends a compact, ordered event log.</li>
+            <li><b>Replay.</b> Clients play the log back as animation and effects.</li>
+          </ol>
+        </div>
+        <div class="span-6 start-7 stack-6">
+          <p class="t-card">Merge Tactics extension point, in C++</p>
+          <pre class="code" aria-label="IHMT_TargetingStrategy.h from the Merge Tactics source"><code><span class="c">// Source/HMT_Core/Public/Units/IHMT_TargetingStrategy.h</span>
+UINTERFACE(BlueprintType, MinimalAPI)
+class UHMT_TargetingStrategy : public UInterface { GENERATED_BODY() };
+
+class HMT_CORE_API IHMT_TargetingStrategy
+{
+    GENERATED_BODY()
+public:
+    UFUNCTION(BlueprintNativeEvent, BlueprintCallable,
+              Category = "HitzMergeTactics|Combat")
+    AActor* SelectTarget(AActor* SelfActor,
+                         const TArray&lt;AActor*&gt;&amp; Candidates,
+                         UHMT_CombatContext* Context);
+};</code></pre>
+          <pre class="code" aria-label="IHMT_StatProvider.h from the Merge Tactics source"><code><span class="c">// Source/HMT_Core/Public/Stats/IHMT_StatProvider.h</span>
+class HMT_CORE_API IHMT_StatProvider
+{
+    GENERATED_BODY()
+public:
+    UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+    float GetFinalStatValue(FGameplayTag StatTag);
+
+    UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+    void ApplyStatModifier(FGameplayTag StatTag,
+        EHMT_StatModOp ModOp, float Magnitude,
+        EHMT_ModifierDuration Duration, ...);
+};</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section g2" id="games" aria-labelledby="games-h">
+    <div class="wrap">
+      <div class="group">
+        <div class="section-head">
+          <h2 id="games-h">Shipped games: The Cursed Hour and Ktrl Smash. <span class="muted">Both are live on Steam.</span></h2>
+        </div>
+        <div class="grid">
+          <article class="card card--row card--open span-6" id="cursed">
+            <h3>The Cursed Hour, 4-player co-op horror</h3>
+            <p class="stackline">Unreal Engine 5 · C++ · Epic Online Services · Steam SDK · Nov 2024</p>
+            <p>I pitched the concept and owned the multiplayer: ghost AI, lobbies and sessions, and voice and text chat. EOS and the Steam SDK run side by side behind one session layer.</p>
+            <div class="panel"><div class="stage"><a class="at-rise fit trailer" style="--fit-max: 520px; --ax: 24px; --ay: 24px" href="https://www.youtube.com/watch?v=NNx7tQpRFV0"><img src="assets/img/trailer-cursed.jpg" alt="Watch the full haunted mansion gameplay trailer for The Cursed Hour on YouTube" loading="lazy" width="599" height="337" data-source="client" data-subject="The Cursed Hour trailer"><span class="trailer__play" aria-hidden="true"></span></a></div></div>
+            <div class="btn-row"><a class="btn btn--primary" href="https://www.youtube.com/watch?v=NNx7tQpRFV0">Watch the trailer</a><a class="btn btn--secondary" href="https://store.steampowered.com/app/3297310/The_Cursed_Hour/">Steam page</a></div>
+          </article>
+          <article class="card card--row card--open span-6" id="ktrl">
+            <h3>Ktrl Smash, online arena brawler</h3>
+            <p class="stackline">Unity · C# · Photon Fusion · AWS dedicated servers · Dec 2025</p>
+            <p>I built the multiplayer layer on Photon Fusion and deployed dedicated servers on AWS with the devops team. Free to play on Steam and WebGL, rated Mostly Positive.</p>
+            <div class="panel"><div class="stage"><a class="at-rise fit trailer" style="--fit-max: 520px; --ax: 24px; --ay: 24px" href="https://www.youtube.com/watch?v=JrFEw-OiJsM"><img src="assets/img/trailer-ktrl.jpg" alt="Watch the Ktrl Smash gameplay trailer on YouTube" loading="lazy" width="600" height="337" data-source="client" data-subject="Ktrl Smash trailer"><span class="trailer__play" aria-hidden="true"></span></a></div></div>
+            <div class="btn-row"><a class="btn btn--primary" href="https://www.youtube.com/watch?v=JrFEw-OiJsM">Watch the trailer</a><a class="btn btn--secondary" href="https://store.steampowered.com/app/4223440/Ktrl_Smash/">Steam page</a></div>
+          </article>
+        </div>
+      </div>
+      <div class="grid grid--top">
+        <div class="span-12 stack-6"><p class="t-card">Ktrl Smash fix: WebGL ping drift</p></div>
+        <p class="span-4"><b>Problem:</b> ping climbed over a session, from 20 to 60 ms on Windows and from 40 to 100 ms on WebGL.</p>
+        <p class="span-4"><b>Cause:</b> per-frame work piled up on WebGL's single main thread, worsened by frequent network updates and redundant replicated state.</p>
+        <p class="span-4"><b>Fix:</b> I audited coroutines, cut the update rate and payload size, and removed unneeded replicated variables. Ping now stays flat.</p>
+      </div>
+      <div class="grid">
+        <a class="tile span-3" href="https://store.steampowered.com/app/3297310/The_Cursed_Hour/"><div class="tile__media"><img src="assets/img/cursed-2.jpg" alt="A blood-red handprint on a dark wooden table in The Cursed Hour" loading="lazy" width="600" height="338"></div></a>
+        <a class="tile span-3" href="https://store.steampowered.com/app/3297310/The_Cursed_Hour/"><div class="tile__media"><img src="assets/img/cursed-3.jpg" alt="Four players walk toward a dark mansion in The Cursed Hour" loading="lazy" width="600" height="338"></div></a>
+        <a class="tile span-3" href="https://store.steampowered.com/app/4223440/Ktrl_Smash/"><div class="tile__media"><img src="assets/img/ktrl-2.jpg" alt="Ktrl Smash players fighting among shipping containers" loading="lazy" width="600" height="338"></div></a>
+        <a class="tile span-3" href="https://store.steampowered.com/app/4223440/Ktrl_Smash/"><div class="tile__media"><img src="assets/img/ktrl-3.jpg" alt="Ktrl Smash combat in the arena with the combo counter" loading="lazy" width="600" height="338"></div></a>
+      </div>
+    </div>
+  </section>
   <section class="section" id="ai" aria-labelledby="ai-h">
     <div class="wrap">
       <div class="grid grid--top">
-        <h2 class="span-5" id="ai-h">Hitz AI Suite, behavior trees for Unity</h2>
+        <div class="span-5 stack-6"><h2 id="ai-h">Hitz AI Suite, behavior trees for Unity</h2><p class="stackline">Unity 6 · C# · Burst · GraphView · Fab</p></div>
         <div class="span-6 start-7">
           <p>My AI framework on Fab, with EQS, perception and crowds too. When the Warden's path to the player fails, its selector falls back to cover. 500 agents run at 0.19 ms median a frame, measured in the Unity Editor.</p>
           <a class="link" href="https://www.fab.com/listings/53974d58-8b16-41f3-ba25-da18639515f5">See Hitz AI Suite on Fab</a>
@@ -189,103 +294,26 @@
       </div>
     </div>
   </section>
-
-  <section class="section" id="merge" aria-labelledby="merge-h">
-    <div class="wrap">
-      <div class="grid grid--top">
-        <div class="span-5 stack-6">
-          <h2 id="merge-h">Merge Tactics, an auto-battler framework for Unreal</h2>
-          <p class="t-lead">HITZ: Merge Tactics is 13,800 lines of C++ that I wrote alone and sell on Fab. The server simulates each round and sends clients an event log to replay, so no client can fake a result.</p>
-          <ul class="facts">
-            <li>Four Blueprint interfaces, so buyers extend it without C++</li>
-            <li>A GAS bridge that maps stats onto an existing AttributeSet</li>
-            <li>Hex and square grids from one board asset</li>
-          </ul>
-          <a class="link" href="https://github.com/hitz482/HitzMergeTacticsCodeBase">Read the source on GitHub</a>
-        </div>
-        <div class="frame frame--split span-6 start-7" data-visual data-fx="gradient-mesh" data-fx-seed="7">
-          <div class="stage stage--fade-br">
-            <div class="at-corner wide shot" style="--ax: 56px; --ay: 56px; --w: 760px">
-              <img src="assets/img/hitz-screenshot-editor.jpg" alt="The HITZ: Merge Tactics board layout editor in Unreal Engine, painting hex and square boards" loading="lazy" width="1672" height="941" data-source="client" data-subject="HITZ: Merge Tactics board editor">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section statement" id="ping" data-moment="giant-type-pass" data-moment-opts='{"image": "../../img/warden-orbs.jpg", "travel": 60, "focusY": 60}' aria-labelledby="ping-h">
-    <div class="wrap">
-      <h2 class="mo-gt__type" id="ping-h">Ping stays<br>flat</h2>
-      <div class="mo-gt__row">
-        <p>On Ktrl Smash, ping climbed from 20 to 60 ms over a session on Windows and from 40 to 100 ms on WebGL. I traced it to per-frame work on WebGL's single main thread and cut the update rate and the payload.</p>
-        <a class="link" href="#ktrl">See Ktrl Smash</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="games" style="--hm: 2" aria-labelledby="games-h">
+  <section class="section" id="products" aria-labelledby="products-h">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="games-h">Multiplayer games I shipped. <span class="muted">Both are live on Steam.</span></h2>
+        <h2 id="products-h">More Unreal plugins on Fab. <span class="muted">Built and documented alone.</span></h2>
       </div>
       <div class="grid">
-        <a class="card card--row card--open span-6" id="ktrl" href="https://store.steampowered.com/app/4223440/Ktrl_Smash/">
-          <h3>Built Ktrl Smash's online play on Steam</h3>
-          <p>A free-to-play PvP brawler, out in December 2025 on Steam and WebGL: Photon Fusion, with dedicated servers on AWS.</p>
-          <div class="panel"><img class="frame__img" src="assets/img/ktrl-1.jpg" alt="Ktrl Smash arena gameplay with the scoreboard and the elimination feed" loading="lazy" width="1600" height="900" data-source="client" data-subject="Ktrl Smash gameplay"></div>
-        </a>
-        <a class="card card--row card--open span-6" id="cursed" href="https://store.steampowered.com/app/3297310/The_Cursed_Hour/">
-          <h3>Built The Cursed Hour's co-op on Steam</h3>
-          <p>A four-player co-op horror game, out in November 2024 on Steam: the ghost AI, lobbies, and voice and text chat.</p>
-          <div class="panel"><img class="frame__img" src="assets/img/cursed-1.jpg" alt="The Cursed Hour key art: a ghost with red eyes in a dark corridor" loading="lazy" width="1600" height="900" data-source="client" data-subject="The Cursed Hour key art"></div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section g2" id="products" aria-labelledby="products-h">
-    <div class="wrap">
-      <div class="group">
-        <div class="section-head">
-          <h2 id="products-h">Engine tools I sell on Fab. <span class="muted">Plugins and asset packs, built alone.</span></h2>
-        </div>
-        <div class="grid">
-          <a class="card card--row card--open span-12" id="geomap" href="https://www.fab.com/listings/11ad1758-2a82-41f1-824e-5a4e020bc047">
+          <a class="card card--row card--open span-6" id="geomap" href="https://www.fab.com/listings/11ad1758-2a82-41f1-824e-5a4e020bc047">
             <h3>Hitz GeoMap streams real-world maps into Unreal</h3>
+            <p class="stackline">Unreal Engine 5.8 · C++ · Blueprint · Android GPS</p>
             <p>Roads, buildings and water appear around the player's GPS position, from five map providers. Windows and Android.</p>
             <div class="panel"><img class="frame__img" src="assets/img/geomap-cover.jpg" alt="Hitz GeoMap streaming a real city's streets and river into Unreal Engine" loading="lazy" width="1280" height="720" data-source="client" data-subject="Hitz GeoMap"></div>
           </a>
-        </div>
+          <a class="card card--row card--open span-6" id="gas" href="https://www.fab.com/listings/5bbba0ca-9f37-4822-8fe5-ce48dcadfbb9">
+          <h3>HitzGAS Toolkit adds GAS to any actor</h3>
+          <p class="stackline">Unreal Engine 5 · C++ · Gameplay Ability System</p>
+          <p>Three components, a live debugger and an AttributeSet generator. Works in Blueprint-only projects.</p>
+          <div class="panel"><img class="frame__img" src="assets/img/gas-cover.jpg" alt="The HitzGAS Toolkit debugger open in the Unreal editor" loading="lazy" width="1280" height="720" data-source="client" data-subject="HitzGAS Toolkit"></div>
+        </a>
       </div>
-      <div class="grid">
-        <a class="card card--row card--open span-3" id="gas" href="https://www.fab.com/listings/5bbba0ca-9f37-4822-8fe5-ce48dcadfbb9">
-          <h3>HitzGAS Toolkit adds GAS to actors</h3>
-          <p>Three components, a live debugger and an AttributeSet generator.</p>
-          <div class="panel" data-fx="gradient-mesh" data-fx-seed="23" data-fx-params='{"drift":0}'>
-            <div class="stage stage--fade-br">
-              <div class="at-corner wide shot" style="--ax: 24px; --ay: 32px; --w: 520px">
-                <img src="assets/img/gas-cover.jpg" alt="The HitzGAS Toolkit debugger open in the Unreal editor" loading="lazy" width="1280" height="720" data-source="client" data-subject="HitzGAS Toolkit">
-              </div>
-            </div>
-          </div>
-        </a>
-        <a class="card card--row card--open span-3" id="cozy" href="https://www.fab.com/listings/6ff1dd0a-1eb8-45f7-b7e8-00009421a204">
-          <h3>Cozy Kingdom builds a town</h3>
-          <p>751 low-poly houses, walls, farms and trees.</p>
-          <div class="panel"><img class="frame__img" src="assets/img/kingdom-cover.jpg" alt="A low-poly castle town from the Cozy Kingdom Builder Kit" loading="lazy" width="1200" height="630" data-source="client" data-subject="Cozy Kingdom Builder Kit"></div>
-        </a>
-        <a class="card card--row card--open span-3" href="https://www.fab.com/listings/91fac1e6-2f5e-4908-8fdb-4f32dfdc6ad2">
-          <h3>Cozy Christmas Village adds a market</h3>
-          <p>123 stalls, rinks and snowy houses.</p>
-          <div class="panel"><img class="frame__img" src="assets/img/xmas-cover.jpg" alt="A snowy low-poly village from Cozy Christmas Village" loading="lazy" width="1200" height="630" data-source="client" data-subject="Cozy Christmas Village"></div>
-        </a>
-        <article class="card card--row card--open span-3">
-          <h3>Cozy Halloween Village adds a manor</h3>
-          <p>109 pieces, waiting for Fab's approval.</p>
-          <div class="panel"><img class="frame__img" src="assets/img/halloween-cover.jpg" alt="A low-poly Halloween village with pumpkins and a manor" loading="lazy" width="1200" height="630" data-source="client" data-subject="Cozy Halloween Village"></div>
-        </article>
-      </div>
+      <p class="also" id="cozy">Also on Fab: low-poly asset packs for Unity and UE5. <a class="link" href="https://www.fab.com/listings/6ff1dd0a-1eb8-45f7-b7e8-00009421a204">Cozy Kingdom Builder Kit</a>, <a class="link" href="https://www.fab.com/listings/91fac1e6-2f5e-4908-8fdb-4f32dfdc6ad2">Cozy Christmas Village</a>, and a Halloween village awaiting approval.</p>
     </div>
   </section>
 
@@ -294,8 +322,13 @@
         <div class="span-5 stack-6">
           <h2 id="experience-h">Studio experience in UE5 and Unity</h2>
           <p class="t-lead">Most of it at Fiftyfive Gaming Studio in Jaipur, in teams of five or six, shipping titles for PC, mobile and VR.</p>
-          <p>Other titles: Robo XR on Meta Quest, Rift Riders and Fight Hero on mobile, and Tower of Demons.</p>
-          <p>I also fixed an iOS crash from Firebase linking twice, through Unity's prebuilt libraries and Swift Package Manager.</p>
+          <ul class="facts">
+            <li>Robo XR (Unreal, Meta Quest): sole developer, robot assembly, combat, enemy AI, DLC</li>
+            <li>Rift Riders (Unreal): endless track, vehicle pawn, quests, Firebase</li>
+            <li>Fight Hero (Unity): mech combat loop and upgrade balancing</li>
+            <li>Tower of Demons (Unity): game modes, cosmetics, scalable UI</li>
+            <li>Fixed an iOS crash from Firebase linking twice, through Unity's prebuilt libraries and Swift Package Manager</li>
+          </ul>
         </div>
         <div class="span-6 start-7 stack-6">
           <img class="portrait" src="assets/img/profile-photo.jpg" alt="Aman Khandelwal on the Manali–Leh Highway" width="400" height="400" loading="lazy" data-source="client" data-subject="Aman Khandelwal">
@@ -348,7 +381,7 @@
           <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Aman Khandelwal</a>
           <p class="footer__lede">Gameplay and systems code for UE5 and Unity</p>
         </div>
-        <div class="span-2 footer__col"><h3>Work</h3><ul><li><a href="#ai">Hitz AI Suite</a></li><li><a href="#merge">Merge Tactics</a></li><li><a href="#products">Fab tools</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Work</h3><ul><li><a href="#ai">Hitz AI Suite</a></li><li><a href="#merge">Merge Tactics</a></li><li><a href="#products">Fab plugins</a></li><li><a href="#cozy">Asset packs</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Games</h3><ul><li><a href="#ktrl">Ktrl Smash</a></li><li><a href="#cursed">The Cursed Hour</a></li></ul></div>
         <div class="span-2 footer__col"><h3>About</h3><ul><li><a href="#experience">Experience</a></li><li><a href="assets/Aman_Khandelwal_Resume_Full.pdf">Full resume</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Elsewhere</h3><ul><li><a href="https://github.com/hitz482">GitHub</a></li><li><a href="https://www.linkedin.com/in/aman-khandelwal-b7a3551a1/">LinkedIn</a></li><li><a href="https://www.artstation.com/hitzsama">ArtStation</a></li><li><a href="https://www.youtube.com/@amankhandelwal8816">YouTube</a></li></ul></div>

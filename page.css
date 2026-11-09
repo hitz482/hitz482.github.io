@@ -49,23 +49,50 @@
 .portrait { display: block; width: min(400px, 100%); aspect-ratio: 1; object-fit: cover; border-radius: var(--r-lg); }
 
 /* one --p-h per card group */
-#games .panel { --p-h: 340px; }
-#products .panel { --p-h: 252px; }
-@media (min-width: 1024px) { #merge .frame--split { --ratio: 100%; } }
+#games .panel { --p-h: 300px; }
+#products .panel { --p-h: 250px; }
 
-/* tablets stack every card on its own row: the products' panels shorten so the section stays two screens */
-@media (min-width: 640px) and (max-width: 1023px) {
-  #products .panel { --p-h: 200px; }
-  #products .grid > .span-3 { grid-column: span 6; }
-}
 
 /* the product hero's phone crop, as its demo sets it (assets/layout/hero-product.html) */
 @media (max-width: 639px) {
   .hero--product .hero__stage { aspect-ratio: 4 / 3; }
-  #products .panel { --p-h: 140px; }
-  #games .panel { --p-h: 520px; }
   /* the phone copy of #merge drops its three fact lines so the section stays one screen */
   #merge .facts { display: none; }
   #merge .frame--split { --ratio: 75%; }
   .portrait { width: 240px; }
 }
+
+@media (min-width: 640px) and (max-width: 1023px) { #cozy .tile { --tile-ratio: 5 / 2; } }
+
+/* phone: one screen each, the card text goes and the pictures stay */
+@media (max-width: 639px) {
+  #games .card > p, #products .card > p, #cozy .tile > p { display: none; }
+  #games .panel, #products .panel { --p-h: 170px; }
+  #cozy .tile { --tile-ratio: 3 / 1; }
+}
+.stage > .at-rise > img { display: block; width: 100%; height: auto; border-radius: var(--u-r, 8px); }
+
+.stackline { margin: 0; font: 500 var(--t-small)/1.5 var(--font-mono); color: var(--muted); }
+.steps-list { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--s-3); }
+.also { margin: var(--s-7) 0 0; color: var(--ink); }
+.code { margin: 0; padding: var(--s-5); overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; font: 400 13px/1.6 var(--font-mono); color: var(--ink); }
+.code .c { color: var(--muted); }
+.trailer { display: block; position: absolute; }
+.trailer img { display: block; width: 100%; height: auto; border-radius: var(--u-r, 8px); }
+.trailer__play { position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; translate: -50% -50%; border-radius: 50%; background: var(--p-accent); box-shadow: 0 6px 24px rgb(0 0 0 / .4); }
+.trailer__play::after { content: ""; position: absolute; left: 22px; top: 17px; border-left: 18px solid var(--p-accent-ink); border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
+@media (max-width: 639px) { .code { font-size: 11px; } }
+@media (max-width: 639px) {
+  #games .panel { --p-h: 130px; }
+  #games .stackline { display: none; }
+  #games .card > p:not(.stackline) { font-size: 14px; }
+  #products .panel { --p-h: 90px; }
+  #products .card > p:not(.stackline) { display: none; }
+  .also { margin-top: var(--s-5); font-size: 14px; }
+}
+@media (max-width: 639px) { .code { white-space: pre-wrap; overflow-wrap: anywhere; } }
+#games .panel { --p-h: 210px; }
+#games .card > p:not(.stackline) { font-size: 15px; }
+.steps-list { font-size: var(--t-lead, 20px); gap: var(--s-5); }
+@media (max-width: 639px) { #games .panel { --p-h: 130px; } .steps-list { font-size: 16px; gap: var(--s-3); } }
+@media (max-width: 639px) { #merge .code + .code { display: none; } }
