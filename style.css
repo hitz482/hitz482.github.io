@@ -101,6 +101,9 @@ ul, ol { margin: 0; padding: 0; }
 .frame img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 .frame--contain img { object-fit: contain; background: #0d0f10; }
 .frame--natural img { aspect-ratio: auto; }
+/* same treatment as the profile photo: thin border + amber offset block */
+.frame, .trailer { --off: 8px; box-shadow: var(--off) var(--off) 0 var(--accent-2); margin-right: var(--off); margin-bottom: var(--off); }
+.tool > .frame, .shots .frame { --off: 6px; }
 
 /* selected work */
 .work { display: grid; gap: clamp(40px, 6vw, 72px); }
@@ -199,11 +202,11 @@ ul, ol { margin: 0; padding: 0; }
 .doc__body ul, .doc__body ol.list { padding-left: 22px; display: grid; gap: 10px; margin-bottom: 1em; }
 .doc__body li b, .doc__body p b { color: var(--text); font-weight: 500; }
 .doc__body .frame, .doc__body .diagram, .doc__body .code, .doc__body .trailer { margin: 24px 0; }
-.shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 24px 0; }
+.shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 24px 0; }
 .shots .frame { margin: 0; }
 .shot { margin: 24px 0; }
 .shots .shot { margin: 0; }
-.shot figcaption { margin-top: 10px; font-size: 14px; color: var(--text-2); }
+.shot figcaption { margin-top: 14px; font-size: 14px; color: var(--text-2); }
 .doc__body .shot .frame { margin: 0; }
 .case-study { padding: clamp(56px, 8vw, 88px) 0; border-top: 1px solid var(--border); }
 .case-study > .wrap > h2 { font-size: clamp(28px, 3.4vw, 40px); margin-bottom: 14px; }
@@ -266,6 +269,8 @@ ul, ol { margin: 0; padding: 0; }
   .hero__grid { grid-template-columns: 1fr; }
   .hero__side { justify-content: flex-start; }
   .hero__photo { width: min(320px, 88%); }
+  .frame, .trailer { --off: 6px; }
+  .hero__photo { box-shadow: 6px 6px 0 var(--accent-2); }
   .btn-row .btn { flex: 1 1 100%; }
   .code { font-size: 12px; }
   .lead { font-size: 17px; }
