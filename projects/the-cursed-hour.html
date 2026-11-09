@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cursed Hour | Aman Khandelwal</title>
+<meta name="description" content="A four-player cooperative horror game for Steam in Unreal Engine 5, with ghost AI, lobbies and sessions, and voice and text chat.">
+<meta name="theme-color" content="#111315">
+<link rel="canonical" href="https://hitz482.github.io/projects/the-cursed-hour.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aman Khandelwal">
+<meta property="og:title" content="The Cursed Hour | Aman Khandelwal">
+<meta property="og:description" content="A four-player cooperative horror game for Steam in Unreal Engine 5, with ghost AI, lobbies and sessions, and voice and text chat.">
+<meta property="og:url" content="https://hitz482.github.io/projects/the-cursed-hour.html">
+<meta property="og:image" content="https://hitz482.github.io/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Cursed Hour | Aman Khandelwal">
+<meta name="twitter:description" content="A four-player cooperative horror game for Steam in Unreal Engine 5, with ghost AI, lobbies and sessions, and voice and text chat.">
+<meta name="twitter:image" content="https://hitz482.github.io/share.jpg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="../main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="nav__brand" href="../index.html">Aman Khandelwal</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span><span></span></button>
+    <nav id="site-menu" class="nav__menu" aria-label="Main">
+      <ul><li><a href="../index.html">Home</a></li><li><a href="../index.html#work">Projects</a></li><li><a href="../engineering.html">Engineering</a></li><li><a href="../index.html#experience">Experience</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+      <a class="btn btn--sm" href="../assets/Aman_Khandelwal_Resume.pdf" download>Resume</a>
+    </nav>
+  </div>
+</header>
+<main id="main"><div class="wrap page-head">
+<p class="crumb"><a href="../index.html">Home</a> / <a href="../index.html#work">Projects</a> / The Cursed Hour</p>
+<p class="eyebrow">Studio project, Fiftyfive Gaming Studio</p>
+<h1>The Cursed Hour</h1>
+<p class="lead">A four-player cooperative horror game for Steam in Unreal Engine 5, with ghost AI, lobbies and sessions, and voice and text chat.</p>
+<dl class="meta"><div><dt>Engine</dt><dd>Unreal Engine 5</dd></div><div><dt>Language</dt><dd>C++</dd></div><div><dt>Online</dt><dd>Epic Online Services, Steam SDK</dd></div><div><dt>Players</dt><dd>4-player co-op</dd></div><div><dt>Platform</dt><dd>Steam</dd></div><div><dt>Released</dt><dd>November 2024</dd></div></dl>
+</div>
+<div class="wrap"><div class="frame" style="margin-bottom: 56px;"><img src="../assets/img/cursed-1.jpg" srcset="../assets/img/cursed-1-800.jpg 800w, ../assets/img/cursed-1.jpg 1600w" sizes="(min-width: 1024px) 1200px, 100vw" alt="The Cursed Hour key art: a ghost with red eyes in a dark corridor" width="1600" height="900" fetchpriority="high"></div></div>
+<div class="wrap" style="padding-bottom: 64px;"><div class="doc"><nav class="doc__side" aria-label="On this page"><ol><li><a href="#overview">Overview</a></li><li><a href="#role">My role</a></li><li><a href="#responsibilities">Main responsibilities</a></li><li><a href="#challenges">Technical challenges</a></li><li><a href="#implementation">Implementation</a></li><li><a href="#media">Links and media</a></li></ol></nav><div class="doc__body"><section id="overview"><h2>Overview</h2><p>The Cursed Hour is a four-player online co-op horror game set in a haunted mansion. It released on Steam in November 2024 and has 129 reviews. We estimate roughly 18 to 23 thousand players from the review count; this is an estimate, not a platform figure.</p></section><section id="role"><h2>My role</h2><p>I pitched the original concept and owned the core multiplayer systems through to ship. It was a studio project; the ghost NPC, the lobby and session layer and the chat systems are my contribution.</p></section><section id="responsibilities"><h2>Main responsibilities</h2><ul><li>The ghost NPC.</li><li>The lobby and session layer.</li><li>Text and voice chat.</li><li>Epic Online Services and Steam SDK integration, in parallel.</li></ul></section><section id="challenges"><h2>Technical challenges</h2><p>The game shipped on Steam, but a cross-platform rollout through Epic Online Services was planned. Both backends had to work behind one lobby and session experience, without game code depending on either.</p></section><section id="implementation"><h2>Implementation</h2><p>I integrated Epic Online Services and the Steam SDK side by side and kept the session layer backend-agnostic, so the game logic talks to one session interface.</p></section><section id="media"><h2>Links and media</h2><a class="trailer" href="https://www.youtube.com/watch?v=NNx7tQpRFV0"><img src="../assets/img/trailer-cursed.jpg" alt="Watch the The Cursed Hour trailer on YouTube" width="599" height="337" loading="lazy" decoding="async"><span class="trailer__play" aria-hidden="true"></span><span class="trailer__label">Watch the trailer on YouTube</span></a><div class="shots"><div class="frame"><img src="../assets/img/cursed-2.jpg" alt="A bloody handprint on a dark wooden table in The Cursed Hour" width="600" height="338" loading="lazy" decoding="async"></div><div class="frame"><img src="../assets/img/cursed-3.jpg" alt="Four players approach a dark mansion in The Cursed Hour" width="600" height="338" loading="lazy" decoding="async"></div></div><div class="btn-row" style="margin-top: 24px;"><a class="btn" href="https://store.steampowered.com/app/3297310/The_Cursed_Hour/">Steam page</a><a class="btn btn--ghost" href="https://www.youtube.com/watch?v=NNx7tQpRFV0">Trailer</a></div></section><div class="next"><a class="link" href="ktrl-smash.html">Ktrl Smash</a><a class="link" href="merge-tactics.html">Merge Tactics</a></div></div></div></div></main>
+<footer class="footer">
+  <div class="wrap footer__bar">
+    <span>&copy; 2026 Aman Khandelwal. Senior Gameplay Programmer, Jaipur, India.</span>
+    <span class="footer__links"><a href="mailto:khandelwalaman5@gmail.com">Email</a><a href="https://www.linkedin.com/in/aman-khandelwal-b7a3551a1/">LinkedIn</a><a href="https://github.com/hitz482">GitHub</a><a href="https://www.youtube.com/@amankhandelwal8816">YouTube</a><a href="../assets/Aman_Khandelwal_Resume_Full.pdf" download>Full resume</a></span>
+  </div>
+  <div class="wrap footer__note">Game art and trailers belong to their studios. Product names and logos are trademarks of their owners.</div>
+</footer>
+</body>
+</html>

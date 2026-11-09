@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HITZ: Merge Tactics | Aman Khandelwal</title>
+<meta name="description" content="A server-authoritative auto-battler framework for Unreal Engine 5.8, designed so a complete game can be built on it without writing C++.">
+<meta name="theme-color" content="#111315">
+<link rel="canonical" href="https://hitz482.github.io/projects/merge-tactics.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aman Khandelwal">
+<meta property="og:title" content="HITZ: Merge Tactics | Aman Khandelwal">
+<meta property="og:description" content="A server-authoritative auto-battler framework for Unreal Engine 5.8, designed so a complete game can be built on it without writing C++.">
+<meta property="og:url" content="https://hitz482.github.io/projects/merge-tactics.html">
+<meta property="og:image" content="https://hitz482.github.io/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HITZ: Merge Tactics | Aman Khandelwal">
+<meta name="twitter:description" content="A server-authoritative auto-battler framework for Unreal Engine 5.8, designed so a complete game can be built on it without writing C++.">
+<meta name="twitter:image" content="https://hitz482.github.io/share.jpg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="../main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="nav__brand" href="../index.html">Aman Khandelwal</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span><span></span></button>
+    <nav id="site-menu" class="nav__menu" aria-label="Main">
+      <ul><li><a href="../index.html">Home</a></li><li><a href="../index.html#work">Projects</a></li><li><a href="../engineering.html">Engineering</a></li><li><a href="../index.html#experience">Experience</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+      <a class="btn btn--sm" href="../assets/Aman_Khandelwal_Resume.pdf" download>Resume</a>
+    </nav>
+  </div>
+</header>
+<main id="main"><div class="wrap page-head">
+<p class="crumb"><a href="../index.html">Home</a> / <a href="../index.html#work">Projects</a> / HITZ: Merge Tactics</p>
+<p class="eyebrow">Independent project, published on Fab</p>
+<h1>HITZ: Merge Tactics</h1>
+<p class="lead">A server-authoritative auto-battler framework for Unreal Engine 5.8, designed so a complete game can be built on it without writing C++.</p>
+<dl class="meta"><div><dt>Engine</dt><dd>Unreal Engine 5.8</dd></div><div><dt>Language</dt><dd>C++</dd></div><div><dt>Size</dt><dd>About 13,800 lines, 4 modules</dd></div><div><dt>Type</dt><dd>Solo project</dd></div><div><dt>Licence</dt><dd>Paid, source-available</dd></div><div><dt>Distribution</dt><dd>Fab</dd></div></dl>
+</div>
+<div class="wrap"><div class="frame" style="margin-bottom: 56px;"><img src="../assets/img/hitz-screenshot-overview.jpg" srcset="../assets/img/hitz-screenshot-overview-800.jpg 800w, ../assets/img/hitz-screenshot-overview.jpg 1672w" sizes="(min-width: 1024px) 1200px, 100vw" alt="Overview of the HITZ framework: board layouts, shop, traits, combat, 3D viewer and material painter" width="1672" height="941" fetchpriority="high"></div></div>
+<div class="wrap" style="padding-bottom: 64px;"><div class="doc"><nav class="doc__side" aria-label="On this page"><ol><li><a href="#overview">Overview</a></li><li><a href="#role">My role</a></li><li><a href="#responsibilities">Main responsibilities</a></li><li><a href="#challenges">Technical challenges</a></li><li><a href="#implementation">Implementation</a></li><li><a href="#results">Results</a></li><li><a href="#media">Links and media</a></li></ol></nav><div class="doc__body"><section id="overview"><h2>Overview</h2><p>Merge Tactics is a complete, playable auto-battler framework: board, shop, traits, combat and the full multiplayer round loop. It is aimed at Unreal developers who want to build an auto-battler and extend it without touching C++.</p></section><section id="role"><h2>My role</h2><p>I designed, built, documented and published all of it myself, including the listing and the documentation site.</p></section><section id="responsibilities"><h2>Main responsibilities</h2><ul><li>Architecture: three reusable modules and a separate sample game (<span class="mono">HMT_Core</span> 6.2k lines, <span class="mono">HMT_CoreEditor</span> 1.3k, <span class="mono">HMT_GASBridge</span> 0.3k, sample game 6.0k).</li><li>Server-authoritative combat and the multiplayer round loop.</li><li>Four Blueprint extension interfaces and the GAS bridge.</li><li>Editor tooling: a click-to-paint board layout editor, a unit definition editor with live 3D preview and montage playback, and a save-time validator across seven data-asset types.</li></ul></section><section id="challenges"><h2>Technical challenges</h2><ul><li>Keep match results cheat-proof, so clients must not compute outcomes.</li><li>Keep the core independent of GAS while still supporting GAS projects.</li><li>Make every extension point usable from Blueprint.</li><li>Support hex and square grids from one board asset, with the grid maths separate from board state.</li></ul></section><section id="implementation"><h2>Implementation</h2><p>The server locks board snapshots, simulates combat and replicates one compact event log, which clients replay for animation.</p><figure class="diagram">
+<div class="diagram-scroll"><svg viewBox="0 0 960 250" role="img" aria-labelledby="flow-t flow-d">
+<title id="flow-t">Merge Tactics server-authoritative combat flow</title>
+<desc id="flow-d">On the server, board snapshots are locked, combat is simulated, an event log is built and results are applied. Clients receive the event log once and replay it visually.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#707980"/></marker><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#55D6BE"/></marker></defs>
+<text class="lane" x="0" y="72">SERVER</text><text class="lane" x="0" y="192">CLIENTS</text>
+<line x1="0" y1="130" x2="960" y2="130" stroke="#30363B" stroke-dasharray="4 6"/>
+<g class="box"><rect x="92" y="36" width="196" height="64" rx="6"/><text class="t" x="108" y="64">Lock board snapshots</text><text class="s" x="108" y="84">end of prep phase</text></g>
+<g class="box"><rect x="328" y="36" width="196" height="64" rx="6"/><text class="t" x="344" y="64">Simulate combat</text><text class="s" x="344" y="84">targeting, abilities, traits</text></g>
+<g class="box hot"><rect x="564" y="36" width="196" height="64" rx="6"/><text class="t" x="580" y="64">Build event log</text><text class="s" x="580" y="84">compact, ordered events</text></g>
+<g class="box"><rect x="796" y="36" width="156" height="64" rx="6"/><text class="t" x="812" y="64">Apply results</text><text class="s" x="812" y="84">HP, gold, pairing</text></g>
+<g class="box"><rect x="564" y="160" width="196" height="64" rx="6"/><text class="t" x="580" y="188">Receive event log</text><text class="s" x="580" y="208">replicated once</text></g>
+<g class="box"><rect x="796" y="160" width="156" height="64" rx="6"/><text class="t" x="812" y="188">Replay visually</text><text class="s" x="812" y="208">animation, VFX, UI</text></g>
+<path class="arrow" d="M288 68H326"/><path class="arrow" d="M524 68H562"/><path class="arrow" d="M760 68H794"/>
+<path class="arrow hot" d="M662 100V158"/><path class="arrow" d="M760 192H794"/>
+</svg></div>
+<figcaption>Clients only receive the server's event log and replay it for animation. They never compute a match outcome.</figcaption>
+</figure><p>The four extension interfaces are the stat provider, the targeting strategy, the trait effect and the ability executor. The GAS bridge maps the stat interface onto an existing <span class="mono">AttributeSet</span> per unit, so a GAS project swaps its stat backend with no changes to any other system.</p><pre class="code" aria-label="IHMT_TargetingStrategy.h from the Merge Tactics source"><code><span class="c">// Source/HMT_Core/Public/Units/IHMT_TargetingStrategy.h</span>
+UINTERFACE(BlueprintType, MinimalAPI)
+class UHMT_TargetingStrategy : public UInterface { GENERATED_BODY() };
+
+class HMT_CORE_API IHMT_TargetingStrategy
+{
+    GENERATED_BODY()
+public:
+    UFUNCTION(BlueprintNativeEvent, BlueprintCallable,
+              Category = "HitzMergeTactics|Combat")
+    AActor* SelectTarget(AActor* SelfActor,
+                         const TArray&lt;AActor*&gt;&amp; Candidates,
+                         UHMT_CombatContext* Context);
+};</code></pre><pre class="code" aria-label="IHMT_StatProvider.h from the Merge Tactics source"><code><span class="c">// Source/HMT_Core/Public/Stats/IHMT_StatProvider.h (excerpt)</span>
+class HMT_CORE_API IHMT_StatProvider
+{
+    GENERATED_BODY()
+public:
+    UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+    float GetFinalStatValue(FGameplayTag StatTag);
+
+    UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+    void ApplyStatModifier(FGameplayTag StatTag,
+        EHMT_StatModOp ModOp, float Magnitude,
+        EHMT_ModifierDuration Duration, ...);
+};</code></pre><p>The round loop covers prep, combat and results phases, recency-weighted pairing, ghost boards for odd lobbies, PvE rounds, spectating and late join, on standard Unreal replication.</p></section><section id="results"><h2>Results</h2><p>Clients never compute outcomes, which closes the cheat surface on match results. The framework drops into an existing project by copying three source folders. I have no sales or player figures to report here.</p></section><section id="media"><h2>Links and media</h2><div class="shots"><div class="frame"><img src="../assets/img/hitz-screenshot-combat.jpg" srcset="../assets/img/hitz-screenshot-combat-800.jpg 800w, ../assets/img/hitz-screenshot-combat.jpg 1672w" sizes="(min-width: 900px) 400px, 100vw" alt="Combat and prep phases on a hex grid" width="1672" height="941" loading="lazy" decoding="async"></div><div class="frame"><img src="../assets/img/hitz-screenshot-editor.jpg" srcset="../assets/img/hitz-screenshot-editor-800.jpg 800w, ../assets/img/hitz-screenshot-editor.jpg 1672w" sizes="(min-width: 900px) 400px, 100vw" alt="Board layout data asset and material painter in the editor" width="1672" height="941" loading="lazy" decoding="async"></div><div class="frame"><img src="../assets/img/hitz-screenshot-preview.jpg" srcset="../assets/img/hitz-screenshot-preview-800.jpg 800w, ../assets/img/hitz-screenshot-preview.jpg 1672w" sizes="(min-width: 900px) 400px, 100vw" alt="Unit definition editor with live 3D preview" width="1672" height="941" loading="lazy" decoding="async"></div><div class="frame"><img src="../assets/img/hitz-screenshot-board.jpg" srcset="../assets/img/hitz-screenshot-board-800.jpg 800w, ../assets/img/hitz-screenshot-board.jpg 1672w" sizes="(min-width: 900px) 400px, 100vw" alt="Board layout options in the framework" width="1672" height="941" loading="lazy" decoding="async"></div></div><div class="btn-row" style="margin-top: 24px;"><a class="btn" href="https://www.fab.com/listings/ead02f11-78dc-43d0-9b92-e5edb8c4cd28">View on Fab</a><a class="btn btn--ghost" href="https://github.com/hitz482/HitzMergeTacticsCodeBase">Source on GitHub</a><a class="btn btn--ghost" href="https://hitz482.github.io/HitzMergeTactics/">Documentation</a></div></section><div class="next"><a class="link" href="the-cursed-hour.html">The Cursed Hour</a><a class="link" href="hitz-ai-suite.html">Hitz AI Suite</a></div></div></div></div></main>
+<footer class="footer">
+  <div class="wrap footer__bar">
+    <span>&copy; 2026 Aman Khandelwal. Senior Gameplay Programmer, Jaipur, India.</span>
+    <span class="footer__links"><a href="mailto:khandelwalaman5@gmail.com">Email</a><a href="https://www.linkedin.com/in/aman-khandelwal-b7a3551a1/">LinkedIn</a><a href="https://github.com/hitz482">GitHub</a><a href="https://www.youtube.com/@amankhandelwal8816">YouTube</a><a href="../assets/Aman_Khandelwal_Resume_Full.pdf" download>Full resume</a></span>
+  </div>
+  <div class="wrap footer__note">Game art and trailers belong to their studios. Product names and logos are trademarks of their owners.</div>
+</footer>
+</body>
+</html>

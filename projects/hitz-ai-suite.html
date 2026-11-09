@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hitz AI Suite | Aman Khandelwal</title>
+<meta name="description" content="An AI toolkit for Unity 6: behavior trees, state machines, perception, EQS, navigation, crowd avoidance and smart objects on one scheduler, with a visual debugger.">
+<meta name="theme-color" content="#111315">
+<link rel="canonical" href="https://hitz482.github.io/projects/hitz-ai-suite.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aman Khandelwal">
+<meta property="og:title" content="Hitz AI Suite | Aman Khandelwal">
+<meta property="og:description" content="An AI toolkit for Unity 6: behavior trees, state machines, perception, EQS, navigation, crowd avoidance and smart objects on one scheduler, with a visual debugger.">
+<meta property="og:url" content="https://hitz482.github.io/projects/hitz-ai-suite.html">
+<meta property="og:image" content="https://hitz482.github.io/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hitz AI Suite | Aman Khandelwal">
+<meta name="twitter:description" content="An AI toolkit for Unity 6: behavior trees, state machines, perception, EQS, navigation, crowd avoidance and smart objects on one scheduler, with a visual debugger.">
+<meta name="twitter:image" content="https://hitz482.github.io/share.jpg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="../main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="nav__brand" href="../index.html">Aman Khandelwal</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span><span></span></button>
+    <nav id="site-menu" class="nav__menu" aria-label="Main">
+      <ul><li><a href="../index.html">Home</a></li><li><a href="../index.html#work">Projects</a></li><li><a href="../engineering.html">Engineering</a></li><li><a href="../index.html#experience">Experience</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+      <a class="btn btn--sm" href="../assets/Aman_Khandelwal_Resume.pdf" download>Resume</a>
+    </nav>
+  </div>
+</header>
+<main id="main"><div class="wrap page-head">
+<p class="crumb"><a href="../index.html">Home</a> / <a href="../index.html#work">Projects</a> / Hitz AI Suite</p>
+<p class="eyebrow">Independent project, published on Fab</p>
+<h1>Hitz AI Suite</h1>
+<p class="lead">An AI toolkit for Unity 6: behavior trees, state machines, perception, EQS, navigation, crowd avoidance and smart objects on one scheduler, with a visual debugger.</p>
+<dl class="meta"><div><dt>Engine</dt><dd>Unity 6 (6000.3+)</dd></div><div><dt>Language</dt><dd>C#</dd></div><div><dt>Performance</dt><dd>Burst jobs for EQS</dd></div><div><dt>Type</dt><dd>Solo project</dd></div><div><dt>Distribution</dt><dd>Fab</dd></div></dl>
+</div>
+<div class="wrap"><div class="frame" style="margin-bottom: 56px;"><img src="../assets/img/warden-slam.jpg" srcset="../assets/img/warden-slam-800.jpg 800w, ../assets/img/warden-slam.jpg 1920w" sizes="(min-width: 1024px) 1200px, 100vw" alt="The Warden boss mid-slam in the Hitz AI Suite boss fight sample" width="1920" height="1080" fetchpriority="high"></div></div>
+<div class="wrap" style="padding-bottom: 64px;"><div class="doc"><nav class="doc__side" aria-label="On this page"><ol><li><a href="#overview">Overview</a></li><li><a href="#role">My role</a></li><li><a href="#responsibilities">Main responsibilities</a></li><li><a href="#challenges">Technical challenges</a></li><li><a href="#implementation">Implementation</a></li><li><a href="#results">Results</a></li><li><a href="#media">Links and media</a></li></ol></nav><div class="doc__body"><section id="overview"><h2>Overview</h2><p>Hitz AI Suite gives a Unity studio the systems it needs to build enemies, companions and crowds, designed to work together and to stay fast with hundreds of agents. If you know Unreal Engine's AI framework, the concepts will be familiar.</p></section><section id="role"><h2>My role</h2><p>I designed and built everything: the runtime systems, the editor tooling, the samples and the documentation.</p></section><section id="responsibilities"><h2>Main responsibilities</h2><ul><li>AI World: one scheduler for every system, with level of detail and a per-frame time budget.</li><li>Behavior Trees and State Machines for decisions; Blackboards for agent memory.</li><li>Perception, Navigation, EQS, Crowd avoidance (ORCA) and Smart Objects.</li><li>A visual debugger and a GraphView behavior tree editor.</li><li>A bridge to Unity's own Behavior package.</li></ul></section><section id="challenges"><h2>Technical challenges</h2><p>Run many agents inside a fixed frame budget, let conditions interrupt lower-priority behaviour at once, make agent decisions visible while debugging, and keep unused systems out of the build.</p></section><section id="implementation"><h2>Implementation</h2><p>The Boss Fight sample shows every system in one encounter. The Warden sees you in a wide cone, but pillars block its view, and it hears your sword. Its behavior tree picks every move by priority: roar at phase changes, recover from staggers, heal when low, otherwise fight. EQS picks where it leaps, where it summons minions and where it searches when it loses you. Minions run a state machine and swarm with crowd avoidance. In the last phase it claims a healing shrine, and hitting it interrupts the heal.</p><img style="border:1px solid var(--border);border-radius:6px;margin:20px 0" src="../assets/img/bt-editor.jpg" srcset="../assets/img/bt-editor-800.jpg 800w, ../assets/img/bt-editor.jpg 1920w" sizes="(min-width: 1024px) 820px, 100vw" alt="The behavior tree editor showing the Warden combat branch" width="1920" height="800" loading="lazy" decoding="async"></section><section id="results"><h2>Results</h2><p>500 agents with perception, behavior trees, EQS and smart objects run at 0.67 ms median and 1.0 ms p95 of AI main-thread time per frame, with no managed allocations per frame. Measured with the included benchmark in a release Windows player on a Ryzen 7 3700X.</p></section><section id="media"><h2>Links and media</h2><div class="shots"><div class="frame"><img src="../assets/img/warden-orbs.jpg" srcset="../assets/img/warden-orbs-800.jpg 800w, ../assets/img/warden-orbs.jpg 1920w" sizes="(min-width: 900px) 400px, 100vw" alt="The Warden surrounded by red meteor markers in the boss fight" width="1920" height="1080" loading="lazy" decoding="async"></div><div class="frame"><img src="../assets/img/aisuite-cover.jpg" srcset="../assets/img/aisuite-cover-800.jpg 800w, ../assets/img/aisuite-cover.jpg 1280w" sizes="(min-width: 900px) 400px, 100vw" alt="Hitz AI Suite Fab cover art" width="1280" height="720" loading="lazy" decoding="async"></div></div><div class="btn-row" style="margin-top: 24px;"><a class="btn" href="https://www.fab.com/listings/53974d58-8b16-41f3-ba25-da18639515f5">View on Fab</a><a class="btn btn--ghost" href="../engineering.html#ai">AI case study</a></div></section><div class="next"><a class="link" href="merge-tactics.html">Merge Tactics</a><a class="link" href="hitz-geomap.html">Hitz GeoMap</a></div></div></div></div></main>
+<footer class="footer">
+  <div class="wrap footer__bar">
+    <span>&copy; 2026 Aman Khandelwal. Senior Gameplay Programmer, Jaipur, India.</span>
+    <span class="footer__links"><a href="mailto:khandelwalaman5@gmail.com">Email</a><a href="https://www.linkedin.com/in/aman-khandelwal-b7a3551a1/">LinkedIn</a><a href="https://github.com/hitz482">GitHub</a><a href="https://www.youtube.com/@amankhandelwal8816">YouTube</a><a href="../assets/Aman_Khandelwal_Resume_Full.pdf" download>Full resume</a></span>
+  </div>
+  <div class="wrap footer__note">Game art and trailers belong to their studios. Product names and logos are trademarks of their owners.</div>
+</footer>
+</body>
+</html>

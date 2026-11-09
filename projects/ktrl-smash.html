@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ktrl Smash | Aman Khandelwal</title>
+<meta name="description" content="A free-to-play online PvP arena brawler for Steam and WebGL, built in Unity on Photon Fusion with dedicated servers on AWS.">
+<meta name="theme-color" content="#111315">
+<link rel="canonical" href="https://hitz482.github.io/projects/ktrl-smash.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aman Khandelwal">
+<meta property="og:title" content="Ktrl Smash | Aman Khandelwal">
+<meta property="og:description" content="A free-to-play online PvP arena brawler for Steam and WebGL, built in Unity on Photon Fusion with dedicated servers on AWS.">
+<meta property="og:url" content="https://hitz482.github.io/projects/ktrl-smash.html">
+<meta property="og:image" content="https://hitz482.github.io/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ktrl Smash | Aman Khandelwal">
+<meta name="twitter:description" content="A free-to-play online PvP arena brawler for Steam and WebGL, built in Unity on Photon Fusion with dedicated servers on AWS.">
+<meta name="twitter:image" content="https://hitz482.github.io/share.jpg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="../main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="nav__brand" href="../index.html">Aman Khandelwal</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu"><span></span><span></span></button>
+    <nav id="site-menu" class="nav__menu" aria-label="Main">
+      <ul><li><a href="../index.html">Home</a></li><li><a href="../index.html#work">Projects</a></li><li><a href="../engineering.html">Engineering</a></li><li><a href="../index.html#experience">Experience</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+      <a class="btn btn--sm" href="../assets/Aman_Khandelwal_Resume.pdf" download>Resume</a>
+    </nav>
+  </div>
+</header>
+<main id="main"><div class="wrap page-head">
+<p class="crumb"><a href="../index.html">Home</a> / <a href="../index.html#work">Projects</a> / Ktrl Smash</p>
+<p class="eyebrow">Studio project, Fiftyfive Gaming Studio</p>
+<h1>Ktrl Smash</h1>
+<p class="lead">A free-to-play online PvP arena brawler for Steam and WebGL, built in Unity on Photon Fusion with dedicated servers on AWS.</p>
+<dl class="meta"><div><dt>Engine</dt><dd>Unity</dd></div><div><dt>Language</dt><dd>C#</dd></div><div><dt>Networking</dt><dd>Photon Fusion</dd></div><div><dt>Servers</dt><dd>AWS dedicated</dd></div><div><dt>Platforms</dt><dd>Steam (Windows), WebGL</dd></div><div><dt>Released</dt><dd>December 2025</dd></div></dl>
+</div>
+<div class="wrap"><div class="frame" style="margin-bottom: 56px;"><img src="../assets/img/ktrl-1.jpg" srcset="../assets/img/ktrl-1-800.jpg 800w, ../assets/img/ktrl-1.jpg 1600w" sizes="(min-width: 1024px) 1200px, 100vw" alt="Ktrl Smash arena gameplay with the scoreboard and elimination feed" width="1600" height="900" fetchpriority="high"></div></div>
+<div class="wrap" style="padding-bottom: 64px;"><div class="doc"><nav class="doc__side" aria-label="On this page"><ol><li><a href="#overview">Overview</a></li><li><a href="#role">My role</a></li><li><a href="#responsibilities">Main responsibilities</a></li><li><a href="#challenges">Technical challenges</a></li><li><a href="#implementation">Implementation</a></li><li><a href="#results">Results</a></li><li><a href="#media">Links and media</a></li></ol></nav><div class="doc__body"><section id="overview"><h2>Overview</h2><p>Ktrl Smash is a free-to-play online arena brawler. It launched on Steam in December 2025 and is rated Mostly Positive. It also runs in the browser as a WebGL build.</p></section><section id="role"><h2>My role</h2><p>I built the multiplayer layer on Photon Fusion and worked with the devops team to deploy dedicated servers on AWS. After release I diagnosed and fixed a network performance problem that grew over the length of a session. It was a studio project, and the multiplayer layer and the ping fix are my contribution.</p></section><section id="responsibilities"><h2>Main responsibilities</h2><ul><li>Multiplayer layer on Photon Fusion.</li><li>Dedicated server deployment on AWS, together with devops.</li><li>Network performance debugging for both the Windows and WebGL builds.</li></ul></section><section id="challenges"><h2>Technical challenges</h2><p>Ping climbed during a session: from 20 to 60 ms on Windows and from 40 to 100 ms on WebGL. On WebGL, everything runs on a single main thread, so per-frame work built up there. Frequent network updates and redundant replicated state made it worse.</p></section><section id="implementation"><h2>Implementation</h2><p>I audited coroutine usage across the codebase, cut the update frequency and payload size, and removed replicated variables that were not needed.</p></section><section id="results"><h2>Results</h2><table class="table"><thead><tr><th>Platform</th><th>Ping over a session before the fix</th><th>After</th></tr></thead><tbody><tr><td>Windows</td><td>20 to 60 ms</td><td>Stays flat</td></tr><tr><td>WebGL</td><td>40 to 100 ms</td><td>Stays flat</td></tr></tbody></table></section><section id="media"><h2>Links and media</h2><a class="trailer" href="https://www.youtube.com/watch?v=JrFEw-OiJsM"><img src="../assets/img/trailer-ktrl.jpg" alt="Watch the Ktrl Smash trailer on YouTube" width="600" height="337" loading="lazy" decoding="async"><span class="trailer__play" aria-hidden="true"></span><span class="trailer__label">Watch the trailer on YouTube</span></a><div class="shots"><div class="frame"><img src="../assets/img/ktrl-2.jpg" alt="Ktrl Smash players fighting among shipping containers" width="600" height="338" loading="lazy" decoding="async"></div><div class="frame"><img src="../assets/img/ktrl-3.jpg" alt="Ktrl Smash combat in the arena" width="600" height="338" loading="lazy" decoding="async"></div></div><p class="muted">The full write-up of the ping fix is in the <a class="link" href="../engineering.html#performance">performance engineering case study</a>.</p><div class="btn-row" style="margin-top: 24px;"><a class="btn" href="https://store.steampowered.com/app/4223440/Ktrl_Smash/">Steam page</a><a class="btn btn--ghost" href="https://www.youtube.com/watch?v=JrFEw-OiJsM">Trailer</a></div></section><div class="next"><span></span><a class="link" href="the-cursed-hour.html">The Cursed Hour</a></div></div></div></div></main>
+<footer class="footer">
+  <div class="wrap footer__bar">
+    <span>&copy; 2026 Aman Khandelwal. Senior Gameplay Programmer, Jaipur, India.</span>
+    <span class="footer__links"><a href="mailto:khandelwalaman5@gmail.com">Email</a><a href="https://www.linkedin.com/in/aman-khandelwal-b7a3551a1/">LinkedIn</a><a href="https://github.com/hitz482">GitHub</a><a href="https://www.youtube.com/@amankhandelwal8816">YouTube</a><a href="../assets/Aman_Khandelwal_Resume_Full.pdf" download>Full resume</a></span>
+  </div>
+  <div class="wrap footer__note">Game art and trailers belong to their studios. Product names and logos are trademarks of their owners.</div>
+</footer>
+</body>
+</html>
